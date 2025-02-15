@@ -14,7 +14,7 @@ public class TemperatureFit {
         int temperature = 10;
         double fruitsTemp = TemperatureFit.idealTemperatureForFruits(temperature);
         double meatTemp = TemperatureFit.idealTemperatureForMeat(temperature);
-        System.out.println("Ideal temperature for fruits is " + fruitsTemp + "°C");
-        System.out.println("Ideal temperature for meat is " + meatTemp + "°C");
+        System.out.println("Ideal temperature for fruits is " + fruitsTemp + "Â°C");
+        System.out.println("Ideal temperature for meat is " + meatTemp + "Â°C");
     }
 }

@@ -15,8 +15,6 @@ class FindLoopTest {
 
     @Test
     void whenArrayHasNot10ThenMinus1() {
-        /* Здесь нужно дописать тест, когда в массиве не найдено число 10.
-        Можно искать любое другое число, корректно изменив при этом название теста */
         int[] data = new int[] {2, 11, 4, 9, 7};
         int element = 10;
         int result = FindLoop.indexOf(data, element);

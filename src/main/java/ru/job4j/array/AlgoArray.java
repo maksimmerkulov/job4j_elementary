@@ -1,6 +1,13 @@
 package ru.job4j.array;
 
+/**
+ * Класс AlgoArray демонстрирует сортировку массива методом перестановки элементов.
+ */
 public class AlgoArray {
+
+    /**
+     * Основной метод программы. Выполняет сортировку массива по возрастанию.
+     */
     public static void main(String[] args) {
         int[] array = new int[] {5, 3, 2, 1, 4};
         int temp = array[0];

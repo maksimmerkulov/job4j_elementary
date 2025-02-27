@@ -1,5 +1,8 @@
 package ru.job4j.array;
 
+/**
+ * Класс демонстрирует объявление, инициализацию и вывод массивов в Java.
+ */
 public class ArrayDefinition {
     public static void main(String[] args) {
         short[] ages = new short[10];
@@ -17,8 +20,8 @@ public class ArrayDefinition {
         System.out.println("Размер массива prices равен: " + prices.length);
         System.out.println();
 
-        for (int index = 0; index < names.length; index++) {
-            System.out.println(names[index]);
+        for (String name : names) {
+            System.out.println(name);
         }
     }
 }

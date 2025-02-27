@@ -1,6 +1,17 @@
 package ru.job4j.loop;
 
+/**
+ * Класс Board рисует шахматную доску в консоли.
+ * Символ "X" используется для затемненных клеток, пробел - для светлых.
+ */
 public class Board {
+
+    /**
+     * Метод рисует шахматную доску заданной ширины и высоты.
+     *
+     * @param width  Ширина доски (количество столбцов).
+     * @param height Высота доски (количество строк).
+     */
     public static void paint(int width, int height) {
         for (int row = 0; row < height; row++) {
             for (int cell = 0; cell < width; cell++) {
@@ -14,6 +25,9 @@ public class Board {
         }
     }
 
+    /**
+     * Основной метод программы. Демонстрирует работу метода paint.
+     */
     public static void main(String[] args) {
         paint(3, 3);
         System.out.println();

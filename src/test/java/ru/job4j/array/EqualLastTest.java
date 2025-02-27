@@ -19,4 +19,28 @@ public class EqualLastTest {
         boolean result = EqualLast.check(left, right);
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void whenLeftIsEmpty() {
+        int[] left = {};
+        int[] right = {3, 3, 4};
+        boolean result = EqualLast.check(left, right);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void whenRightIsEmpty() {
+        int[] left = {1, 2, 3};
+        int[] right = {};
+        boolean result = EqualLast.check(left, right);
+        assertThat(result).isFalse();
+    }
+
+    @Test
+    public void whenBothEmpty() {
+        int[] left = {};
+        int[] right = {};
+        boolean result = EqualLast.check(left, right);
+        assertThat(result).isFalse();
+    }
 }

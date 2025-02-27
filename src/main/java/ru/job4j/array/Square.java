@@ -9,7 +9,7 @@ public class Square {
      * Метод заполняет массив квадратами чисел от 0 до bound - 1.
      *
      * @param bound Верхняя граница чисел (не включительно).
-     * @return массив, содержащий квадраты чисел от 0 до bound - 1
+     * @return Массив, содержащий квадраты чисел от 0 до bound - 1.
      */
     public static int[] calculate(int bound) {
         int[] result = new int[bound];

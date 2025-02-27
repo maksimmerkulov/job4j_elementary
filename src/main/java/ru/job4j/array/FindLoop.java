@@ -10,7 +10,7 @@ public class FindLoop {
      *
      * @param data    Массив, в котором выполняется поиск.
      * @param element Искомый элемент.
-     * @return индекс элемента, если он найден, иначе -1
+     * @return Индекс элемента, если он найден, иначе -1.
      */
     public static int indexOf(int[] data, int element) {
         int result = -1; /* если элемента нет в массиве, то возвращаем -1. */

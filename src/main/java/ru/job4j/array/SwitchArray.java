@@ -11,7 +11,7 @@ public class SwitchArray {
      * @param array       Исходный массив.
      * @param source      Индекс первого элемента.
      * @param destination Индекс второго элемента.
-     * @return массив с измененными элементами
+     * @return Массив с измененными элементами.
      */
     public static int[] swap(int[] array, int source, int destination) {
         int temp = array[source];
@@ -25,7 +25,7 @@ public class SwitchArray {
      * Если массив пустой или состоит из одного элемента, изменений не происходит.
      *
      * @param array Исходный массив.
-     * @return массив с переставленными границами (или без изменений)
+     * @return Массив с переставленными границами (или без изменений).
      */
     public static int[] swapBorder(int[] array) {
         int temp = array[0];

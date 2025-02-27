@@ -7,9 +7,10 @@ public class ArrayChar {
 
     /**
      * Метод проверяет, начинается ли массив символов word с префикса prefix.
+     *
      * @param word Массив символов, в котором выполняется проверка.
      * @param prefix Массив символов, который должен быть в начале word.
-     * @return true, если word начинается с prefix, иначе false
+     * @return Значение true, если word начинается с prefix, иначе false.
      */
     public static boolean startsWith(char[] word, char[] prefix) {
         boolean result = true;

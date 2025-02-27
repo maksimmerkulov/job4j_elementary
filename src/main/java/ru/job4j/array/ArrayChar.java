@@ -1,13 +1,20 @@
 package ru.job4j.array;
 
+/**
+ * Класс предназначен для проверки, начинается ли массив символов с заданного префикса.
+ */
 public class ArrayChar {
+
+    /**
+     * Метод проверяет, начинается ли массив символов word с префикса prefix.
+     * @param word Массив символов, в котором выполняется проверка.
+     * @param prefix Массив символов, который должен быть в начале word.
+     * @return true, если word начинается с prefix, иначе false
+     */
     public static boolean startsWith(char[] word, char[] prefix) {
         boolean result = true;
-        if (prefix.length > word.length) {
-            return false;
-        }
-        for (int index = 0; index < prefix.length; index++) {
-            if (prefix[index] != word[index]) {
+        for (int i = 0; i < prefix.length; i++) {
+            if (prefix[i] != word[i]) {
                 result = false;
                 break;
             }

@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class FitnessTest {
-
     @Test
     void whenIvanGreatNik() {
         int ivan = 95;

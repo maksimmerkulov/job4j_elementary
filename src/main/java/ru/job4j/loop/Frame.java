@@ -1,7 +1,6 @@
 package ru.job4j.loop;
 
 public class Frame {
-
     public static void draw(int size) {
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {

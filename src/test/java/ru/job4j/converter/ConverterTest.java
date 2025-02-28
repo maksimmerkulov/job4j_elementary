@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class ConverterTest {
-
     @Test
     void whenConvert140RblThen1dot4271Euro() {
         float input = 140;

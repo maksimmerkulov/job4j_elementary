@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class TemperatureFitTest {
-
     @Test
     void whenRoomTemperature10ThenFruits8() {
         int input = 10;

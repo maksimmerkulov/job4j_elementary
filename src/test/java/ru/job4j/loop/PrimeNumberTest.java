@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class PrimeNumberTest {
-
     @Test
     void when5Then3() {
         int finish = 5;

@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class PointTest {
-
     @Test
     void whenPoints00And20Then2() {
         int x1 = 0, y1 = 0, x2 = 2, y2 = 0;

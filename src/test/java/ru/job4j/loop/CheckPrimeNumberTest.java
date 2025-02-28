@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class CheckPrimeNumberTest {
-
     @Test
     void when5ThenTrue() {
         int number = 5;

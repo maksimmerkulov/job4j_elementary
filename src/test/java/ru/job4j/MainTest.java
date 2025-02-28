@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 public class MainTest {
-
     @Test
     public void whenActionThenResult() {
         int excepted = 1;

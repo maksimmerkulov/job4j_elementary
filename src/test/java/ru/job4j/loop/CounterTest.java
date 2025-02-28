@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class CounterTest {
-
     @Test
     void whenSumFrom0To10Then55() {
         int start = 0;

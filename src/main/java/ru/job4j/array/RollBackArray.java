@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс предназначен для переворачивания массива в обратном порядке.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class RollBackArray {
 

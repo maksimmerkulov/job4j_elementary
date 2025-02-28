@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс SortSelected реализует сортировку выбором.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class SortSelected {
 

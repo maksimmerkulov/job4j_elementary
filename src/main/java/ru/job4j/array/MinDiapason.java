@@ -3,6 +3,9 @@ package ru.job4j.array;
 /**
  * Класс MinDiapason предназначен для поиска минимального значения
  * в заданном диапазоне индексов массива.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class MinDiapason {
 

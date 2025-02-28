@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс FindLoop содержит методы для поиска элемента в массиве.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class FindLoop {
 

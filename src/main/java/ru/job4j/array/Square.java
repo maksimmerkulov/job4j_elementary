@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс Square заполняет массив числами, возведенными в квадрат.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class Square {
 

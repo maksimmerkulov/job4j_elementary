@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс Sequence демонстрирует создание и заполнение двумерного массива 3x3.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class Sequence {
     public static void main(String[] args) {

@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс демонстрирует объявление, инициализацию и вывод массивов в Java.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class ArrayDefinition {
     public static void main(String[] args) {

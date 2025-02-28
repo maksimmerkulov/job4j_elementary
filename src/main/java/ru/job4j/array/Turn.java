@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс Turn содержит метод для переворачивания массива.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class Turn {
 

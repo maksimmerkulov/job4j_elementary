@@ -2,6 +2,9 @@ package ru.job4j.loop;
 
 /**
  * Класс для построения числовой пирамиды в консоли.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class NumberPyramid {
 
@@ -25,6 +28,10 @@ public class NumberPyramid {
         }
     }
 
+    /**
+     * Основной метод програамы для демонстрации работы метода {@link #draw(int)}.
+     * Этот метод выводит на экран числовую пирамиду для различных высот.
+     */
     public static void main(String[] args) {
         System.out.println("Number pyramid of height 3:");
         draw(3);

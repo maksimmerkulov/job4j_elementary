@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс предназначен для сравнения последних элементов двух массивов.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class EqualLast {
 

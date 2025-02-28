@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс предназначен для проверки, заканчивается ли массив символов на заданный постфикс.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class EndsWith {
 

@@ -3,6 +3,9 @@ package ru.job4j.array;
 /**
  * Класс ArrayLoop демонстрирует работу с массивами и циклами.
  * Заполняет массив значениями по формуле y = index * 2 + 3 и выводит их в консоль.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class ArrayLoop {
 

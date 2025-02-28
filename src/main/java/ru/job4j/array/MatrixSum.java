@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс MatrixSum вычисляет сумму всех элементов двумерного массива.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class MatrixSum {
 

@@ -3,6 +3,9 @@ package ru.job4j.loop;
 /**
  * Класс Board рисует шахматную доску в консоли.
  * Символ "X" используется для затемненных клеток, пробел - для светлых.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class Board {
 

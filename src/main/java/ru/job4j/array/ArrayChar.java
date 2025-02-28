@@ -2,6 +2,9 @@ package ru.job4j.array;
 
 /**
  * Класс предназначен для проверки, начинается ли массив символов с заданного префикса.
+ *
+ * @author Maksim Merkulov
+ * @version 1.0
  */
 public class ArrayChar {
 

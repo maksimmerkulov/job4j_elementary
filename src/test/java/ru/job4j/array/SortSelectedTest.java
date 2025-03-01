@@ -3,6 +3,9 @@ package ru.job4j.array;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода sort в классе SortSelected.
+ */
 public class SortSelectedTest {
     @Test
     public void whenSort() {

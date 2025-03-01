@@ -3,6 +3,14 @@ package ru.job4j.loop;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода вычисления факториала в классе Factorial.
+ * <p>
+ * Этот класс тестирует метод, который вычисляет факториал числа.
+ * Факториал числа - это произведение всех положительных целых чисел, меньших или равных данному числу.
+ * Например, факториал числа 5 (обозначается 5!) равен 5 * 4 * 3 * 2 * 1 = 120.
+ * </p>
+ */
 class FactorialTest {
     @Test
     void whenCalculateFactorialForFiveThenOneHundredTwenty() {

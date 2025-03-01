@@ -3,6 +3,14 @@ package ru.job4j.loop;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * Тест-класс для проверки методов суммирования чисел в классе Counter.
+ * </p>
+ * Этот класс предназначен для тестирования методов, которые суммируют числа в заданном диапазоне.
+ * Метод `sum(int start, int finish)` суммирует все числа от `start` до `finish` включительно,
+ * а метод `sumByEven(int start, int finish)` суммирует только четные числа в указанном диапазоне.
+ * </p>
+ */
 class CounterTest {
     @Test
     void whenSumFrom0To10Then55() {

@@ -3,6 +3,13 @@ package ru.job4j.loop;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода calc в классе Fitness.
+ * </p>
+ * Этот класс тестирует метод, вычисляющий количество месяцев,
+ * за которые Иван сможет превзойти Николая по силе тяги.
+ * </p>
+ */
 class FitnessTest {
     @Test
     void whenIvanGreatNik() {

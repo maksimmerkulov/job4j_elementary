@@ -3,6 +3,9 @@ package ru.job4j.calculator;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * Тест-класс для проверки методов manWeight и womanWeight в классе Fit.
+ */
 class FitTest {
     @Test
     void whenMan180Then92() {

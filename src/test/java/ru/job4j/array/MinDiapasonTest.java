@@ -3,6 +3,9 @@ package ru.job4j.array;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода findMin в классе MinDiapason.
+ */
 public class MinDiapasonTest {
     @Test
     public void whenFirstMin() {

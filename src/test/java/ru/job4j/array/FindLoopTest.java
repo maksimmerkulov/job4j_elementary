@@ -3,6 +3,9 @@ package ru.job4j.array;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки методов поиска индекса в массиве в классе FindLoop.
+ */
 class FindLoopTest {
     @Test
     void whenArrayHas5Then0() {

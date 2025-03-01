@@ -3,6 +3,15 @@ package ru.job4j.loop;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода check(int) в классе CheckPrimeNumber.
+ * </p>
+ * Этот класс предназначен для тестирования метода, который проверяет, является ли переданное число простым.
+ * Простой считается число, которое больше 1 и делится только на 1 и на себя.
+ * В тестах проверяются различные случаи, включая простые и составные числа, а также исключение числа 1,
+ * которое не является простым.
+ * </p>
+ */
 class CheckPrimeNumberTest {
     @Test
     void when5ThenTrue() {

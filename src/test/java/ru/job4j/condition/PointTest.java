@@ -3,6 +3,9 @@ package ru.job4j.condition;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * Тест-класс для проверки метода distance в классе Point.
+ */
 class PointTest {
     @Test
     void whenPoints00And20Then2() {

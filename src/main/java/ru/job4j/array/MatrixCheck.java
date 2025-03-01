@@ -1,11 +1,13 @@
 package ru.job4j.array;
 
 /**
- * Класс MatrixCheck содержит методы для проверки строк и столбцов в двумерном массиве.
- * Проверяет, заполнены ли строка или колонка только символами 'X'.
+ * Класс MatrixCheck содержит методы для работы с двумерными массивами,
+ * включая проверку строк, колонок и извлечение диагонали.
+ * Проверяется, состоит ли строка или колонка только из символов 'X'.
+ * Также реализован метод извлечения диагонали матрицы из массива.
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
  */
 public class MatrixCheck {
 
@@ -41,6 +43,20 @@ public class MatrixCheck {
                 result = false;
                 break;
             }
+        }
+        return result;
+    }
+
+    /**
+     * Метод извлекает диагональ матрицы из квадратного двумерного массива.
+     *
+     * @param board Двумерный массив символов.
+     * @return Массив символов, содержащий элементы диагонали.
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            result[i] = board[i][i];
         }
         return result;
     }

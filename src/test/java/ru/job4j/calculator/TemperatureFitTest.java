@@ -3,6 +3,9 @@ package ru.job4j.calculator;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * Тест-класс для проверки методов idealTemperatureForFruits и idealTemperatureForMeat в классе TemperatureFit.
+ */
 class TemperatureFitTest {
     @Test
     void whenRoomTemperature10ThenFruits8() {

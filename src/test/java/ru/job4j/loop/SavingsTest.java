@@ -3,6 +3,9 @@ package ru.job4j.loop;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * Тест-класс для проверки метода years в классе Savings.
+ */
 class SavingsTest {
     @Test
     void whenGoal500Deposit100Percent5ThenYears5() {

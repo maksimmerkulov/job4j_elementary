@@ -3,6 +3,9 @@ package ru.job4j.converter;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
+/**
+ * Тест-класс для проверки методов конвертации валют в классе Converter.
+ */
 class ConverterTest {
     @Test
     void whenConvert140RblThen1dot4271Euro() {

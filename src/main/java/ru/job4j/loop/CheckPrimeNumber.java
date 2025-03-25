@@ -1,15 +1,15 @@
 package ru.job4j.loop;
 
 /**
- * Класс CheckPrimeNumber проверяет, является ли число простым.
+ * Класс CheckPrimeNumber содержит метод, который определяет, является ли заданное число простым.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class CheckPrimeNumber {
 
     /**
-     * Метод проверяет, является ли переданное число простым.
+     * Метод check проверяет, является ли переданное число простым.
      *
      * @param number Число для проверки.
      * @return Значение true, если число простое, иначе false.

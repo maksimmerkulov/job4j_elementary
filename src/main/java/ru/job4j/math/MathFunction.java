@@ -1,15 +1,15 @@
 package ru.job4j.math;
 
 /**
- * Класс MathFunction выполняет основные математические операции.
+ * Класс MathFunction предназначен для выполнения основных математических операций.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class MathFunction {
 
     /**
-     * Метод выполняет сложение двух чисел.
+     * Метод sum выполняет сложение двух чисел.
      *
      * @param first  Первое число.
      * @param second Второе число.
@@ -20,7 +20,7 @@ public class MathFunction {
     }
 
     /**
-     * Метод выполняет вычитание двух чисел.
+     * Метод subtract выполняет вычитание двух чисел.
      *
      * @param first  Уменьшаемое.
      * @param second Вычитаемое.
@@ -31,7 +31,7 @@ public class MathFunction {
     }
 
     /**
-     * Метод выполняет умножение двух чисел.
+     * Метод multiply выполняет умножение двух чисел.
      *
      * @param first  Первый множитель.
      * @param second Второй множитель.
@@ -42,7 +42,7 @@ public class MathFunction {
     }
 
     /**
-     * Метод выполняет деление двух чисел.
+     * Метод divide выполняет деление двух чисел.
      *
      * @param first  Делимое.
      * @param second Делитель.

@@ -1,16 +1,15 @@
 package ru.job4j;
 
 /**
- * Класс StudentInfo выводит информацию о студенте: имя и дату рождения.
+ * Класс StudentInfo предназначен для вывода в консоль имени студента и его даты рождения.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class StudentInfo {
 
     /**
-     * Основной метод программы.
-     * Выводит в консоль имя студента и его дату рождения.
+     * Метод main выводит в консоль имя студента и его дату рождения.
      */
     public static void main(String[] args) {
         System.out.println("Maksim Merkulov");

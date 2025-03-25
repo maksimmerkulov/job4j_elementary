@@ -1,15 +1,15 @@
 package ru.job4j.loop;
 
 /**
- * Класс Counter выполняет суммирование чисел в заданном диапазоне.
+ * Класс Counter предназначен для суммирования чисел в заданном диапазоне.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Counter {
 
     /**
-     * Метод считает сумму всех чисел в диапазоне от start до finish.
+     * Метод sum считает сумму всех чисел в диапазоне от start до finish.
      *
      * @param start  Начальное число.
      * @param finish Конечное число.
@@ -24,7 +24,7 @@ public class Counter {
     }
 
     /**
-     * Метод считает сумму всех четных чисел в диапазоне от start до finish.
+     * Метод sumByEven считает сумму всех четных чисел в диапазоне от start до finish.
      *
      * @param start  Начальное число.
      * @param finish Конечное число.

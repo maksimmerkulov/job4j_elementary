@@ -5,13 +5,12 @@ package ru.job4j.array;
  * Заполняет массив значениями по формуле y = index * 2 + 3 и выводит их в консоль.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class ArrayLoop {
 
     /**
-     * Основной метод программы.
-     * Создает массив, заполняет его значениями и выводит их в консоль.
+     * Метод main создает массив, заполняет его значениями и выводит их в консоль.
      */
     public static void main(String[] args) {
         int[] numbers = new int[5];

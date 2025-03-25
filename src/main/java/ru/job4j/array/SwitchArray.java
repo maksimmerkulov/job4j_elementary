@@ -4,12 +4,12 @@ package ru.job4j.array;
  * Класс SwitchArray содержит методы для обмена элементов в массиве.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class SwitchArray {
 
     /**
-     * Метод меняет местами два элемента массива.
+     * Метод swap меняет местами два элемента массива.
      *
      * @param array       Исходный массив.
      * @param source      Индекс первого элемента.
@@ -24,7 +24,7 @@ public class SwitchArray {
     }
 
     /**
-     * Метод меняет местами первый и последний элементы массива.
+     * Метод swapBorder меняет местами первый и последний элементы массива.
      * Если массив пустой или состоит из одного элемента, изменений не происходит.
      *
      * @param array Исходный массив.
@@ -38,7 +38,7 @@ public class SwitchArray {
     }
 
     /**
-     * Основной метод программы. Демонстрирует работу метода swapBorder.
+     * Метод main демонстрирует работу метода swapBorder.
      */
     public static void main(String[] args) {
         int[] numbers = new int[] {1, 2, 3, 4, 5, 6};

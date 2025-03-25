@@ -1,17 +1,15 @@
 package ru.job4j;
 
 /**
- * Класс Main является точкой входа в программу.
- * В методе main выводится приветственное сообщение в консоль.
+ * Класс Main предназначен для вывода приветственного сообщения в консоль.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Main {
 
     /**
-     * Основной метод программы.
-     * Выводит сообщение "Hello world".
+     * Метод main выводит сообщение "Hello world".
      */
     public static void main(String[] args) {
         System.out.println("Hello world");

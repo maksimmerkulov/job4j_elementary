@@ -1,15 +1,15 @@
 package ru.job4j.condition;
 
 /**
- * Класс Vector выполняет сложение двух векторов в двумерном пространстве.
+ * Класс Vector предназначен для выполнения сложения двух векторов в двумерном пространстве.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Vector {
 
     /**
-     * Метод выполняет сложение двух векторов (x1, y1) и (x2, y2).
+     * Метод addVectors выполняет сложение двух векторов (x1, y1) и (x2, y2).
      *
      * @param x1 Координата X первого вектора.
      * @param y1 Координата Y первого вектора.
@@ -24,7 +24,7 @@ public class Vector {
     }
 
     /**
-     * Основной метод программы. Демонстрирует работу метода {@link #addVectors(int, int, int, int)}.
+     * Метод main демонстрирует работу метода addVectors.
      */
     public static void main(String[] args) {
         String result = addVectors(1, 2, 3, 4);

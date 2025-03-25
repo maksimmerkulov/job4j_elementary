@@ -3,19 +3,20 @@ package ru.job4j.calculator;
 import static ru.job4j.math.MathFunction.*;
 
 /**
- * Класс MathCalculator выполняет математические вычисления, используя методы из MathFunction.
+ * Класс MathCalculator предназначен для выполнения математических вычислений,
+ * используя методы из MathFunction.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class MathCalculator {
 
     /**
-     * Метод вычисляет сумму сложения и произведения двух чисел.
+     * Метод sumAndMultiply вычисляет сумму сложения и произведения двух чисел.
      *
      * @param first  Первое число.
      * @param second Второе число.
-     * @return Cумма сложения и умножения.
+     * @return Сумма сложения и умножения.
      */
     public static double sumAndMultiply(double first, double second) {
         return sum(first, second)
@@ -23,7 +24,7 @@ public class MathCalculator {
     }
 
     /**
-     * Метод вычисляет сумму разности и деления двух чисел.
+     * Метод subtractAndDivide вычисляет сумму разности и деления двух чисел.
      *
      * @param first  Первое число.
      * @param second Второе число.
@@ -35,7 +36,7 @@ public class MathCalculator {
     }
 
     /**
-     * Метод вычисляет сумму всех операций: сложения, умножения, вычитания и деления.
+     * Метод calculateTotal вычисляет сумму всех операций: сложения, умножения, вычитания и деления.
      *
      * @param first  Первое число (для сложения и умножения).
      * @param second Второе число (для сложения и умножения).
@@ -49,19 +50,15 @@ public class MathCalculator {
     }
 
     /**
-     * Основной метод программы. Демонстрирует работу всех методов класса.
-     *
-     * @param args аргументы командной строки (не используются).
+     * Метод main демонстрирует работу всех методов класса.
      */
     public static void main(String[] args) {
         double result1 = sumAndMultiply(10, 20);
         System.out.println("Результат расчета суммы сложения и произведения двух чисел равен: "
                 + result1);
-
         double result2 = subtractAndDivide(100, 20);
         System.out.println("Результат расчета суммы разности и деления двух чисел равен: "
                 + result2);
-
         double totalResult = calculateTotal(10, 20, 100, 20);
         System.out.println("Результат расчета суммы всех операций равен: "
                 + totalResult);

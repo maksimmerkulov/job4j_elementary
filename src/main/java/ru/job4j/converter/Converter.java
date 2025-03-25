@@ -1,15 +1,15 @@
 package ru.job4j.converter;
 
 /**
- * Класс Converter выполняет конвертацию рублей в евро и доллары.
+ * Класс Converter предназначен для выполнения конвертаций рублей в евро и доллары.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Converter {
 
     /**
-     * Метод конвертирует рубли в евро.
+     * Метод rubleToEuro конвертирует рубли в евро.
      *
      * @param value Сумма в рублях.
      * @return Сумма в евро.
@@ -19,7 +19,7 @@ public class Converter {
     }
 
     /**
-     * Метод конвертирует рубли в доллары.
+     * Метод rubleToDollar конвертирует рубли в доллары.
      *
      * @param value Сумма в рублях.
      * @return Сумма в долларах.

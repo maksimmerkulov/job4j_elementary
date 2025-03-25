@@ -1,15 +1,15 @@
 package ru.job4j.array;
 
 /**
- * Класс Square заполняет массив числами, возведенными в квадрат.
+ * Класс Square предназначен для заполнения массива числами, возведенными в квадрат.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Square {
 
     /**
-     * Метод заполняет массив квадратами чисел от 0 до bound - 1.
+     * Метод calculate заполняет массив квадратами чисел от 0 до bound - 1.
      *
      * @param bound Верхняя граница чисел (не включительно).
      * @return Массив, содержащий квадраты чисел от 0 до bound - 1.
@@ -23,12 +23,12 @@ public class Square {
     }
 
     /**
-     * Основной метод программы. Демонстрирует работу метода calculate.
+     * Метод main демонстрирует работу метода calculate.
      */
     public static void main(String[] args) {
         int[] array = calculate(4);
-        for (int element : array) {
-            System.out.println(element);
+        for (int index = 0; index < array.length; index++) {
+            System.out.println(array[index]);
         }
     }
 }

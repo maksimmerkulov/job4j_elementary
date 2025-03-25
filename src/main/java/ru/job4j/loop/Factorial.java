@@ -1,15 +1,15 @@
 package ru.job4j.loop;
 
 /**
- * Класс Factorial вычисляет факториал числа.
+ * Класс Factorial предназначен для вычисления факториала числа.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Factorial {
 
     /**
-     * Метод вычисляет факториал заданного числа.
+     * Метод calculate вычисляет факториал заданного числа.
      *
      * @param number Число, факториал которого нужно вычислить (>= 0).
      * @return Факториал числа.

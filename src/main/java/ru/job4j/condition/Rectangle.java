@@ -1,15 +1,15 @@
 package ru.job4j.condition;
 
 /**
- * Класс Rectangle вычисляет диагональ прямоугольника.
+ * Класс Rectangle предназначен для вычисления диагонали прямоугольника.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Rectangle {
 
     /**
-     * Метод вычисляет диагональ прямоугольника по длине и ширине.
+     * Метод diagonal вычисляет диагональ прямоугольника по длине и ширине.
      *
      * @param length Длина прямоугольника.
      * @param width  Ширина прямоугольника.
@@ -20,7 +20,7 @@ public class Rectangle {
     }
 
     /**
-     * Основной метод программы. Демонстрирует работу метода {@link #diagonal(double, double)}.
+     * Метод main демонстрирует работу метода diagonal.
      */
     public static void main(String[] args) {
         double result = diagonal(3, 4);

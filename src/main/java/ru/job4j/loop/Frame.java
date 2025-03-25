@@ -4,12 +4,12 @@ package ru.job4j.loop;
  * Класс Frame используется для рисования рамки в консоли.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Frame {
 
     /**
-     * Метод рисует квадратную рамку заданного размера.
+     * Метод draw рисует квадратную рамку заданного размера.
      *
      * @param size Размер рамки (количество строк и столбцов).
      */
@@ -33,8 +33,7 @@ public class Frame {
     }
 
     /**
-     * Основной метод программы для демонстрации работы метода {@link #draw(int)}.
-     * Этот метод рисует рамки заданных размеров.
+     * Метод main демонстрирует работу метода draw.
      */
     public static void main(String[] args) {
         System.out.println("Draw frame of size 3");

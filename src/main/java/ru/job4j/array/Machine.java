@@ -3,16 +3,16 @@ package ru.job4j.array;
 import java.util.Arrays;
 
 /**
- * Класс для вычисления сдачи в вендинговом автомате.
+ * Класс Machine предназначен для вычисления сдачи в вендинговом автомате.
  * Использует жадный алгоритм для возврата монет.
  *
  * @author Maksim Merkulov
- * @version 1.2
+ * @version 1.3
  */
 public class Machine {
 
     /**
-     * Метод для вычисления сдачи, которая должна быть возвращена клиенту.
+     * Метод change вычисляет сдачу, которая должна быть возвращена клиенту.
      * Использует жадный алгоритм для возврата монет от большего к меньшему номиналу.
      *
      * @param money Сумма, которую клиент внес в автомат.
@@ -24,7 +24,6 @@ public class Machine {
         int[] result = new int[100];
         int size = 0;
         money -= price;
-
         for (int coin : coins) {
             while (money >= coin) {
                 result[size++] = coin;

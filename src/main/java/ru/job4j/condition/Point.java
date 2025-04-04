@@ -1,31 +1,74 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+
 /**
- * Класс Point предназначен для вычисления расстояния между двумя точками на плоскости.
+ * Класс {@code Point} предназначен для представления точки на двумерной плоскости
+ * и вычисления расстояния до другой точки по формуле Евклидова расстояния.
+ * <p>
+ * Формула расчета расстояния между двумя точками (x1, y1) и (x2, y2):
+ * {@code sqrt((x2 - x1)^2 + (y2 - y1)^2)}
+ * </p>
+ *
+ * <p>Пример использования:</p>
+ * <pre>
+ *     Point a = new Point(0, 0);
+ *     Point b = new Point(0, 2);
+ *     double distance = a.distance(b);
+ * </pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
+ * @since 2025-04-03
  */
 public class Point {
 
     /**
-     * Метод distance вычисляет расстояние между двумя точками (x1, y1) и (x2, y2) в 2D пространстве.
-     *
-     * @param x1 Координата X первой точки.
-     * @param y1 Координата Y первой точки.
-     * @param x2 Координата X второй точки.
-     * @param y2 Координата Y второй точки.
-     * @return Расстояние между точками.
+     * Поле {@code x} представляет координату X точки.
+     * Доступно только внутри экземпляра класса.
      */
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    private int x;
+
+    /**
+     * Поле {@code y} представляет координату Y точки.
+     * Доступно только внутри экземпляра класса.
+     */
+    private int y;
+
+    /**
+     * Конструктор {@code Point(int first, int second)} создает объект {@link Point} с заданными координатами.
+     *
+     * @param first  Координата X.
+     * @param second Координата Y.
+     */
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
     }
 
     /**
-     * Метод main демонстрирует работу метода distance.
+     * Метод {@code distance(Point that)} вычисляет Евклидово расстояние между текущей точкой и переданной в аргументе.
+     *
+     * @param that Другая точка, до которой вычисляется расстояние.
+     * @return Расстояние между двумя точками.
+     */
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
+    }
+
+    /**
+     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #distance(Point)}.
+     * <p>
+     * Создаются две точки и вычисляется расстояние между ними.
+     * </p>
+     *
+     * @param args Аргументы командной строки (не используются).
      */
     public static void main(String[] args) {
-        double result = distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double distance = a.distance(b);
+        System.out.println(distance);
     }
 }

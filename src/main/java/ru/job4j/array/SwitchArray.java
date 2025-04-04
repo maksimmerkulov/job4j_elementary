@@ -1,20 +1,33 @@
 package ru.job4j.array;
 
 /**
- * Класс SwitchArray содержит методы для обмена элементов в массиве.
+ * Класс {@code SwitchArray} содержит методы для обмена элементов в массиве.
+ *
+ * <p>Основные методы:</p>
+ * <ul>
+ *     <li>{@link #swap(int[], int, int)} — меняет местами два элемента массива по индексам.</li>
+ *     <li>{@link #swapBorder(int[])} — меняет местами первый и последний элементы массива.</li>
+ * </ul>
+ *
+ * <p>Класс предназначен для демонстрации базовых операций перестановки элементов в массиве.</p>
  *
  * @author Maksim Merkulov
  * @version 1.1
+ * @since 2025-02-25
  */
 public class SwitchArray {
 
     /**
-     * Метод swap меняет местами два элемента массива.
+     * Метод {@code swap(int[] array, int source, int destination)} меняет местами два элемента в переданном массиве.
      *
-     * @param array       Исходный массив.
+     * <p>Метод выполняет перестановку значений по индексам {@code source} и {@code destination}.</p>
+     * <p>Если индексы выходят за границы массива, будет выброшено {@link ArrayIndexOutOfBoundsException}.</p>
+     *
+     * @param array       Исходный массив, в котором происходит замена.
      * @param source      Индекс первого элемента.
      * @param destination Индекс второго элемента.
-     * @return Массив с измененными элементами.
+     * @return Тот же массив с измененными элементами.
+     * @throws ArrayIndexOutOfBoundsException если переданы некорректные индексы.
      */
     public static int[] swap(int[] array, int source, int destination) {
         int temp = array[source];
@@ -24,7 +37,7 @@ public class SwitchArray {
     }
 
     /**
-     * Метод swapBorder меняет местами первый и последний элементы массива.
+     * Метод {@code swapBorder(int[] array)} меняет местами первый и последний элементы массива.
      * Если массив пустой или состоит из одного элемента, изменений не происходит.
      *
      * @param array Исходный массив.
@@ -38,7 +51,11 @@ public class SwitchArray {
     }
 
     /**
-     * Метод main демонстрирует работу метода swapBorder.
+     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #swapBorder(int[])}.
+     *
+     * <p>Выводит результат работы метода в консоль.</p>
+     *
+     * @param args Аргументы командной строки (не используются).
      */
     public static void main(String[] args) {
         int[] numbers = new int[] {1, 2, 3, 4, 5, 6};

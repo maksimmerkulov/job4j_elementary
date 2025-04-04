@@ -4,9 +4,24 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс для проверки методов monoHorizontal, monoVertical, extractDiagonal и isWin в классе MatrixCheck.
+ * Тест-класс {@code MatrixCheckTest} предназначен для проверки методов
+ * {@link MatrixCheck#monoHorizontal(char[][], int)},
+ * {@link MatrixCheck#monoVertical(char[][], int)},
+ * {@link MatrixCheck#extractDiagonal(char[][])}
+ * и {@link MatrixCheck#isWin(char[][])} в классе {@link MatrixCheck}.
+ *
+ * <p>Эти тесты проверяют корректность работы с двумерными массивами символов.</p>
+ *
+ * @author Maksim Merkulov
+ * @version 1.4
+ * @since 2025-03-01
  */
 public class MatrixCheckTest {
+
+    /**
+     * Проверяет, что метод {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * правильно определяет строку, содержащую только символы 'X'.
+     */
     @Test
     public void whenHasMonoHorizontal() {
         char[][] input = {
@@ -19,6 +34,10 @@ public class MatrixCheckTest {
         assertThat(result).isTrue();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * корректно определяет строку, не состоящую только из символов 'X'.
+     */
     @Test
     public void whenHasNotMonoHorizontal() {
         char[][] input = {
@@ -31,6 +50,10 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#monoVertical(char[][], int)}
+     * правильно определяет колонку, содержащую только символы 'X'.
+     */
     @Test
     public void whenHasMonoVertical() {
         char[][] input = {
@@ -43,6 +66,10 @@ public class MatrixCheckTest {
         assertThat(result).isTrue();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#monoVertical(char[][], int)}
+     * корректно определяет колонку, не состоящую только из символов 'X'.
+     */
     @Test
     public void whenHasNotMonoVertical() {
         char[][] input = {
@@ -55,6 +82,10 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
+     * корректно извлекает диагональ, содержащую только символы 'X'.
+     */
     @Test
     public void whenDiagonalFullX() {
         char[][] input = {
@@ -67,6 +98,10 @@ public class MatrixCheckTest {
         assertThat(result).containsExactly(expected);
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
+     * корректно извлекает диагональ, содержащую только символы '1'.
+     */
     @Test
     public void whenDiagonalFullOne() {
         char[][] input = {
@@ -79,6 +114,10 @@ public class MatrixCheckTest {
         assertThat(result).containsExactly(expected);
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
+     * корректно извлекает диагональ, содержащую различные символы.
+     */
     @Test
     public void whenDiagonalMix() {
         char[][] input = {
@@ -91,6 +130,10 @@ public class MatrixCheckTest {
         assertThat(result).containsExactly(expected);
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
+     * правильно определяет выигрышную ситуацию по вертикали.
+     */
     @Test
     public void whenDataMonoByTrueThenTrue() {
         char[][] input = {
@@ -104,6 +147,10 @@ public class MatrixCheckTest {
         assertThat(result).isTrue();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
+     * правильно определяет отсутствие выигрышной ситуации по вертикали.
+     */
     @Test
     public void whenDataNotMonoByTrueThenFalse() {
         char[][] input = {
@@ -117,6 +164,10 @@ public class MatrixCheckTest {
         assertThat(result).isFalse();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
+     * правильно определяет выигрышную ситуацию по горизонтали.
+     */
     @Test
     public void whenDataHMonoByTrueThenTrue() {
         char[][] input = {
@@ -130,6 +181,10 @@ public class MatrixCheckTest {
         assertThat(result).isTrue();
     }
 
+    /**
+     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
+     * корректно определяет отсутствие выигрышной ситуации на диагонали.
+     */
     @Test
     public void whenDataDiagMonoIsTrueThenFalse() {
         char[][] input = {

@@ -4,14 +4,26 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Тест-класс для проверки методов суммирования чисел в классе Counter.
- * </p>
- * Этот класс предназначен для тестирования методов, которые суммируют числа в заданном диапазоне.
- * Метод `sum(int start, int finish)` суммирует все числа от `start` до `finish` включительно,
- * а метод `sumByEven(int start, int finish)` суммирует только четные числа в указанном диапазоне.
- * </p>
+ * Тестовый класс {@code CounterTest} для проверки методов суммирования чисел в классе {@link Counter}.
+ *
+ * <p>Проверяются методы:</p>
+ * <ul>
+ *     <li>{@link Counter#sum(int, int)} — вычисляет сумму всех чисел в заданном диапазоне.</li>
+ *     <li>{@link Counter#sumByEven(int, int)} — вычисляет сумму всех четных чисел в диапазоне.</li>
+ * </ul>
+ *
+ * <p>Тесты покрывают различные граничные случаи, включая отрицательные значения и неупорядоченные границы.</p>
+ *
+ * @author Maksim Merkulov
+ * @version 1.2
+ * @since 2025-02-20
  */
 class CounterTest {
+
+    /**
+     * Проверяет вычисление суммы чисел от 0 до 10.
+     * Ожидаемый результат: 55.
+     */
     @Test
     void whenSumFrom0To10Then55() {
         int start = 0;
@@ -21,6 +33,10 @@ class CounterTest {
         assertThat(output).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы чисел от 3 до 8.
+     * Ожидаемый результат: 33.
+     */
     @Test
     void whenSumFrom3To8Then33() {
         int start = 3;
@@ -30,6 +46,10 @@ class CounterTest {
         assertThat(output).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы чисел в случае, если начальное и конечное число равны 1.
+     * Ожидаемый результат: 1.
+     */
     @Test
     void whenSumFrom1To1Then1() {
         int start = 1;
@@ -39,6 +59,10 @@ class CounterTest {
         assertThat(output).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы чисел от -5 до 10.
+     * Ожидаемый результат: 40.
+     */
     @Test
     void whenSumFromMinus5To10Then40() {
         int start = -5;
@@ -48,6 +72,10 @@ class CounterTest {
         assertThat(output).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет случай, когда начальное число больше конечного (10 > 1).
+     * Ожидаемый результат: 0.
+     */
     @Test
     void whenStartGreaterThanFinishThen0() {
         int start = 10;
@@ -57,6 +85,10 @@ class CounterTest {
         assertThat(output).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы четных чисел от 0 до 10.
+     * Ожидаемый результат: 30.
+     */
     @Test
     void whenSumEvenNumbersFromZeroToTenThenThirty() {
         int start = 0;
@@ -66,6 +98,10 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы четных чисел от 3 до 8.
+     * Ожидаемый результат: 18.
+     */
     @Test
     void whenSumEvenNumbersFromThreeToEightThenEighteen() {
         int start = 3;
@@ -75,6 +111,10 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы четных чисел в случае, если диапазон состоит из одного нечетного числа (1).
+     * Ожидаемый результат: 0.
+     */
     @Test
     void whenSumEvenNumbersFromOneToOneThenZero() {
         int start = 1;
@@ -84,6 +124,10 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет вычисление суммы четных чисел от -5 до 10.
+     * Ожидаемый результат: 24.
+     */
     @Test
     void whenSumEvenNumbersFromMinusFiveToTenThenTwentyFour() {
         int start = -5;
@@ -93,6 +137,10 @@ class CounterTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Проверяет случай, когда начальное число больше конечного (10 > 1).
+     * Ожидаемый результат: 0.
+     */
     @Test
     void whenSumEvenNumbersFromTenToOneThenZero() {
         int start = 10;

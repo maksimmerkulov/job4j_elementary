@@ -4,16 +4,23 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SimpleStringEncoderTest} проверяет корректность работы метода
+ * Класс {@code SimpleStringEncoderTest} проверяет корректность работы метода
  * {@link SimpleStringEncoder#encode(String)} в классе {@link SimpleStringEncoder}.
  *
  * <p>Метод сжимает строку, заменяя повторяющиеся символы на символ и число повторений.</p>
  *
  * <p>Ожидаемый результат: строка преобразуется согласно алгоритму кодирования.</p>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * String input = "a";
+ * String expected = "a";
+ * String result = SimpleStringEncoder.encode(input);
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-09
+ * @version 1.2
  */
 class SimpleStringEncoderTest {
 

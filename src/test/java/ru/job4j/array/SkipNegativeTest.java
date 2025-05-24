@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SkipNegativeTest} предназначен для проверки метода
+ * Класс {@code SkipNegativeTest} предназначен для проверки метода
  * {@link SkipNegative#skip(int[][])} в классе {@link SkipNegative}.
- * <p>
- * Проверяются различные сценарии, включая:
+ *
+ * <p><b>Проверяются различные сценарии, включая:</b></p>
  * <ul>
  *     <li>Массив с одинаковым числом строк и столбцов.</li>
  *     <li>Массив с разным количеством элементов в строках.</li>
@@ -15,11 +15,17 @@ import static org.assertj.core.api.Assertions.assertThat;
  *     <li>Массив, состоящий только из отрицательных чисел.</li>
  *     <li>Пустой массив.</li>
  * </ul>
- * </p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[][] array = {{1, -2}, {1, 2}};
+ * int[][] result = SkipNegative.skip(array);
+ * int[][] expected = {{1, 0}, {1, 2}};
+ * assertThat(result).isDeepEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-28
+ * @version 1.2
  */
 public class SkipNegativeTest {
 

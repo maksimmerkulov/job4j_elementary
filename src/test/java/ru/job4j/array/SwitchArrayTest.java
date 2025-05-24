@@ -4,15 +4,30 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SwitchArrayTest} проверяет корректность работы методов {@link SwitchArray#swap(int[], int, int)}
+ * Класс {@code SwitchArrayTest} проверяет корректность работы методов {@link SwitchArray#swap(int[], int, int)}
  * и {@link SwitchArray#swapBorder(int[])} класса {@link SwitchArray}.
  *
  * <p>Методы тестируют перестановку элементов в массиве, включая граничные случаи.</p>
+ *
  * <p>Проверяется, что после выполнения методов массив содержит ожидаемые значения.</p>
  *
+ * <p><b>Примеры тестирования:</b></p>
+ * <pre>{@code
+ * int[] input = {1, 2, 3, 4};
+ * int[] result = SwitchArray.swapBorder(input);
+ * int[] expected = {4, 2, 3, 1};
+ * assertThat(result).containsExactly(expected);
+ *
+ * int[] input = {1, 2, 3, 4};
+ * int source = 0;
+ * int destination = 3;
+ * int[] result = SwitchArray.swap(input, source, destination);
+ * int[] expected = {4, 2, 3, 1};
+ * assertThat(result).containsExactly(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-25
+ * @version 1.2
  */
 class SwitchArrayTest {
 

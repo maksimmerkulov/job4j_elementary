@@ -2,18 +2,31 @@ package ru.job4j.condition;
 
 /**
  * Класс {@code Max} предоставляет методы для нахождения максимального значения среди двух, трех или четырех чисел.
- * <p>
- * Используется перегрузка методов для минимизации дублирования кода.
- * </p>
+ *
+ * <p>Используется перегрузка методов для минимизации дублирования кода.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * Max max = new Max();
+ * double result2 = max.max(3, 7);
+ * double result3 = max.max(3, 7, 5);
+ * double result4 = max.max(3, 7, 5, 10);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * 7.0
+ * 7.0
+ * 10.0
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-04-05
+ * @version 1.2
  */
 public class Max {
 
     /**
-     * Метод {@code max(double first, double second)} возвращает максимальное из двух чисел.
+     * Возвращает максимальное из двух чисел.
      *
      * @param first  Первое число.
      * @param second Второе число.
@@ -24,8 +37,7 @@ public class Max {
     }
 
     /**
-     * Метод {@code max(double first, double second, double third)} возвращает максимальное из трех чисел,
-     * используя перегруженный метод {@link #max(double, double)}.
+     * Возвращает максимальное из трех чисел, используя перегруженный метод {@link #max(double, double)}.
      *
      * @param first  Первое число.
      * @param second Второе число.
@@ -37,8 +49,7 @@ public class Max {
     }
 
     /**
-     * Метод {@code max(double first, double second, double third, double fourth)} возвращает максимальное
-     * из четырех чисел, используя перегруженный метод {@link #max(double, double, double)}.
+     * Возвращает максимальное из четырех чисел, используя перегруженный метод {@link #max(double, double, double)}.
      *
      * @param first  Первое число.
      * @param second Второе число.

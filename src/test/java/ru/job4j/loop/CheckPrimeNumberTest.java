@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code CheckPrimeNumberTest} предназначен для проверки метода {@link CheckPrimeNumber#check(int)}
+ * Класс {@code CheckPrimeNumberTest} предназначен для проверки метода {@link CheckPrimeNumber#check(int)}
  * в классе {@link CheckPrimeNumber}.
  *
  * <p>Этот класс тестирует алгоритм определения простого числа. Простое число — это натуральное число,
  * которое больше 1 и не имеет других делителей, кроме 1 и самого себя.</p>
  *
- * <p>В тестах покрываются различные случаи:</p>
+ * <p><b>В тестах покрываются различные случаи:</b></p>
  * <ul>
  *     <li>Проверка минимального простого числа ({@code 2}).</li>
  *     <li>Проверка типичных простых чисел ({@code 5, 11, 97}).</li>
@@ -18,15 +18,21 @@ import static org.assertj.core.api.Assertions.assertThat;
  *     <li>Проверка граничного случая ({@code 1}), который не является простым.</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int number = 5;
+ * boolean result = CheckPrimeNumber.check(number);
+ * assertThat(result).isTrue();
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 class CheckPrimeNumberTest {
 
-/**
- * Тест проверяет, что число 5 является простым.
- */
+    /**
+     * Тест проверяет, что число 5 является простым.
+     */
     @Test
     void when5ThenTrue() {
         int number = 5;

@@ -4,16 +4,25 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code MinDiapasonTest} проверяет корректность работы метода
+ * Класс {@code MinDiapasonTest} проверяет корректность работы метода
  * {@link MinDiapason#findMin(int[], int, int)} в классе {@link MinDiapason}.
  *
  * <p>Проверяется поиск минимального значения в заданном диапазоне индексов массива.</p>
  *
  * <p>Ожидаемый результат — метод возвращает минимальный элемент среди заданных границ.</p>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] array = new int[] {-1, 0, 5, 10};
+ * int start = 1;
+ * int finish = 3;
+ * int result = MinDiapason.findMin(array, start, finish);
+ * int expected = 0;
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class MinDiapasonTest {
 

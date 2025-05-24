@@ -4,23 +4,26 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Тест-класс {@code FitTest} предназначен для проверки методов {@link Fit#manWeight(short)}
+ * Класс {@code FitTest} предназначен для проверки методов {@link Fit#manWeight(short)}
  * и {@link Fit#womanWeight(short)} в классе {@link Fit}.
  *
- * <p>
- * Проверяет корректность вычислений идеального веса для мужчин и женщин.
- * </p>
+ * <p>Проверяет корректность вычислений идеального веса для мужчин и женщин.</p>
  *
- * <p>Пример использования:</p>
- * <pre>
- *     short height = 180;
- *     double idealWeight = Fit.manWeight(height);
- *     assertThat(idealWeight).isEqualTo(92, withPrecision(0.01));
- * </pre>
+ * <p><b>Примеры тестирования:</b></p>
+ * <pre>{@code
+ * short input = 180;
+ * double expected = 92;
+ * double output = Fit.manWeight(input);
+ * assertThat(output).isEqualTo(expected, withPrecision(0.01));
+ *
+ * short input = 170;
+ * double expected = 69;
+ * double output = Fit.womanWeight(input);
+ * assertThat(output).isEqualTo(expected, withPrecision(0.01));
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-14
+ * @version 1.2
  */
 class FitTest {
 

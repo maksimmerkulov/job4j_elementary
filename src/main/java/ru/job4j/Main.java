@@ -3,14 +3,23 @@ package ru.job4j;
 /**
  * Класс {@code Main} предназначен для вывода приветственного сообщения в консоль.
  *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * Main.main(new String[0]);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * Hello world
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-12
+ * @version 1.2
  */
 public class Main {
 
     /**
-     * Метод {@code main(String[] args)} выводит сообщение "Hello world".
+     * Выводит сообщение {@code Hello world} в консоль.
      *
      * @param args Аргументы командной строки (не используются).
      */

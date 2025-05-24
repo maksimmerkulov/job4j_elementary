@@ -4,13 +4,12 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code FitnessTest} проверяет работу метода {@link Fitness#calc(int, int)}
- * из класса {@link Fitness}.
+ * Класс {@code FitnessTest} проверяет работу метода {@link Fitness#calc(int, int)} из класса {@link Fitness}.
  *
  * <p>Метод {@link Fitness#calc(int, int)} вычисляет количество месяцев, за которые Иван сможет превзойти
  * Николая по силе тяги, если каждый месяц его сила увеличивается в 3 раза, а сила Николая — в 2 раза.</p>
  *
- * <p>В тестах проверяются различные сценарии, включая случаи, когда:</p>
+ * <p><b>В тестах проверяются различные сценарии, включая случаи, когда:</b></p>
  * <ul>
  *     <li>Иван изначально сильнее Николая.</li>
  *     <li>Иван немного слабее Николая.</li>
@@ -18,9 +17,17 @@ import static org.assertj.core.api.Assertions.assertThat;
  *     <li>Иван и Николай начинают с одинаковой силой.</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int ivan = 95;
+ * int nik = 90;
+ * int expected = 0;
+ * int result = Fitness.calc(ivan, nik);
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 class FitnessTest {
 

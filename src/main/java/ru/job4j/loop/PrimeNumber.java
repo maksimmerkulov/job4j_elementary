@@ -8,15 +8,26 @@ package ru.job4j.loop;
  * <p>Метод {@link #calc(int)} перебирает все числа от 2 до {@code finish} и проверяет их
  * на простоту, используя метод {@link CheckPrimeNumber#check(int)} из класса {@link CheckPrimeNumber}.</p>
  *
+ * <p>Если {@code finish} меньше 2, метод вернет 0.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * int count = PrimeNumber.calc(10);
+ * System.out.println(count);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * 4
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 public class PrimeNumber {
 
     /**
-     * Метод {@code calc(int finish)} рассчитывает количество простых чисел в диапазоне
-     * от 2 до {@code finish} включительно.
+     * Рассчитывает количество простых чисел в диапазоне от 2 до {@code finish} включительно.
      *
      * <p>Число 1 не является простым, поэтому оно не учитывается при подсчете.</p>
      *

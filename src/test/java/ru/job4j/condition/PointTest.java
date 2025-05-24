@@ -4,17 +4,33 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Тест-класс {@code PointTest} предназначен для тестирования методов класса {@link Point}.
- * В частности, для проверки метода {@link Point#distance(Point)} для вычисления Евклидова расстояния
- * между двумя точками и метода {@link Point#distance3d(Point)} для вычисления расстояния между
- * точками в трехмерном пространстве.
- * <p>
- * Для тестирования используются точки с различными координатами, а результаты сравниваются с ожидаемыми значениями.
- * </p>
+ * Класс {@code PointTest} предназначен для модульного тестирования методов класса {@link Point}.
+ *
+ * <p>Проверяются следующие методы:</p>
+ * <ul>
+ *   <li>{@link Point#distance(Point)} — вычисление Евклидова расстояния между двумя точками на плоскости.</li>
+ *   <li>{@link Point#distance3d(Point)} — вычисление расстояния между точками в трёхмерном пространстве.</li>
+ * </ul>
+ *
+ * <p>Тесты используют различные координаты и сравнивают результаты с ожидаемыми значениями с допуском 0.01.</p>
+ *
+ * <p><b>Примеры тестирования:</b></p>
+ * <pre>{@code
+ * Point a = new Point(0, 0);
+ * Point b = new Point(0, 2);
+ * double expected = 2.0;
+ * double output = a.distance(b);
+ * assertThat(output).isEqualTo(expected, withPrecision(0.01));
+ *
+ * Point a = new Point(1, 2, 3);
+ * Point b = new Point(4, 5, 6);
+ * double expected = 5.2;
+ * double output = a.distance3d(b);
+ * assertThat(output).isEqualTo(expected, withPrecision(0.01));
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-04-05
+ * @version 1.4
  */
 class PointTest {
 

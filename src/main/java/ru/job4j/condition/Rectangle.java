@@ -4,30 +4,28 @@ package ru.job4j.condition;
  * Класс {@code Rectangle} предназначен для вычисления диагонали прямоугольника
  * по его длине и ширине с использованием теоремы Пифагора.
  *
- * <p>Формула расчета:</p>
- * <pre>
- *     diagonal = sqrt(length² + width²)
- * </pre>
+ * <p><b>Формула расчета:</b></p>
+ * <pre>{@code
+ * diagonal = sqrt(length^2 + width^2)
+ * }</pre>
  *
- * <p>Пример использования:</p>
- * <pre>
- *     double result = Rectangle.diagonal(3, 4); 5.0
- * </pre>
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * double result = Rectangle.diagonal(3, 4);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * Diagonal of rectangle with length 3 and width 4 is 5.0
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-15
+ * @version 1.2
  */
 public class Rectangle {
 
     /**
-     * Метод {@code diagonal(double length, double width)} вычисляет длину диагонали прямоугольника
-     * по его длине и ширине.
-     *
-     * <p>Используется теорема Пифагора:</p>
-     * <pre>
-     *     diagonal = sqrt(length² + width²)
-     * </pre>
+     * Вычисляет длину диагонали прямоугольника по его длине и ширине.
      *
      * @param length Длина прямоугольника (должна быть положительной).
      * @param width  Ширина прямоугольника (должна быть положительной).
@@ -38,12 +36,7 @@ public class Rectangle {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #diagonal(double, double)}.
-     *
-     * <p>Пример вывода:</p>
-     * <pre>
-     *     Diagonal of rectangle with length 3 and width 4 is 5.0
-     * </pre>
+     * Демонстрирует работу метода {@link #diagonal(double, double)}.
      *
      * @param args Аргументы командной строки (не используются).
      */

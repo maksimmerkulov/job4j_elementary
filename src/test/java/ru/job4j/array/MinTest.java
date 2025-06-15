@@ -4,15 +4,21 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code MinTest} предназначен для проверки метода {@link Min#findMin(int[])} в классе {@link Min}.
- * <p>
- * Проверяет корректность работы метода на различных входных данных, таких как минимальный элемент в начале,
- * середине и конце массива.
- * </p>
+ * Класс {@code MinTest} предназначен для проверки метода {@link Min#findMin(int[])} в классе {@link Min}.
+ *
+ * <p>Проверяет корректность работы метода на различных входных данных, таких как минимальный элемент в начале,
+ * середине и конце массива.</p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] array = new int[] {0, 5, 10};
+ * int result = Min.findMin(array);
+ * int expected = 0;
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
  * @version 1.2
- * @since 2025-02-28
  */
 public class MinTest {
 

@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code RollBackArrayTest} предназначен для проверки метода
+ * Класс {@code RollBackArrayTest} предназначен для проверки метода
  * {@link RollBackArray#rollback(int[])} в классе {@link RollBackArray}.
  *
- * <p>Данный класс содержит тесты для проверки работы метода {@link RollBackArray#rollback(int[])}
- * на различных входных данных.</p>
+ * <p>Данный класс содержит тесты для проверки работы метода
+ * {@link RollBackArray#rollback(int[])} на различных входных данных.</p>
  *
- * <p>Тестируется:</p>
+ * <p><b>Тестируется:</b></p>
  * <ul>
  *     <li>Пустой массив</li>
  *     <li>Массив из одного элемента</li>
@@ -18,9 +18,16 @@ import static org.assertj.core.api.Assertions.assertThat;
  *     <li>Массив, состоящий из одинаковых элементов</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] input = new int[] {};
+ * int[] expected = new int[] {};
+ * int[] result = RollBackArray.rollback(input);
+ * assertThat(result).containsExactly(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-26
+ * @version 1.2
  */
 public class RollBackArrayTest {
 

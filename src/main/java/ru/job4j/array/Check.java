@@ -5,29 +5,33 @@ package ru.job4j.array;
  *
  * <p>Методы класса позволяют определить, являются ли все элементы массива {@code boolean} идентичными.</p>
  *
- * <p>Пример использования:</p>
- * <pre>
- *     boolean[] data = {true, true, true};
- *     boolean result = Check.mono(data); true
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * boolean[] data1 = {true, true, true};
+ * boolean result1 = Check.mono(data1);
  *
- *     boolean[] data2 = {true, false, true};
- *     boolean result2 = Check.mono(data2); false
- * </pre>
+ * boolean[] data2 = {true, false, true};
+ * boolean result2 = Check.mono(data2);
+ * }</pre>
+ *
+ * <p><b>Результат проверки:</b></p>
+ * <pre>{@code
+ * result1 = true
+ * result2 = false
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-27
+ * @version 1.3
  */
 public class Check {
 
     /**
-     * Метод {@code mono(boolean[] data)} проверяет, все ли элементы массива имеют одинаковое значение
-     * (либо {@code true}, либо {@code false}).
+     * Проверяет, все ли элементы массива имеют одинаковое значение.
      *
      * <p>Метод сравнивает первый элемент массива со всеми остальными.</p>
      *
      * @param data Массив булевых значений (гарантированно содержит хотя бы один элемент).
-     * @return {@code true}, если все элементы одинаковы, иначе {@code false}.
+     * @return Значение {@code true}, если все элементы одинаковы, иначе {@code false}.
      */
     public static boolean mono(boolean[] data) {
         boolean result = true;

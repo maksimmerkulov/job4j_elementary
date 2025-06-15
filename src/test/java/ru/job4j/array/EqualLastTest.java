@@ -4,15 +4,23 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code EqualLastTest} для проверки метода {@link EqualLast#check(int[], int[])}
+ * Класс {@code EqualLastTest} для проверки метода {@link EqualLast#check(int[], int[])}
  * в классе {@link EqualLast}.
  *
  * <p>Тестируется корректность определения совпадения последних элементов двух массивов.</p>
+ *
  * <p>Проверяются различные случаи, включая пустые массивы.</p>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] left = {1, 2, 3};
+ * int[] right = {5, 4, 3};
+ * boolean result = EqualLast.check(left, right);
+ * assertThat(result).isTrue();
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class EqualLastTest {
 

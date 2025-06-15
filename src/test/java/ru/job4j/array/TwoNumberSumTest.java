@@ -4,16 +4,24 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code TwoNumberSumTest} предназначен для проверки метода
+ * Класс {@code TwoNumberSumTest} предназначен для проверки метода
  * {@link TwoNumberSum#getIndexes(int[], int)} в классе {@link TwoNumberSum}.
- * <p>
- * Класс проверяет различные случаи, когда метод поиска индексов двух чисел, сумма которых равна целевому значению,
- * должен работать корректно: наличие одинаковых чисел, отрицательных чисел, а также сценарии, когда сумма не найдена.
- * </p>
+ *
+ * <p>Класс проверяет различные случаи, когда метод поиска индексов двух чисел,
+ * сумма которых равна целевому значению, должен работать корректно:
+ * наличие одинаковых чисел, отрицательных чисел, а также сценарии, когда сумма не найдена.</p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] array = {5, 5};
+ * int target = 10;
+ * int[] result = TwoNumberSum.getIndexes(array, target);
+ * int[] expected = {0, 1};
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-02
+ * @version 1.2
  */
 class TwoNumberSumTest {
 

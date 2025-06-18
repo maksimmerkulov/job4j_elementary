@@ -4,20 +4,17 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Тест-класс {@code MainTest} предназначен для проверки работы основного функционала приложения.
+ * Класс {@code MainTest} предназначен для проверки работы основного функционала приложения.
  *
- * <p>Пример простого теста:</p>
- * <pre>
- *     int expected = 1;
- *     int result = 1;
- *     assertThat(result).isEqualTo(expected);
- * </pre>
- *
- * <p>Данный тест служит примером базовой проверки ожидаемого результата.</p>
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int expected = 1;
+ * int result = 1;
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.0
- * @since 2025-02-13
+ * @version 1.1
  */
 public class MainTest {
 
@@ -26,8 +23,8 @@ public class MainTest {
      */
     @Test
     public void whenActionThenResult() {
-        int excepted = 1;
+        int expected = 1;
         int result = 1;
-        assertThat(result).isEqualTo(excepted);
+        assertThat(result).isEqualTo(expected);
     }
 }

@@ -4,7 +4,8 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 /**
- * Тест-класс {@code ConverterTest} содержит тесты для проверки методов конвертации валют в классе {@link Converter}.
+ * Класс {@code ConverterTest} содержит тесты для проверки методов
+ * конвертации валют в классе {@link Converter}.
  *
  * <p>В тестах проверяется корректность выполнения конвертации:</p>
  * <ul>
@@ -14,9 +15,23 @@ import static org.assertj.core.api.Assertions.*;
  *
  * <p>Результаты тестов сравниваются с допустимой погрешностью 0.0001.</p>
  *
+ * <p><b>Примеры тестирования:</b></p>
+ * <pre>{@code
+ * float input = 140;
+ * float expected = 1.4271f;
+ * float output = Converter.rubleToEuro(input);
+ * float value = 0.0001f;
+ * assertThat(output).isEqualTo(expected, withPrecision(value));
+
+ * float input = 180;
+ * float expected = 1.9148f;
+ * float output = Converter.rubleToDollar(input);
+ * float value = 0.0001f;
+ * assertThat(output).isEqualTo(expected, withPrecision(value));
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-13
+ * @version 1.2
  */
 class ConverterTest {
 

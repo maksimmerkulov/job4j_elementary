@@ -2,16 +2,28 @@ package ru.job4j.calculator;
 
 /**
  * Класс {@code Fit} предназначен для вычисления идеального веса для мужчин и женщин.
- * Идеальный вес рассчитывается с использованием роста человека.
+ *
+ * <p>Идеальный вес рассчитывается с использованием роста человека.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ *     short height = 187;
+ *     double man = Fit.manWeight(height);
+ *     System.out.println("Man 187 cm is " + man + " kg");
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * Man 187 cm is 85.0 kg
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-14
+ * @version 1.2
  */
 public class Fit {
 
     /**
-     * Метод {@code manWeight(short height)} вычисляет идеальный вес для мужчины.
+     * Вычисляет идеальный вес для мужчины.
      *
      * @param height Рост в сантиметрах.
      * @return Идеальный вес в килограммах.
@@ -21,7 +33,7 @@ public class Fit {
     }
 
     /**
-     * Метод {@code womanWeight(short height)} вычисляет идеальный вес для женщины.
+     * Вычисляет идеальный вес для женщины.
      *
      * @param height Рост в сантиметрах.
      * @return Идеальный вес в килограммах.
@@ -31,13 +43,7 @@ public class Fit {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует расчет идеального веса для мужчины.
-     * <p>Пример использования:</p>
-     * <pre>
-     *     short height = 187;
-     *     double man = Fit.manWeight(height);
-     *     System.out.println("Man 187 cm is " + man + " kg");
-     * </pre>
+     * Демонстрирует расчет идеального веса для мужчины.
      *
      * @param args Аргументы командной строки (не используются).
      */

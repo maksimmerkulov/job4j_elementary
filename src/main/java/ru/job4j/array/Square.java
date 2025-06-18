@@ -10,20 +10,28 @@ package ru.job4j.array;
  *     <li>Возвращает заполненный массив.</li>
  * </ul>
  *
- * <p>Пример использования:</p>
- * <pre>
- * int[] array = Square.calculate(4);
- * array: [0, 1, 4, 9]
- * </pre>
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * int[] squares = Square.calculate(4);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * 0
+ * 1
+ * 4
+ * 9
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-24
+ * @version 1.3
  */
 public class Square {
 
     /**
-     * Метод {@code calculate(int bound)} заполняет массив квадратами чисел от {@code 0} до {@code bound - 1}.
+     * Заполняет массив квадратами чисел от {@code 0} до {@code bound - 1}.
+     *
+     * <p>Если {@code bound == 0}, будет возвращен пустой массив.</p>
      *
      * @param bound Верхняя граница чисел (не включительно).
      * @return Массив, содержащий квадраты чисел от {@code 0} до {@code bound - 1}.
@@ -37,8 +45,7 @@ public class Square {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #calculate(int)},
-     * выводя результат в консоль.
+     * Демонстрирует работу метода {@link #calculate(int)}.
      *
      * @param args Аргументы командной строки (не используются).
      */

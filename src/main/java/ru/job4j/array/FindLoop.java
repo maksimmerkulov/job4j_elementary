@@ -10,14 +10,28 @@ package ru.job4j.array;
  * </ul>
  * </p>
  *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * int[] array = {5, 10, 3, 7};
+ * int index1 = FindLoop.indexOf(array, 3);
+ * int index2 = FindLoop.indexInRange(array, 10, 1, 3);
+ * int index3 = FindLoop.indexOf(array, 100);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * index1 = 2
+ * index2 = 1
+ * index3 = -1
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-27
+ * @version 1.2
  */
 public class FindLoop {
 
     /**
-     * Метод {@code indexOf(int[] data, int element)} ищет элемент в массиве и возвращает его индекс.
+     * Выполняет поиск элемента в массиве и возвращает его индекс.
      *
      * <p>Поиск выполняется по всему массиву слева направо. Если элемент найден, возвращается его индекс.
      * Если элемент отсутствует в массиве, метод возвращает {@code -1}.</p>
@@ -38,8 +52,7 @@ public class FindLoop {
     }
 
     /**
-     * Метод {@code indexInRange(int[] data, int element, int start, int finish)} ищет элемент в массиве в пределах
-     * заданного диапазона индексов.
+     * Выполняет поиск элемента в массиве в пределах заданного диапазона индексов.
      *
      * <p>Поиск выполняется в границах {@code [start, finish]}. Если элемент найден,
      * возвращается его индекс в массиве. Если элемент отсутствует в указанном диапазоне,

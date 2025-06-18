@@ -4,14 +4,22 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SquareTest} для проверки метода {@link Square#calculate(int)} в классе {@link Square}.
+ * Класс {@code SquareTest} для проверки метода {@link Square#calculate(int)} в классе {@link Square}.
  *
  * <p>Методы тестируют корректность работы алгоритма заполнения массива квадратами чисел.</p>
+ *
  * <p>Проверяется, что метод возвращает массив правильной длины и с ожидаемыми значениями.</p>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int bound = 3;
+ * int[] result = Square.calculate(bound);
+ * int[] expected = new int[] {0, 1, 4};
+ * assertThat(result).containsExactly(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-24
+ * @version 1.3
  */
 class SquareTest {
 

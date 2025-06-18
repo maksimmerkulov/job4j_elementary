@@ -6,23 +6,27 @@ package ru.job4j;
  * <p>Программа выводит две строки:</p>
  * <ul>
  *     <li>Имя студента.</li>
- *     <li>Дату его рождения в формате {@code dd.MM.yyyy}.</li>
+ *     <li>Дату его рождения в формате: {@code dd.MM.yyyy}.</li>
  * </ul>
  *
- * <p>Пример вывода:</p>
- * <pre>
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * StudentInfo.main(new String[0]);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
  * Maksim Merkulov
  * 03.08.1987
- * </pre>
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-12
+ * @version 1.2
  */
 public class StudentInfo {
 
     /**
-     * Метод {@code main(String[] args)} выводит в консоль имя студента и его дату рождения.
+     * Выводит в консоль имя студента и его дату рождения.
      *
      * @param args Аргументы командной строки (не используются).
      */

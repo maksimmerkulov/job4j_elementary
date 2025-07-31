@@ -1,26 +1,18 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code MatrixSum} предназначен для вычисления суммы всех элементов двумерного массива.
- * <p>
- * Основная функциональность:
- * <ul>
- *     <li>Проход по всем элементам двумерного массива.</li>
- *     <li>Суммирование значений элементов массива.</li>
- * </ul>
- * </p>
+ * Calculates the total sum of elements in a multidimensional array.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-28
+ * @version 1.2
  */
 public class MatrixSum {
 
     /**
-     * Метод {@code sum(int[][] array)} вычисляет сумму всех элементов переданного двумерного массива.
+     * Calculates the sum of all elements in the given array.
      *
-     * @param array Двумерный массив целых чисел.
-     * @return Сумма всех элементов массива.
+     * @param array multidimensional array to process
+     * @return total sum of elements
      */
     public static int sum(int[][] array) {
         int result = 0;

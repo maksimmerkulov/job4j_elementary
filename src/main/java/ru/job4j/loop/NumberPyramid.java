@@ -1,32 +1,24 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code NumberPyramid} предназначен для построения числовой пирамиды в консоли.
+ * Draws a symmetrical number pyramid of a specified height.
  *
- * <p>Числовая пирамида строится по следующему принципу:</p>
- * <ul>
- *     <li>Каждая строка содержит возрастающую последовательность чисел от 1 до текущего номера строки.</li>
- *     <li>Затем эта последовательность отображается в обратном порядке (без повторения последнего числа).</li>
- *     <li>Выравнивание пирамиды осуществляется за счет пробелов перед числами.</li>
- * </ul>
+ * <p>Example output for {@code n = 3}:
+ * <pre>{@code
+ *   1
+ *  121
+ * 12321
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-21
+ * @version 1.2
  */
 public class NumberPyramid {
 
     /**
-     * Метод {@code draw(int n)} рисует числовую пирамиду с заданной высотой.
+     * Draws the numeric pyramid of height {@code n} to {@link System#out}.
      *
-     * <p>Пример вывода для {@code n = 3}:</p>
-     * <pre>
-     *   1
-     *  121
-     * 12321
-     * </pre>
-     *
-     * @param n Высота пирамиды (количество строк).
+     * @param n the height of the pyramid; must be positive
      */
     public static void draw(int n) {
         for (int i = 1; i <= n; i++) {
@@ -44,11 +36,9 @@ public class NumberPyramid {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #draw(int)}.
+     * Entry point of the program.
      *
-     * <p>Метод вызывает {@link #draw(int)} дважды: сначала с высотой 3, затем с высотой 5.</p>
-     *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         System.out.println("Number pyramid of height 3:");

@@ -1,42 +1,31 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code ArrayLoop} демонстрирует работу с массивами и циклами.
+ * Demonstrates filling and printing an array using loops.
  *
- * <p>Программа выполняет следующие шаги:</p>
- * <ul>
- *     <li>Создает массив из 5 элементов.</li>
- *     <li>Заполняет массив значениями по формуле {@code y = index * 2 + 3}.</li>
- *     <li>Выводит значения массива в консоль.</li>
- * </ul>
- *
- * <p>Пример вывода:</p>
- * <pre>
+ * <p>Example output:
+ * <pre>{@code
  * 3
  * 5
  * 7
  * 9
  * 11
- * </pre>
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-24
+ * @version 1.3
  */
 public class ArrayLoop {
 
     /**
-     * Метод {@code main(String[] args)} создает массив, заполняет его значениями и выводит в консоль.
+     * Entry point of the program.
      *
-     * <p>Заполнение выполняется с использованием формулы {@code y = index * 2 + 3},
-     * затем значения выводятся с помощью цикла {@code for-each}.</p>
-     *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         int[] numbers = new int[5];
-        for (int index = 0; index < numbers.length; index++) {
-            numbers[index] = index * 2 + 3;
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = i * 2 + 3;
         }
         for (int number : numbers) {
             System.out.println(number);

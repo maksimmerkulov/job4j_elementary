@@ -1,68 +1,59 @@
 package ru.job4j.math;
 
 /**
- * Класс {@code MathFunction} предназначен для выполнения основных математических операций:
- * сложения, вычитания, умножения и деления.
- * Все операции выполняются с использованием чисел типа {@code double}.
- *
- * <p>Пример использования:</p>
- * <pre>
- *     double result1 = MathFunction.sum(10, 20); 30.0
- *     double result2 = MathFunction.subtract(20, 10); 10.0
- *     double result3 = MathFunction.multiply(10, 20); 200.0
- *     double result4 = MathFunction.divide(20, 10); 2.0
- * </pre>
+ * Provides basic mathematical operations.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-13
+ * @version 1.2
  */
 public class MathFunction {
 
     /**
-     * Метод {@code sum(double first, double second)} выполняет сложение двух чисел.
+     * Calculates the sum of two numbers.
      *
-     * @param first  Первое число для сложения.
-     * @param second Второе число для сложения.
-     * @return Сумма двух чисел.
+     * @param first the first operand
+     * @param second the second operand
+     * @return the sum of {@code first} and {@code second}
      */
     public static double sum(double first, double second) {
         return first + second;
     }
 
     /**
-     * Метод {@code subtract(double first, double second)} выполняет вычитание двух чисел.
+     * Calculates the difference between two numbers.
      *
-     * @param first  Уменьшаемое число.
-     * @param second Вычитаемое число.
-     * @return Разность чисел.
+     * @param first the first operand
+     * @param second the second operand
+     * @return the result of subtracting {@code second} from {@code first}
      */
     public static double subtract(double first, double second) {
         return first - second;
     }
 
     /**
-     * Метод {@code multiply(double first, double second)} выполняет умножение двух чисел.
+     * Calculates the product of two numbers.
      *
-     * @param first  Первый множитель.
-     * @param second Второй множитель.
-     * @return Произведение двух чисел.
+     * @param first the first operand
+     * @param second the second operand
+     * @return the product of {@code first} and {@code second}
      */
     public static double multiply(double first, double second) {
         return first * second;
     }
 
     /**
-     * Метод {@code divide(double first, double second)} выполняет деление двух чисел.
+     * Calculates the quotient of two numbers.
      *
-     * @param first  Делимое число.
-     * @param second Делитель.
-     * @return Результат деления.
-     * @throws IllegalArgumentException если второе число (делитель) равно нулю.
+     * @param first the dividend
+     * @param second the divisor
+     * @return the result of dividing {@code first} by {@code second}
+     * @throws IllegalArgumentException if {@code second} is zero
      */
     public static double divide(double first, double second) {
         if (second == 0) {
-            throw new IllegalArgumentException("Ошибка: деление на ноль невозможно!");
+            throw new IllegalArgumentException(
+                    "Division by zero is not allowed"
+            );
         }
         return first / second;
     }

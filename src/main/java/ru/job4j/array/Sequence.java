@@ -1,22 +1,17 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code Sequence} демонстрирует создание и инициализацию двумерного массива размером 3x3.
- * <p>
- * В массиве элементы заполняются последовательными числами от 1 до 9.
- * </p>
+ * Demonstrates manual initialization of a multidimensional array.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class Sequence {
 
     /**
-     * Метод {@code main(String[] args)} создает двумерный массив 3x3 и инициализирует его значениями
-     * от 1 до 9 в порядке следования слева направо и сверху вниз.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         int[][] array = new int[3][3];

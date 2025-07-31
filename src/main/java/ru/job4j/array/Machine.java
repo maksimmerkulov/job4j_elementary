@@ -3,34 +3,21 @@ package ru.job4j.array;
 import java.util.Arrays;
 
 /**
- * Класс {@code Machine} предназначен для расчета сдачи в вендинговом автомате.
- * <p>
- * Используется жадный алгоритм: автомат отдает сдачу монетами наибольшего номинала в первую очередь.
- * Доступные номиналы монет: 10, 5, 2, 1.
- * </p>
- *
- * <p>Примеры работы:</p>
- * <pre>
- *     change(50, 21)  -> {10, 10, 5, 2, 2}
- *     change(100, 63) -> {10, 10, 10, 5, 2}
- *     change(30, 30)  -> {}
- * </pre>
+ * Calculates the change to be returned by a vending machine.
  *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-03-04
+ * @version 1.4
  */
 public class Machine {
 
     /**
-     * Метод {@code change(int money, int price)} рассчитывает сдачу для клиента, используя жадный алгоритм.
-     * <p>
-     * Если сумма внесенных денег меньше стоимости товара, метод вернет пустой массив.
-     * </p>
+     * Calculates the minimum number of coins for the change.
      *
-     * @param money Сумма, внесенная клиентом.
-     * @param price Стоимость товара.
-     * @return Массив монет, необходимых для сдачи (если сдача не требуется, возвращает пустой массив).
+     * <p>Uses greedy algorithm with coin denominations: {@code 10, 5, 2, 1}.
+     *
+     * @param money amount received
+     * @param price price of the item
+     * @return array of coins to return as change
      */
     public static int[] change(int money, int price) {
         int[] coins = {10, 5, 2, 1};

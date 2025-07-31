@@ -1,119 +1,88 @@
 package ru.job4j.array;
 
-import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 /**
- * Тест-класс {@code TwoPointersSquareSortTest} предназначен для проверки методов
- * {@link TwoPointersSquareSort#processArray(int[])}, {@link TwoPointersSquareSort#containsNegative(int[])},
- * {@link TwoPointersSquareSort#reverseArray(int[])} и {@link TwoPointersSquareSort#squareArray(int[])}
- * в классе {@link TwoPointersSquareSort}.
- * <p>
- * Этот класс проверяет корректность работы методов класса {@code TwoPointersSquareSort}, включая обработку массивов
- * с положительными и отрицательными числами, а также проверку правильности развертки и возведения в квадрат элементов.
- * </p>
+ * Tests for the {@link TwoPointersSquareSort} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-24
+ * @version 1.2
  */
-public class TwoPointersSquareSortTest {
+class TwoPointersSquareSortTest {
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])},
-     * когда массив содержит отрицательные числа.
-     * В данном случае происходит разворот массива, а затем возведение каждого элемента в квадрат.
-     */
+    /** Verifies processing of a sorted array containing negative values. */
     @Test
-    public void testProcessArrayWithNegative() {
+    void whenProcessWithNegativeThenSortedSquares() {
         int[] input = {-3, 2, 1};
         int[] expected = {1, 4, 9};
         TwoPointersSquareSort.processArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])},
-     * когда массив не содержит отрицательных чисел.
-     * В данном случае сначала происходит возведение каждого элемента в квадрат, а затем разворот массива.
-     */
+    /** Verifies processing of a sorted array with only positive values. */
     @Test
-    public void testProcessArrayWithoutNegative() {
+    void whenProcessWithoutNegativeThenReversedSquares() {
         int[] input = {1, 2, 3};
         int[] expected = {9, 4, 1};
         TwoPointersSquareSort.processArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])},
-     * проверяя наличие отрицательных чисел в массиве.
-     */
+    /** Verifies detection of negative numbers in the {@code arr}. */
     @Test
-    public void testContainsNegative() {
+    void whenContainsNegative() {
         int[] arrWithNegative = {-1, 0, 1};
         int[] arrWithoutNegative = {1, 2, 3};
-        assertTrue(TwoPointersSquareSort.containsNegative(arrWithNegative));
-        assertFalse(TwoPointersSquareSort.containsNegative(arrWithoutNegative));
+        assertThat(TwoPointersSquareSort.containsNegative(arrWithNegative))
+                .isTrue();
+        assertThat(TwoPointersSquareSort.containsNegative(arrWithoutNegative))
+                .isFalse();
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#reverseArray(int[])},
-     * проверяя корректность разворота массива.
-     */
+    /** Verifies in-place reversal of the {@code int[]} array. */
     @Test
-    public void testReverseArray() {
+    void whenReverseArray() {
         int[] input = {1, 2, 3, 4};
         int[] expected = {4, 3, 2, 1};
         TwoPointersSquareSort.reverseArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#squareArray(int[])},
-     * проверяя возведение каждого элемента массива в квадрат.
-     */
+    /** Verifies in-place squaring of each element in the {@code arr}. */
     @Test
-    public void testSquareArray() {
+    void whenSquareArray() {
         int[] input = {-2, -1, 0, 1, 2};
         int[] expected = {4, 1, 0, 1, 4};
         TwoPointersSquareSort.squareArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])} с пустым массивом.
-     * Ожидается, что результат будет также пустым.
-     */
+    /** Verifies that an empty array is handled correctly. */
     @Test
-    public void testEmptyArray() {
+    void whenEmptyArray() {
         int[] input = {};
         int[] expected = {};
         TwoPointersSquareSort.processArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])} с массивом,
-     * состоящим из одного отрицательного элемента.
-     */
+    /** Verifies processing of a single-element array with a negative value. */
     @Test
-    public void testSingleElementArrayWithNegative() {
+    void whenSingleNegative() {
         int[] input = {-3};
         int[] expected = {9};
         TwoPointersSquareSort.processArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 
-    /**
-     * Тестирует метод {@link TwoPointersSquareSort#processArray(int[])} с массивом,
-     * состоящим из одного положительного элемента.
-     */
+    /** Verifies processing of a single-element array with a positive value. */
     @Test
-    public void testSingleElementArrayWithoutNegative() {
+    void whenSinglePositive() {
         int[] input = {3};
         int[] expected = {9};
         TwoPointersSquareSort.processArray(input);
-        assertArrayEquals(expected, input);
+        assertThat(input).containsExactly(expected);
     }
 }

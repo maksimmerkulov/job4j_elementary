@@ -1,43 +1,20 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Savings} предназначен для вычисления количества лет, необходимых для накопления целевой суммы
- * с учетом ежегодных депозитов и процентной ставки.
- *
- * <p>Этот класс использует метод для расчета времени, необходимого для накопления указанной суммы на счете,
- * принимая во внимание процент, начисляемый ежегодно, и депозиты, которые вносятся каждый год.</p>
- *
- * <p>Метод {@link #years(double, double, double)} моделирует процесс накопления средств
- * с учетом следующих факторов:
- * <ul>
- *     <li>Процент начисляется на текущий баланс, начиная с нулевой суммы.</li>
- *     <li>После начисления процентов добавляется ежегодный депозит.</li>
- *     <li>Этот процесс продолжается до тех пор, пока сумма не превысит или не достигнет заданной целевой суммы.</li>
- * </ul>
- * </p>
+ * Calculates the time required to reach a financial goal.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-21
+ * @version 1.2
  */
 public class Savings {
 
     /**
-     * Метод {@code years(double goal, double annualDeposit, double percent)} рассчитывает количество лет,
-     * которые потребуются для накопления заданной суммы при условии ежегодного депозита и начисления процентов.
+     * Calculates the number of years needed to accumulate the target amount.
      *
-     * <p>Алгоритм работы метода следующий:
-     * <ul>
-     *     <li>Каждый год добавляется ежегодное пополнение вклада.</li>
-     *     <li>Затем начисляются проценты от общей суммы (включая депозит).</li>
-     *     <li>Этот процесс продолжается до тех пор, пока накопленная сумма не станет больше или равной целевой.</li>
-     * </ul>
-     * </p>
-     *
-     * @param goal          Целевая сумма, которую необходимо накопить.
-     * @param annualDeposit Ежегодное пополнение вклада.
-     * @param percent       Процентная ставка по вкладу (ежегодная).
-     * @return Количество лет, необходимых для накопления целевой суммы.
+     * @param goal the target amount to save
+     * @param annualDeposit the amount deposited each year
+     * @param percent the annual interest rate as a percentage
+     * @return the number of years required
      */
     public static int years(double goal, double annualDeposit, double percent) {
         int years = 0;

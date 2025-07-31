@@ -1,18 +1,25 @@
 package ru.job4j;
 
 /**
- * Класс {@code Multiple} предназначен для вывода результатов умножения числа 1 на числа от 2 до 9.
+ * Prints a multiplication table for the number {@code 1}.
+ *
+ * <p>Example output:
+ * <pre>{@code
+ * 1 * 2 = 2
+ * 1 * 3 = 3
+ * ...
+ * 1 * 9 = 9
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-12
+ * @version 1.2
  */
 public class Multiple {
 
     /**
-     * Метод {@code main(String[] args)} выводит в консоль результаты умножения числа 1 на числа от 2 до 9.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         System.out.println("1 * 2 = 2");

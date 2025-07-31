@@ -1,32 +1,18 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code CheckPrimeNumberTest} предназначен для проверки метода {@link CheckPrimeNumber#check(int)}
- * в классе {@link CheckPrimeNumber}.
- *
- * <p>Этот класс тестирует алгоритм определения простого числа. Простое число — это натуральное число,
- * которое больше 1 и не имеет других делителей, кроме 1 и самого себя.</p>
- *
- * <p>В тестах покрываются различные случаи:</p>
- * <ul>
- *     <li>Проверка минимального простого числа ({@code 2}).</li>
- *     <li>Проверка типичных простых чисел ({@code 5, 11, 97}).</li>
- *     <li>Проверка составных чисел ({@code 4, 9, 25, 49}).</li>
- *     <li>Проверка граничного случая ({@code 1}), который не является простым.</li>
- * </ul>
+ * Tests for the {@link CheckPrimeNumber} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 class CheckPrimeNumberTest {
 
-/**
- * Тест проверяет, что число 5 является простым.
- */
+    /** Verifies that {@code 5} is correctly identified as a prime number. */
     @Test
     void when5ThenTrue() {
         int number = 5;
@@ -34,9 +20,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isTrue();
     }
 
-    /**
-     * Тест проверяет, что число 4 не является простым.
-     */
+    /** Verifies that {@code 4} is correctly identified as a non-prime. */
     @Test
     void when4ThenFalse() {
         int number = 4;
@@ -44,9 +28,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Тест проверяет, что число 1 не является простым.
-     */
+    /** Verifies that {@code 1} is correctly identified as a non-prime. */
     @Test
     void when1ThenFalse() {
         int number = 1;
@@ -54,9 +36,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Тест проверяет, что число 11 является простым.
-     */
+    /** Verifies that {@code 11} is correctly identified as a prime number. */
     @Test
     void when11ThenTrue() {
         int number = 11;
@@ -64,9 +44,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isTrue();
     }
 
-    /**
-     * Тест проверяет, что число 25 не является простым.
-     */
+    /** Verifies that {@code 25} is correctly identified as a non-prime. */
     @Test
     void when25ThenFalse() {
         int number = 25;
@@ -74,9 +52,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Тест проверяет, что число 9 не является простым.
-     */
+    /** Verifies that {@code 9} is correctly identified as a non-prime. */
     @Test
     void when9ThenFalse() {
         int number = 9;
@@ -84,9 +60,7 @@ class CheckPrimeNumberTest {
         assertThat(result).isFalse();
     }
 
-    /**
-     * Тест проверяет, что число 49 не является простым.
-     */
+    /** Verifies that {@code 49} is correctly identified as a non-prime. */
     @Test
     void when49ThenFalse() {
         int number = 49;

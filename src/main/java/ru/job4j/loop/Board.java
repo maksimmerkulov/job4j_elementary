@@ -1,33 +1,25 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Board} предназначен для рисования шахматной доски в консоли.
+ * Paints a checkerboard pattern in the console.
  *
- * <p>Доска представляется в виде сетки, где затемненные клетки обозначены символом {@code 'X'},
- * а светлые клетки — пробелом. Чередование клеток соответствует шахматному порядку.</p>
- *
- * <p>Метод {@link #paint(int, int)} принимает параметры ширины и высоты доски и выводит ее в консоль.</p>
- *
- * <p>Пример работы метода {@code paint(3, 3)}:</p>
- * <pre>
+ * <p>Example output for {@code 3x3} board:
+ * <pre>{@code
  * X X
  *  X
  * X X
- * </pre>
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-24
+ * @version 1.2
  */
 public class Board {
 
     /**
-     * Метод {@code paint(int width, int height)} рисует шахматную доску заданной ширины и высоты.
+     * Paints a board with specified width and height.
      *
-     * <p>Чередование цветов клеток достигается путем проверки четности суммы индексов строки и столбца.</p>
-     *
-     * @param width  Ширина доски (количество столбцов).
-     * @param height Высота доски (количество строк).
+     * @param width board width
+     * @param height board height
      */
     public static void paint(int width, int height) {
         for (int row = 0; row < height; row++) {
@@ -43,9 +35,9 @@ public class Board {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #paint(int, int)}.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         paint(3, 3);

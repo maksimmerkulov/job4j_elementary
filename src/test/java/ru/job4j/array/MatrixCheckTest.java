@@ -1,29 +1,23 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code MatrixCheckTest} предназначен для проверки методов
- * {@link MatrixCheck#monoHorizontal(char[][], int)},
- * {@link MatrixCheck#monoVertical(char[][], int)},
- * {@link MatrixCheck#extractDiagonal(char[][])}
- * и {@link MatrixCheck#isWin(char[][])} в классе {@link MatrixCheck}.
- *
- * <p>Эти тесты проверяют корректность работы с двумерными массивами символов.</p>
+ * Tests for the {@link MatrixCheck} class.
  *
  * @author Maksim Merkulov
- * @version 1.4
- * @since 2025-03-01
+ * @version 1.5
  */
-public class MatrixCheckTest {
+class MatrixCheckTest {
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#monoHorizontal(char[][], int)}
-     * правильно определяет строку, содержащую только символы 'X'.
+     * Verifies that {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * returns {@code true} for a fully filled row with {@code 'X'}.
      */
     @Test
-    public void whenHasMonoHorizontal() {
+    void whenHasMonoHorizontal() {
         char[][] input = {
                 {' ', ' ', ' '},
                 {'X', 'X', 'X'},
@@ -35,11 +29,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#monoHorizontal(char[][], int)}
-     * корректно определяет строку, не состоящую только из символов 'X'.
+     * Verifies that {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * returns {@code false} if the row is not fully filled.
      */
     @Test
-    public void whenHasNotMonoHorizontal() {
+    void whenHasNotMonoHorizontal() {
         char[][] input = {
                 {'X', ' ', ' '},
                 {'X', 'X', ' '},
@@ -51,11 +45,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#monoVertical(char[][], int)}
-     * правильно определяет колонку, содержащую только символы 'X'.
+     * Verifies that {@link MatrixCheck#monoVertical(char[][], int)}
+     * returns {@code true} for a fully filled column with {@code 'X'}.
      */
     @Test
-    public void whenHasMonoVertical() {
+    void whenHasMonoVertical() {
         char[][] input = {
                 {' ', ' ', 'X'},
                 {' ', ' ', 'X'},
@@ -67,11 +61,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#monoVertical(char[][], int)}
-     * корректно определяет колонку, не состоящую только из символов 'X'.
+     * Verifies that {@link MatrixCheck#monoVertical(char[][], int)}
+     * returns {@code false} if the column is not fully filled.
      */
     @Test
-    public void whenHasNotMonoVertical() {
+    void whenHasNotMonoVertical() {
         char[][] input = {
                 {' ', 'X', 'X'},
                 {' ', 'X', 'X'},
@@ -83,11 +77,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
-     * корректно извлекает диагональ, содержащую только символы 'X'.
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * correctly returns the main diagonal of the matrix.
      */
     @Test
-    public void whenDiagonalFullX() {
+    void whenDiagonalFullX() {
         char[][] input = {
                 {'X', ' ', ' '},
                 {' ', 'X', ' '},
@@ -99,11 +93,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
-     * корректно извлекает диагональ, содержащую только символы '1'.
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * correctly returns the main diagonal when all elements are {@code '1'}.
      */
     @Test
-    public void whenDiagonalFullOne() {
+    void whenDiagonalFullOne() {
         char[][] input = {
                 {'1', ' ', ' '},
                 {' ', '1', ' '},
@@ -115,11 +109,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#extractDiagonal(char[][])}
-     * корректно извлекает диагональ, содержащую различные символы.
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * correctly returns the main diagonal when elements are mixed.
      */
     @Test
-    public void whenDiagonalMix() {
+    void whenDiagonalMix() {
         char[][] input = {
                 {'X', ' ', ' '},
                 {' ', 'Y', ' '},
@@ -131,11 +125,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
-     * правильно определяет выигрышную ситуацию по вертикали.
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code true}
+     * for a vertical winning line.
      */
     @Test
-    public void whenDataMonoByTrueThenTrue() {
+    void whenDataMonoByTrueThenTrue() {
         char[][] input = {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
@@ -148,11 +142,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
-     * правильно определяет отсутствие выигрышной ситуации по вертикали.
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code false}
+     * if no winning line exists.
      */
     @Test
-    public void whenDataNotMonoByTrueThenFalse() {
+    void whenDataNotMonoByTrueThenFalse() {
         char[][] input = {
                 {' ', ' ', 'X', ' ', ' '},
                 {' ', ' ', 'X', ' ', ' '},
@@ -165,11 +159,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
-     * правильно определяет выигрышную ситуацию по горизонтали.
+     * Verifies {@link MatrixCheck#isWin(char[][])} returns {@code true}
+     * for a horizontal winning line.
      */
     @Test
-    public void whenDataHMonoByTrueThenTrue() {
+    void whenDataHMonoByTrueThenTrue() {
         char[][] input = {
                 {' ', ' ', ' ', ' ', ' '},
                 {' ', ' ', ' ', ' ', ' '},
@@ -182,11 +176,11 @@ public class MatrixCheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link MatrixCheck#isWin(char[][])}
-     * корректно определяет отсутствие выигрышной ситуации на диагонали.
+     * Verifies {@link MatrixCheck#isWin(char[][])} returns {@code false}
+     * for a diagonal-only filled matrix without full row or column.
      */
     @Test
-    public void whenDataDiagMonoIsTrueThenFalse() {
+    void whenDataDiagMonoIsTrueThenFalse() {
         char[][] input = {
                 {'X', ' ', ' ', ' ', ' '},
                 {' ', 'X', ' ', ' ', ' '},

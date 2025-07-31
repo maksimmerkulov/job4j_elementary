@@ -1,28 +1,20 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тестовый класс {@code CounterTest} для проверки методов суммирования чисел в классе {@link Counter}.
- *
- * <p>Проверяются методы:</p>
- * <ul>
- *     <li>{@link Counter#sum(int, int)} — вычисляет сумму всех чисел в заданном диапазоне.</li>
- *     <li>{@link Counter#sumByEven(int, int)} — вычисляет сумму всех четных чисел в диапазоне.</li>
- * </ul>
- *
- * <p>Тесты покрывают различные граничные случаи, включая отрицательные значения и неупорядоченные границы.</p>
+ * Tests for the {@link Counter} class.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-20
+ * @version 1.3
  */
 class CounterTest {
 
     /**
-     * Проверяет вычисление суммы чисел от 0 до 10.
-     * Ожидаемый результат: 55.
+     * Verifies {@link Counter#sum(int, int)}
+     * with range {@code 0} to {@code 10}.
      */
     @Test
     void whenSumFrom0To10Then55() {
@@ -34,8 +26,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы чисел от 3 до 8.
-     * Ожидаемый результат: 33.
+     * Verifies {@link Counter#sum(int, int)}
+     * with range {@code 3} to {@code 8}.
      */
     @Test
     void whenSumFrom3To8Then33() {
@@ -47,8 +39,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы чисел в случае, если начальное и конечное число равны 1.
-     * Ожидаемый результат: 1.
+     * Verifies {@link Counter#sum(int, int)}
+     * with range {@code 1} to {@code 1}.
      */
     @Test
     void whenSumFrom1To1Then1() {
@@ -60,8 +52,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы чисел от -5 до 10.
-     * Ожидаемый результат: 40.
+     * Verifies {@link Counter#sum(int, int)}
+     * with range {@code -5} to {@code 10}.
      */
     @Test
     void whenSumFromMinus5To10Then40() {
@@ -73,8 +65,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет случай, когда начальное число больше конечного (10 > 1).
-     * Ожидаемый результат: 0.
+     * Verifies {@link Counter#sum(int, int)}
+     * when {@code start} exceeds {@code finish}.
      */
     @Test
     void whenStartGreaterThanFinishThen0() {
@@ -86,12 +78,12 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы четных чисел от 0 до 10.
-     * Ожидаемый результат: 30.
+     * Verifies {@link Counter#sumByEven(int, int)}
+     * with range {@code 1} to {@code 10}.
      */
     @Test
-    void whenSumEvenNumbersFromZeroToTenThenThirty() {
-        int start = 0;
+    void whenSumEvenNumbersFromOneToTenThenThirty() {
+        int start = 1;
         int finish = 10;
         int result = Counter.sumByEven(start, finish);
         int expected = 30;
@@ -99,8 +91,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы четных чисел от 3 до 8.
-     * Ожидаемый результат: 18.
+     * Verifies {@link Counter#sumByEven(int, int)}
+     * with range {@code 3} to {@code 8}.
      */
     @Test
     void whenSumEvenNumbersFromThreeToEightThenEighteen() {
@@ -112,8 +104,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы четных чисел в случае, если диапазон состоит из одного нечетного числа (1).
-     * Ожидаемый результат: 0.
+     * Verifies {@link Counter#sumByEven(int, int)}
+     * with range {@code 1} to {@code 1}.
      */
     @Test
     void whenSumEvenNumbersFromOneToOneThenZero() {
@@ -125,8 +117,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы четных чисел от -5 до 10.
-     * Ожидаемый результат: 24.
+     * Verifies {@link Counter#sumByEven(int, int)}
+     * with range {@code -5} to {@code 10}.
      */
     @Test
     void whenSumEvenNumbersFromMinusFiveToTenThenTwentyFour() {
@@ -138,8 +130,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет случай, когда начальное число больше конечного (10 > 1).
-     * Ожидаемый результат: 0.
+     * Verifies {@link Counter#sumByEven(int, int)}
+     * when {@code start} exceeds {@code finish}.
      */
     @Test
     void whenSumEvenNumbersFromTenToOneThenZero() {

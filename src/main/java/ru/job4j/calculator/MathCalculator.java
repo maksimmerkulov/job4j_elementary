@@ -3,37 +3,27 @@ package ru.job4j.calculator;
 import static ru.job4j.math.MathFunction.*;
 
 /**
- * Класс {@code MathCalculator} предназначен для выполнения математических вычислений,
- * используя методы из класса {@link ru.job4j.math.MathFunction}.
+ * Provides complex mathematical calculations by combining basic operations.
  *
- * <p>
- * Этот класс выполняет операции сложения, вычитания, умножения и деления для двух или более чисел.
- * Также реализованы методы, которые комбинируют эти операции.
- * </p>
- *
- * <p>Пример использования:</p>
- * <pre>
- *     double result1 = MathCalculator.sumAndMultiply(10, 20);
- *     double result2 = MathCalculator.subtractAndDivide(100, 20);
- *     double totalResult = MathCalculator.calculateTotal(10, 20, 100, 20);
- * </pre>
+ * <p>Example output:
+ * <pre>{@code
+ * Result of sum and multiply: 230.0
+ * Result of subtract and divide: 85.0
+ * Total result of all operations: 315.0
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-13
+ * @version 1.2
+ * @see ru.job4j.math.MathFunction
  */
 public class MathCalculator {
 
     /**
-     * Метод {@code sumAndMultiply(double first, double second)} вычисляет сумму сложения и произведения двух чисел.
+     * Calculates the sum of addition and multiplication results.
      *
-     * <p>
-     * Выполняет два действия: сначала суммирует числа, затем умножает их и возвращает сумму результатов.
-     * </p>
-     *
-     * @param first  Первое число для сложения и умножения.
-     * @param second Второе число для сложения и умножения.
-     * @return Сумма результата сложения и произведения двух чисел.
+     * @param first the first operand
+     * @param second the second operand
+     * @return the sum of addition and multiplication results
      */
     public static double sumAndMultiply(double first, double second) {
         return sum(first, second)
@@ -41,16 +31,11 @@ public class MathCalculator {
     }
 
     /**
-     * Метод {@code subtractAndDivide(double first, double second)} вычисляет сумму разности и деления двух чисел.
+     * Calculates the sum of subtraction and division results.
      *
-     * <p>
-     * Выполняет два действия: сначала вычитает второе число из первого, затем делит первое число на второе.
-     * Возвращает сумму этих двух результатов.
-     * </p>
-     *
-     * @param first  Первое число.
-     * @param second Второе число.
-     * @return Сумма разности и деления (если second ≠ 0).
+     * @param first the first operand
+     * @param second the second operand
+     * @return the sum of subtraction and division results
      */
     public static double subtractAndDivide(double first, double second) {
         return subtract(first, second)
@@ -58,52 +43,35 @@ public class MathCalculator {
     }
 
     /**
-     * Метод {@code calculateTotal(double first, double second, double third, double fourth)} вычисляет сумму всех
-     * операций: сложения, умножения, вычитания и деления.
+     * Calculates the total result of all operations.
      *
-     * <p>
-     * Выполняет следующие операции:
-     * <ul>
-     *     <li>Суммирует первые два числа</li>
-     *     <li>Умножает первые два числа</li>
-     *     <li>Вычитает третье число из четвертого</li>
-     *     <li>Делит третье число на четвертое</li>
-     * </ul>
-     * Возвращает общую сумму всех операций.
-     * </p>
-     *
-     * @param first  Первое число (для сложения и умножения).
-     * @param second Второе число (для сложения и умножения).
-     * @param third  Третье число (для вычитания и деления).
-     * @param fourth Четвертое число (для вычитания и деления).
-     * @return Общая сумма всех операций.
+     * @param first the first operand
+     * @param second the second operand
+     * @param third the third operand
+     * @param fourth the fourth operand
+     * @return the total sum
      */
-    public static double calculateTotal(double first, double second, double third, double fourth) {
+    public static double calculateTotal(double first, double second,
+                                        double third, double fourth) {
         return sumAndMultiply(first, second)
                 + subtractAndDivide(third, fourth);
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу всех методов класса.
+     * Entry point of the program.
      *
-     * <p>Пример вывода:</p>
-     * <pre>
-     *     Результат расчета суммы сложения и произведения двух чисел равен: 610.0
-     *     Результат расчета суммы разности и деления двух чисел равен: 85.0
-     *     Результат расчета суммы всех операций равен: 695.0
-     * </pre>
-     *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
-        double result1 = sumAndMultiply(10, 20);
-        System.out.println("Результат расчета суммы сложения и произведения двух чисел равен: "
-                + result1);
-        double result2 = subtractAndDivide(100, 20);
-        System.out.println("Результат расчета суммы разности и деления двух чисел равен: "
-                + result2);
-        double totalResult = calculateTotal(10, 20, 100, 20);
-        System.out.println("Результат расчета суммы всех операций равен: "
-                + totalResult);
+        System.out.println(
+                "Result of sum and multiply: " + sumAndMultiply(10, 20)
+        );
+        System.out.println(
+                "Result of subtract and divide: " + subtractAndDivide(100, 20)
+        );
+        System.out.println(
+                "Total result of all operations: "
+                        + calculateTotal(10, 20, 100, 20)
+        );
     }
 }

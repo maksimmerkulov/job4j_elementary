@@ -1,33 +1,26 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code AlgoArray} демонстрирует сортировку массива методом ручных перестановок.
+ * Demonstrates manual sorting of an array by swapping elements.
  *
- * <p>В данном примере элементы массива меняются местами вручную без использования стандартных алгоритмов сортировки.
- * Итоговый массив отсортирован по возрастанию.</p>
- *
- * <p>Исходный массив: {5, 3, 2, 1, 4}</p>
- * <p>Результат после перестановок: {1, 2, 3, 4, 5}</p>
- *
- * <p>Пример вывода:</p>
- * <pre>
+ * <p>Example output:
+ * <pre>{@code
  * 1
  * 2
  * 3
  * 4
  * 5
- * </pre>
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-25
+ * @version 1.3
  */
 public class AlgoArray {
 
     /**
-     * Метод {@code main(String[] args)} выполняет сортировку массива по возрастанию.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         int[] array = new int[] {5, 3, 2, 1, 4};
@@ -40,8 +33,8 @@ public class AlgoArray {
         temp = array[3];
         array[3] = array[4];
         array[4] = temp;
-        for (int element : array) {
-            System.out.println(element);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
     }
 }

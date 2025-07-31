@@ -1,36 +1,30 @@
 package ru.job4j.converter;
 
 /**
- * Класс {@code Converter} предоставляет методы для конвертации валют.
- * В частности, выполняет конвертацию из рублей в евро и доллары.
- * <p>
- * Конвертация осуществляется по фиксированным курсам:
- * 1 евро = 98.10 рублей и 1 доллар = 94 рубля.
- * </p>
+ * Currency converter utility class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-13
+ * @version 1.2
  */
 public class Converter {
 
     /**
-     * Метод {@code rubleToEuro(float value)} выполняет конвертацию рублей в евро.
+     * Converts rubles to euros.
      *
-     * @param value Сумма в рублях, которую необходимо конвертировать.
-     * @return Сумма в евро.
+     * @param value amount in rubles
+     * @return amount in euros
      */
-    public static float rubleToEuro(float value) {
-        return value / 98.10f;
+    public static double rubleToEuro(double value) {
+        return value / 90;
     }
 
     /**
-     * Метод {@code rubleToDollar(float value)} выполняет конвертацию рублей в доллары.
+     * Converts rubles to dollars.
      *
-     * @param value Сумма в рублях, которую необходимо конвертировать.
-     * @return Сумма в долларах.
+     * @param value amount in rubles
+     * @return amount in dollars
      */
-    public static float rubleToDollar(float value) {
-        return value / 94;
+    public static double rubleToDollar(double value) {
+        return value / 75;
     }
 }

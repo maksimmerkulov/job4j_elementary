@@ -1,49 +1,50 @@
 package ru.job4j.calculator;
 
 /**
- * Класс {@code Fit} предназначен для вычисления идеального веса для мужчин и женщин.
- * Идеальный вес рассчитывается с использованием роста человека.
+ * Calculates ideal weight for men and women.
+ *
+ * <p>Example output:
+ * <pre>{@code
+ * Man 187 cm is 100.05 kg
+ * Woman 162 cm is 59.8 kg
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-14
+ * @version 1.2
  */
 public class Fit {
 
     /**
-     * Метод {@code manWeight(short height)} вычисляет идеальный вес для мужчины.
+     * Calculates ideal weight for a man based on height.
      *
-     * @param height Рост в сантиметрах.
-     * @return Идеальный вес в килограммах.
+     * @param height height in centimeters
+     * @return ideal weight in kilograms
      */
     public static double manWeight(short height) {
         return (height - 100) * 1.15;
     }
 
     /**
-     * Метод {@code womanWeight(short height)} вычисляет идеальный вес для женщины.
+     * Calculates ideal weight for a woman based on height.
      *
-     * @param height Рост в сантиметрах.
-     * @return Идеальный вес в килограммах.
+     * @param height height in centimeters
+     * @return ideal weight in kilograms
      */
     public static double womanWeight(short height) {
         return (height - 110) * 1.15;
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует расчет идеального веса для мужчины.
-     * <p>Пример использования:</p>
-     * <pre>
-     *     short height = 187;
-     *     double man = Fit.manWeight(height);
-     *     System.out.println("Man 187 cm is " + man + " kg");
-     * </pre>
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
-        short height = 187;
-        double man = Fit.manWeight(height);
+        short manHeight = 187;
+        short womanHeight = 162;
+        double man = Fit.manWeight(manHeight);
+        double woman = Fit.womanWeight(womanHeight);
         System.out.println("Man 187 cm is " + man + " kg");
+        System.out.println("Woman 162 cm is " + woman + " kg");
     }
 }

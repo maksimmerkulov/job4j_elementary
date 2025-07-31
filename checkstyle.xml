@@ -5,7 +5,7 @@
 
 <module name="Checker">
 
-    <!--Расширение файла должно быть java, properties, xml-->
+    <!-- Allowed file extensions: java, properties, xml -->
     <property name="fileExtensions" value="java, properties, xml"/>
 
     <!-- Checks for Size Violations.                    -->

@@ -1,35 +1,20 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code MinDiapason} предназначен для поиска минимального значения
- * в заданном диапазоне индексов массива.
- *
- * <p>Метод данного класса позволяет найти минимальное значение в массиве
- * на основе диапазона индексов, указанного пользователем.</p>
+ * Finds the minimum value within a specific range of an array.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class MinDiapason {
 
     /**
-     * Метод {@code findMin(int[] array, int start, int finish)} находит минимальное значение в массиве
-     * в пределах указанного диапазона индексов (включительно).
+     * Finds the minimum element between {@code start} and {@code finish} indices.
      *
-     * <p>Этот метод позволяет выбрать подмассив из основного массива, начиная с индекса {@code start}
-     * и заканчивая индексом {@code finish}, и вернуть минимальное значение среди этих элементов.</p>
-     *
-     * @param array  Входной массив, в котором выполняется поиск минимального значения.
-     * @param start  Начальный индекс диапазона (включительно), с которого начинается поиск.
-     * @param finish Конечный индекс диапазона (включительно), на котором заканчивается поиск.
-     * @return Минимальное значение в указанном диапазоне индексов.
-     *
-     * <p>Пример использования:</p>
-     * <pre>
-     * int[] numbers = {10, 20, 30, 5, 15};
-     * int minValue = MinDiapason.findMin(numbers, 1, 3); minValue будет равно 5
-     * </pre>
+     * @param array array to process
+     * @param start start index of the range
+     * @param finish end index of the range
+     * @return the minimum value found in the range
      */
     public static int findMin(int[] array, int start, int finish) {
         int min = array[start];

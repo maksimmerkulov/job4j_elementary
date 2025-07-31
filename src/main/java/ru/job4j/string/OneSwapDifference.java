@@ -1,36 +1,21 @@
 package ru.job4j.string;
 
 /**
- * Класс {@code OneSwapDifference} проверяет, можно ли получить второе слово из первого,
- * если в первом слове поменять местами ровно два символа.
- *
- * <p>Сравнение происходит по порядку: выполняется поиск позиций, где символы различаются.
- * Если таких позиций ровно две — символы в этих позициях меняются и результат сравнивается повторно.</p>
- *
- * <p><b>Пример использования:</b></p>
- * <pre>{@code
- * boolean result = OneSwapDifference.canTransform("abc", "acb");
- * System.out.println(result);
- * }</pre>
- *
- * <p><b>Пример вывода:</b></p>
- * <pre>{@code
- * true
- * }</pre>
+ * Provides utility methods for string transformations.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class OneSwapDifference {
 
     /**
-     * Проверяет, можно ли получить {@code word2}, поменяв в {@code word1} местами ровно два символа.
+     * Checks if {@code word1} can be transformed into {@code word2} by swapping
+     * exactly two characters in {@code word1}.
      *
-     * <p>Если строки разной длины — сразу возвращается {@code false}.</p>
-     *
-     * @param word1 Первое слово.
-     * @param word2 Второе слово.
-     * @return {@code true}, если достаточно одной перестановки двух символов, иначе {@code false}
+     * @param word1 the first string to compare
+     * @param word2 the second string to compare
+     * @return {@code true} if exactly one swap makes strings equal,
+     *         {@code false} otherwise
      */
     public static boolean canTransform(String word1, String word2) {
         if (word1.length() != word2.length()) {

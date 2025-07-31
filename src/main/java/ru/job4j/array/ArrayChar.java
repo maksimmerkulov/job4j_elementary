@@ -1,32 +1,19 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code ArrayChar} предназначен для проверки, начинается ли массив символов с заданного префикса.
- *
- * <p>Метод {@link #startsWith(char[], char[])} выполняет посимвольное сравнение начала массива {@code word}
- * с массивом {@code prefix}. Если все символы префикса совпадают с началом массива, метод возвращает {@code true},
- * иначе — {@code false}.</p>
- *
- * <p>Пример использования:</p>
- * <pre>
- *     char[] word = {'h', 'e', 'l', 'l', 'o'};
- *     char[] prefix = {'h', 'e'};
- *     boolean result = ArrayChar.startsWith(word, prefix); true
- * </pre>
+ * Checks if a character array starts with a specific prefix.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class ArrayChar {
 
     /**
-     * Метод {@code startsWith(char[] word, char[] prefix)} проверяет,
-     * начинается ли массив символов word с префикса prefix.
+     * Checks if the word begins with the specified prefix.
      *
-     * @param word   Массив символов, в котором выполняется проверка.
-     * @param prefix Массив символов, который должен быть в начале word.
-     * @return Значение true, если word начинается с prefix, иначе false.
+     * @param word character array to check
+     * @param prefix character array to compare against
+     * @return {@code true} if word starts with prefix, {@code false} otherwise
      */
     public static boolean startsWith(char[] word, char[] prefix) {
         boolean result = true;

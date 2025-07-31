@@ -1,26 +1,19 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SimpleStringEncoderTest} проверяет корректность работы метода
- * {@link SimpleStringEncoder#encode(String)} в классе {@link SimpleStringEncoder}.
- *
- * <p>Метод сжимает строку, заменяя повторяющиеся символы на символ и число повторений.</p>
- *
- * <p>Ожидаемый результат: строка преобразуется согласно алгоритму кодирования.</p>
+ * Tests for the {@link SimpleStringEncoder} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-09
+ * @version 1.2
  */
 class SimpleStringEncoderTest {
 
     /**
-     * Тест для строки из одного символа.
-     *
-     * <p>Ожидаемый результат: строка остается без изменений.</p>
+     * Verifies that a single-character string remains unchanged.
      */
     @Test
     void whenOnlyOne() {
@@ -31,9 +24,7 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки из двух одинаковых символов.
-     *
-     * <p>Ожидаемый результат: символ заменяется на символ + число повторений.</p>
+     * Verifies that two identical characters are encoded as character and count.
      */
     @Test
     void whenDoubleA() {
@@ -44,9 +35,8 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "aaabbc".
-     *
-     * <p>Ожидаемый результат: "a3b2c".</p>
+     * Verifies encoding for a string with multiple repeated characters:
+     * {@code "aaabbc"}.
      */
     @Test
     void whenStringaaabbcThenResulta3b2c() {
@@ -57,9 +47,7 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "abbccc".
-     *
-     * <p>Ожидаемый результат: "ab2c3".</p>
+     * Verifies encoding for a string: {@code "abbccc"} -> {@code "ab2c3"}.
      */
     @Test
     void whenStringabbcccThenResulta2b3c() {
@@ -70,9 +58,8 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "aaabcc".
-     *
-     * <p>Ожидаемый результат: "a3bc2".</p>
+     * Verifies encoding for separated repeated characters:
+     * {@code "aaabcc"} -> {@code "a3bc2"}.
      */
     @Test
     void whenStringaaabccThenResulta3bc2() {
@@ -83,9 +70,7 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "abc".
-     *
-     * <p>Ожидаемый результат: "abc" (без изменений).</p>
+     * Verifies that a string without consecutive duplicates remains unchanged.
      */
     @Test
     void whenStringabcThenResultabc() {
@@ -96,9 +81,8 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "aaabbbccc".
-     *
-     * <p>Ожидаемый результат: "a3b3c3".</p>
+     * Verifies encoding for a string with equal repeated blocks:
+     * {@code "aaabbbccc"}.
      */
     @Test
     void whenStringaaabbbcccThenResulta3b3c3() {
@@ -109,9 +93,8 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "aaaaaaaaaaaabbbcdddd".
-     *
-     * <p>Ожидаемый результат: "a12b3cd4".</p>
+     * Verifies encoding for longer repeated sequences:
+     * {@code "aaaaaaaaaaaabbbcdddd"}.
      */
     @Test
     void whenStringaaaaaaaaaaaabbbcddddThenResulta12b3cd4() {
@@ -122,9 +105,7 @@ class SimpleStringEncoderTest {
     }
 
     /**
-     * Тест для строки "aaabbbbaaabbcccddddd".
-     *
-     * <p>Ожидаемый результат: "a3b4a3b2c3d5".</p>
+     * Verifies encoding for a complex string with multiple repeated blocks.
      */
     @Test
     void whenStringaaabbbbaaabbcccdddddThenResulta3b4a3b2c3d5() {

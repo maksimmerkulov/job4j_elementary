@@ -1,24 +1,20 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code CheckTest} для проверки метода {@link Check#mono(boolean[])} класса {@link Check}.
- *
- * <p>Методы тестируют корректность определения однородности массива.</p>
- * <p>Проверяются случаи, когда массив полностью состоит из {@code true} или {@code false},
- * а также случаи, когда массив содержит разные значения.</p>
+ * Tests for the {@link Check} class.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-27
+ * @version 1.3
  */
 class CheckTest {
 
     /**
-     * Проверяет, что метод {@link Check#mono(boolean[])} возвращает {@code true},
-     * если массив полностью состоит из {@code true}.
+     * Verifies that {@code mono} returns {@code true}
+     * when all elements are {@code true}.
      */
     @Test
     void whenDataMonoByTrueThenTrue() {
@@ -28,8 +24,8 @@ class CheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link Check#mono(boolean[])} возвращает {@code false},
-     * если массив содержит разные значения, начиная с {@code true}.
+     * Verifies that {@code mono} returns {@code false}
+     * when elements are mixed {@code true} and {@code false}.
      */
     @Test
     void whenDataNotMonoByTrueThenFalse() {
@@ -39,8 +35,8 @@ class CheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link Check#mono(boolean[])} возвращает {@code true},
-     * если массив полностью состоит из {@code false}.
+     * Verifies that {@code mono} returns {@code true}
+     * when all elements are {@code false}.
      */
     @Test
     void whenDataMonoByFalseThenTrue() {
@@ -50,8 +46,8 @@ class CheckTest {
     }
 
     /**
-     * Проверяет, что метод {@link Check#mono(boolean[])} возвращает {@code false},
-     * если массив содержит разные значения, начиная с {@code false}.
+     * Verifies that {@code mono} returns {@code false}
+     * when elements are mixed {@code false} and {@code true}.
      */
     @Test
     void whenDataNotMonoByFalseThenFalse() {

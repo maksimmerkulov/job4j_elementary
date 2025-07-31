@@ -1,34 +1,22 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SkipNegativeTest} предназначен для проверки метода
- * {@link SkipNegative#skip(int[][])} в классе {@link SkipNegative}.
- * <p>
- * Проверяются различные сценарии, включая:
- * <ul>
- *     <li>Массив с одинаковым числом строк и столбцов.</li>
- *     <li>Массив с разным количеством элементов в строках.</li>
- *     <li>Массив, не содержащий отрицательных чисел.</li>
- *     <li>Массив, состоящий только из отрицательных чисел.</li>
- *     <li>Пустой массив.</li>
- * </ul>
- * </p>
+ * Tests for the {@link SkipNegative} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-28
+ * @version 1.2
  */
-public class SkipNegativeTest {
+class SkipNegativeTest {
 
     /**
-     * Тест проверяет массив размером 2x2, содержащий отрицательные элементы.
-     * Отрицательные элементы должны замениться на 0.
+     * Verifies that negative numbers in a square array are replaced by zero.
      */
     @Test
-    public void whenArrayRowAndColumnEquals() {
+    void whenArrayRowAndColumnEquals() {
         int[][] array = {
                 {1, -2},
                 {1, 2}
@@ -42,11 +30,10 @@ public class SkipNegativeTest {
     }
 
     /**
-     * Тест проверяет массив с разной длиной строк, содержащий отрицательные числа.
-     * Все отрицательные числа должны быть заменены на 0.
+     * Verifies negative number replacement in a non-square array.
      */
     @Test
-    public void whenArrayRow4AndColumnNotEquals() {
+    void whenArrayRow4AndColumnNotEquals() {
         int[][] array = {
                 {1, -2},
                 {1, 2, -3},
@@ -64,11 +51,10 @@ public class SkipNegativeTest {
     }
 
     /**
-     * Тест проверяет массив, который уже не содержит отрицательных чисел.
-     * Ожидается, что массив останется неизменным.
+     * Verifies that an array with no negative numbers remains unchanged.
      */
     @Test
-    public void whenArrayHasNoNegativeNumbers() {
+    void whenArrayHasNoNegativeNumbers() {
         int[][] array = {
                 {1, 2, 3},
                 {4, 5, 6}
@@ -82,11 +68,10 @@ public class SkipNegativeTest {
     }
 
     /**
-     * Тест проверяет массив, состоящий только из отрицательных чисел.
-     * Ожидается, что все числа заменятся на 0.
+     * Verifies that an array with only negative numbers is replaced with zeros.
      */
     @Test
-    public void whenArrayHasOnlyNegativeNumbers() {
+    void whenArrayHasOnlyNegativeNumbers() {
         int[][] array = {
                 {-1, -2, -3},
                 {-4, -5, -6}
@@ -100,11 +85,10 @@ public class SkipNegativeTest {
     }
 
     /**
-     * Тест проверяет случай пустого массива.
-     * Ожидается, что метод корректно обработает этот случай без ошибок.
+     * Verifies that an empty array returns an empty array.
      */
     @Test
-    public void whenArrayIsEmpty() {
+    void whenArrayIsEmpty() {
         int[][] array = {};
         int[][] result = SkipNegative.skip(array);
         int[][] expected = {};

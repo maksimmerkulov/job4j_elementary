@@ -1,29 +1,19 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Fitness} содержит метод для вычисления количества месяцев, необходимых Ивану,
- * чтобы обогнать Николая по силе тяги.
- *
- * <p>Этот класс решает задачу, где Иван и Николай начинают с разных значений силы тяги, и каждый месяц
- * сила Ивана увеличивается в 3 раза, а сила Николая — в 2 раза. Метод вычисляет количество месяцев,
- * за которые сила Ивана превзойдет силу Николая.</p>
+ * Calculates time needed for Ivan to overtake Nikolay in pulling power.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 public class Fitness {
 
     /**
-     * Метод {@code calc(int ivan, int nik)} вычисляет количество месяцев, которые нужны Ивану, чтобы обогнать Николая
-     * по силе тяги.
+     * Calculates months required for Ivan to overtake Nikolay.
      *
-     * <p>Каждый месяц сила Ивана увеличивается в 3 раза, а сила Николая — в 2 раза. Метод работает
-     * до тех пор, пока сила Ивана не станет больше силы Николая.</p>
-     *
-     * @param ivan Начальная сила Ивана (в кг).
-     * @param nik  Начальная сила Николая (в кг).
-     * @return Количество месяцев, которые понадобятся Ивану, чтобы превзойти Николая.
+     * @param ivan Ivan's initial pulling power
+     * @param nik Nikolay's initial pulling power
+     * @return number of months
      */
     public static int calc(int ivan, int nik) {
         int month = 0;

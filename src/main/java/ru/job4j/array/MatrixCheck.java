@@ -1,33 +1,19 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code MatrixCheck} предоставляет методы для работы с двумерными массивами символов,
- * включая проверку строк, колонок, извлечение диагонали и проверку на выигрышную ситуацию в игре.
- * В контексте игры победной ситуацией считается, когда хотя бы одна строка или колонка состоит
- * только из символов {@code 'X'}.
- * <p>
- * Этот класс реализует методы для проверки:
- * <ul>
- *     <li>Проверки строки на наличие только символов 'X'.</li>
- *     <li>Проверки колонки на наличие только символов 'X'.</li>
- *     <li>Извлечения диагонали матрицы.</li>
- *     <li>Проверки на выигрышную ситуацию (по строкам и столбцам).</li>
- * </ul>
- * </p>
+ * Provides methods for checking conditions on a game board.
  *
  * @author Maksim Merkulov
- * @version 1.4
- * @since 2025-03-01
+ * @version 1.5
  */
 public class MatrixCheck {
 
     /**
-     * Метод {@code monoHorizontal(char[][] board, int row)} проверяет, содержит ли указанная строка массива
-     * только символ 'X'.
+     * Checks if a specific row contains only {@code 'X'} symbols.
      *
-     * @param board Двумерный массив, содержащий символы 'X' и ' ' (пробел).
-     * @param row   Индекс строки, которую нужно проверить.
-     * @return {@code true}, если вся строка состоит только из 'X', иначе {@code false}.
+     * @param board game board
+     * @param row row index to check
+     * @return {@code true} if row is mono, {@code false} otherwise
      */
     public static boolean monoHorizontal(char[][] board, int row) {
         boolean result = true;
@@ -41,12 +27,11 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод {@code monoVertical(char[][] board, int column)} проверяет, содержит ли указанная колонка массива
-     * только символ 'X'.
+     * Checks if a specific column contains only {@code 'X'} symbols.
      *
-     * @param board  Двумерный массив, содержащий символы 'X' и ' ' (пробел).
-     * @param column Индекс колонки, которую нужно проверить.
-     * @return {@code true}, если вся колонка состоит только из 'X', иначе {@code false}.
+     * @param board game board
+     * @param column column index to check
+     * @return {@code true} if column is mono, {@code false} otherwise
      */
     public static boolean monoVertical(char[][] board, int column) {
         boolean result = true;
@@ -60,11 +45,10 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод {@code extractDiagonal(char[][] board)} извлекает диагональ матрицы из квадратного двумерного массива.
-     * Диагональ матрицы состоит из элементов, расположенных на позиции [i][i] для всех строк.
+     * Extracts the main diagonal from the board.
      *
-     * @param board Двумерный массив символов.
-     * @return Массив символов, содержащий элементы диагонали.
+     * @param board game board
+     * @return character array containing diagonal elements
      */
     public static char[] extractDiagonal(char[][] board) {
         char[] result = new char[board.length];
@@ -75,14 +59,10 @@ public class MatrixCheck {
     }
 
     /**
-     * Метод {@code isWin(char[][] board)} проверяет, есть ли на игровом поле выигрышная ситуация, то есть,
-     * если хотя бы одна строка или колонка заполнена только символами 'X'.
-     * Для этого метод использует проверки строк и столбцов с помощью методов
-     * {@link #monoHorizontal(char[][], int)} и {@link #monoVertical(char[][], int)},
-     * а также проверяет диагональ {@link #extractDiagonal(char[][])}.
+     * Checks if the current state of the board is a winning one.
      *
-     * @param board Двумерный массив символов, представляющий игровое поле.
-     * @return {@code true}, если существует выигрышная ситуация, иначе {@code false}.
+     * @param board game board
+     * @return {@code true} if player has won, {@code false} otherwise
      */
     public static boolean isWin(char[][] board) {
         boolean result = false;

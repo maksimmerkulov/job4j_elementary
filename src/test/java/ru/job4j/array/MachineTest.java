@@ -1,34 +1,23 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Класс {@code MachineTest} содержит модульные тесты для метода {@link Machine#change(int, int)}
- * из класса {@link Machine}.
- * <p>
- * Метод {@link Machine#change(int, int)} рассчитывает сдачу с использованием жадного алгоритма.
- * Доступные номиналы монет: 10, 5, 2, 1.
- * </p>
- *
- * <p>Примеры работы метода:</p>
- * <pre>
- *     Machine.change(50, 21) -> {10, 10, 5, 2, 2}
- *     Machine.change(30, 30) -> {}
- * </pre>
+ * Tests for the {@link Machine} class.
  *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-03-04
+ * @version 1.4
  */
-public class MachineTest {
+class MachineTest {
 
     /**
-     * Проверяет случай, когда сумма внесенных денег равна стоимости товара.
-     * Ожидается пустой массив (сдачи нет).
+     * Verifies that when {@code money} equals {@code price},
+     * no change is returned.
      */
     @Test
-    public void whenMoneyEqualsPrice() {
+    void whenMoneyEqualsPrice() {
         int money = 100;
         int price = 100;
         int[] result = Machine.change(money, price);
@@ -37,10 +26,11 @@ public class MachineTest {
     }
 
     /**
-     * Проверяет случай, когда сдача составляет 15 (10 + 5).
+     * Verifies simple change: {@code money} is {@code 50},
+     * {@code price} is {@code 35}, change should be {@code {10, 5}}.
      */
     @Test
-    public void whenMoney50Price35() {
+    void whenMoney50Price35() {
         int money = 50;
         int price = 35;
         int[] result = Machine.change(money, price);
@@ -49,10 +39,11 @@ public class MachineTest {
     }
 
     /**
-     * Проверяет случай, когда сдача составляет 29 (10 + 10 + 5 + 2 + 2).
+     * Verifies more complex change: {@code money} is {@code 50},
+     * {@code price} is {@code 21}, expected change is {@code {10, 10, 5, 2, 2}}.
      */
     @Test
-    public void whenMoney50Price21() {
+    void whenMoney50Price21() {
         int money = 50;
         int price = 21;
         int[] result = Machine.change(money, price);
@@ -61,10 +52,11 @@ public class MachineTest {
     }
 
     /**
-     * Проверяет случай, когда сдача составляет 18 (10 + 5 + 2 + 1).
+     * Verifies change when {@code money} is {@code 50},
+     * {@code price} is {@code 32}, expected change is {@code {10, 5, 2, 1}}.
      */
     @Test
-    public void whenMoney50Price32() {
+    void whenMoney50Price32() {
         int money = 50;
         int price = 32;
         int[] result = Machine.change(money, price);

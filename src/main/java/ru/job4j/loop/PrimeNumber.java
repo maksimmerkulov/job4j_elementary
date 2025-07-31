@@ -1,27 +1,21 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code PrimeNumber} предназначен для подсчета количества простых чисел в заданном диапазоне.
- *
- * <p>Простое число — это натуральное число, которое больше 1 и делится только на 1 и само себя.</p>
- *
- * <p>Метод {@link #calc(int)} перебирает все числа от 2 до {@code finish} и проверяет их
- * на простоту, используя метод {@link CheckPrimeNumber#check(int)} из класса {@link CheckPrimeNumber}.</p>
+ * Calculates the quantity of prime numbers in a range.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
+ * @see CheckPrimeNumber
  */
 public class PrimeNumber {
 
     /**
-     * Метод {@code calc(int finish)} рассчитывает количество простых чисел в диапазоне
-     * от 2 до {@code finish} включительно.
+     * Calculates the quantity of prime numbers from {@code 2} to {@code finish}.
      *
-     * <p>Число 1 не является простым, поэтому оно не учитывается при подсчете.</p>
+     * <p>Uses {@link CheckPrimeNumber#check(int)} for verification.
      *
-     * @param finish Верхняя граница диапазона (включительно).
-     * @return Количество простых чисел в диапазоне от 2 до {@code finish}.
+     * @param finish the upper bound of the range
+     * @return the count of prime numbers found
      */
     public static int calc(int finish) {
         int count = 0;

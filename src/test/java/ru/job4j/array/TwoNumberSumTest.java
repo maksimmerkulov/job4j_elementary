@@ -1,26 +1,19 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code TwoNumberSumTest} предназначен для проверки метода
- * {@link TwoNumberSum#getIndexes(int[], int)} в классе {@link TwoNumberSum}.
- * <p>
- * Класс проверяет различные случаи, когда метод поиска индексов двух чисел, сумма которых равна целевому значению,
- * должен работать корректно: наличие одинаковых чисел, отрицательных чисел, а также сценарии, когда сумма не найдена.
- * </p>
+ * Tests for the {@link TwoNumberSum} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-02
+ * @version 1.2
  */
 class TwoNumberSumTest {
 
     /**
-     * Тестирует случай, когда два одинаковых числа в массиве дают нужную сумму.
-     * Входные данные: {5, 5}, целевое значение: 10.
-     * Ожидаемый результат: индексы этих чисел (0, 1).
+     * Verifies two identical numbers that sum to the {@code target}.
      */
     @Test
     void whenTwoEqualsNumbersYesTarget() {
@@ -32,9 +25,7 @@ class TwoNumberSumTest {
     }
 
     /**
-     * Тестирует случай, когда два одинаковых числа в массиве не дают нужную сумму.
-     * Входные данные: {5, 5}, целевое значение: 12.
-     * Ожидаемый результат: пустой массив.
+     * Verifies two identical numbers that do not sum to the {@code target}.
      */
     @Test
     void whenTwoEqualsNumbersNoTarget() {
@@ -46,9 +37,7 @@ class TwoNumberSumTest {
     }
 
     /**
-     * Тестирует случай, когда в массиве присутствуют отрицательные числа, и они дают нужную сумму.
-     * Входные данные: {-7, -5, 0, 5, 8, 12}, целевое значение: 3.
-     * Ожидаемый результат: индексы чисел, сумма которых равна 3 (1, 4).
+     * Verifies array with negative numbers that sum to the {@code target}.
      */
     @Test
     void whenWithNegativeNumbersYesTarget() {
@@ -60,9 +49,7 @@ class TwoNumberSumTest {
     }
 
     /**
-     * Тестирует случай, когда в массиве нет отрицательных чисел и сумма равна целевому значению.
-     * Входные данные: {0, 2, 5, 8, 10, 12}, целевое значение: 15.
-     * Ожидаемый результат: индексы чисел, сумма которых равна 15 (2, 4).
+     * Verifies array without negative numbers that sum to the {@code target}.
      */
     @Test
     void whenWithoutNegativeNumbersYesTarget() {

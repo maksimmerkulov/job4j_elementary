@@ -1,18 +1,22 @@
 package ru.job4j;
 
 /**
- * Класс {@code Info} предназначен для вывода текущей даты в консоль.
+ * Prints the current date to the console.
+ *
+ * <p>Example output:
+ * <pre>{@code
+ * 12.02.2025
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-12
+ * @version 1.2
  */
 public class Info {
 
     /**
-     * Метод {@code main(String[] args)} выводит текущую дату в консоль.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         System.out.println("12.02.2025");

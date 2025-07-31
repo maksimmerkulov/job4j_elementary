@@ -1,32 +1,20 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code TwoPointersSquareSort} содержит методы для обработки массива согласно следующему условию:
- * - Если массив содержит отрицательные числа, сначала происходит разворот массива, а затем возведение каждого
- *   элемента в квадрат.
- * - Если отрицательных чисел нет, сначала происходит возведение каждого элемента в квадрат, а затем разворот
- *   массива.
- *
- * <p>Класс включает в себя методы для:</p>
- * <ul>
- *   <li>Проверки на наличие отрицательных чисел в массиве.</li>
- *   <li>Разворота массива с использованием двух указателей.</li>
- *   <li>Возведения каждого элемента массива в квадрат.</li>
- * </ul>
+ * Processes arrays by squaring elements and reversing order.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-24
+ * @version 1.2
  */
 public class TwoPointersSquareSort {
 
     /**
-     * Метод {@code processArray(int[] arr)} обрабатывает массив согласно условию задачи:
-     * - Если массив содержит отрицательные числа, сначала разворачиваем его,
-     *   затем возводим каждый элемент в квадрат.
-     * - Если отрицательных нет, сначала возводим в квадрат, затем разворачиваем.
+     * Orchestrates array transformation based on negative values presence.
      *
-     * @param arr Входной массив, который нужно обработать.
+     * <p>Uses {@link #containsNegative(int[])}, {@link #reverseArray(int[])}
+     * and {@link #squareArray(int[])} for execution.
+     *
+     * @param arr array to be processed
      */
     public static void processArray(int[] arr) {
         if (containsNegative(arr)) {
@@ -39,10 +27,10 @@ public class TwoPointersSquareSort {
     }
 
     /**
-     * Метод {@code containsNegative(int[] arr)} проверяет, содержит ли массив отрицательные числа.
+     * Checks if the array contains at least one negative number.
      *
-     * @param arr Входной массив для проверки.
-     * @return {@code true}, если хотя бы один элемент массива меньше 0, иначе {@code false}.
+     * @param arr array to check
+     * @return {@code true} if negative numbers found, {@code false} otherwise
      */
     public static boolean containsNegative(int[] arr) {
         for (int num : arr) {
@@ -54,15 +42,9 @@ public class TwoPointersSquareSort {
     }
 
     /**
-     * Метод {@code reverseArray(int[] arr)} разворачивает массив с использованием двух указателей.
+     * Reverses the given array in-place using two pointers.
      *
-     * <p>Алгоритм работает следующим образом:</p>
-     * <ul>
-     *   <li>Используются два указателя: один с начала массива, второй с конца.</li>
-     *   <li>Элементы на этих позициях меняются местами до тех пор, пока указатели не пересекутся.</li>
-     * </ul>
-     *
-     * @param arr Входной массив, который нужно развернуть.
+     * @param arr array to be reversed
      */
     public static void reverseArray(int[] arr) {
         int left = 0;
@@ -77,9 +59,9 @@ public class TwoPointersSquareSort {
     }
 
     /**
-     * Метод {@code squareArray(int[] arr)} возводит каждый элемент массива в квадрат.
+     * Replaces each element in the array with its square.
      *
-     * @param arr Входной массив, элементы которого необходимо возвести в квадрат.
+     * @param arr array to be squared
      */
     public static void squareArray(int[] arr) {
         for (int i = 0; i < arr.length; i++) {

@@ -1,39 +1,31 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code LengthArrayArrays} демонстрирует создание и использование двумерного массива
- * с вложенными массивами разной длины.
- * <p>
- * Основная цель — показать, что каждый подмассив может иметь разное количество элементов,
- * и вывести их размеры в консоль.
- * </p>
+ * Demonstrates how to get the length of multidimensional arrays.
+ *
+ * <p>Example output:
+ * <pre>{@code
+ * Length of the inner array is: 1
+ * Length of the inner array is: 2
+ * Length of the inner array is: 3
+ * Length of the inner array is: 4
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-27
+ * @version 1.2
  */
 public class LengthArrayArrays {
 
     /**
-     * Метод {@code main(String[] args)} создает двумерный массив, где у каждого подмассива разная длина,
-     * и выводит размер каждого вложенного массива в консоль.
-     * <p>
-     * Пример выходных данных:
-     * <pre>
-     * Размер вложенного массива равен: 1
-     * Размер вложенного массива равен: 2
-     * Размер вложенного массива равен: 3
-     * Размер вложенного массива равен: 4
-     * </pre>
-     * </p>
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         int[][] numbers = {{1}, {2, 3}, {4, 5, 6}, {7, 8, 9, 10}};
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(
-                    "Размер вложенного массива равен: " + numbers[i].length
+                    "Length of the inner array is: " + numbers[i].length
             );
         }
     }

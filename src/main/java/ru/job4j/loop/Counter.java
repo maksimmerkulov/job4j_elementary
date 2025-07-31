@@ -1,29 +1,19 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Counter} предназначен для суммирования чисел в заданном диапазоне.
- *
- * <p>Содержит методы для подсчета суммы всех чисел и суммы только четных чисел.</p>
- *
- * <p>Пример использования:</p>
- * <pre>
- *     int totalSum = Counter.sum(1, 10); 55
- *     int evenSum = Counter.sumByEven(1, 10); 30
- * </pre>
+ * Provides methods for calculating sums in a range.
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-20
+ * @version 1.3
  */
 public class Counter {
 
     /**
-     * Метод {@code sum(int start, int finish)} вычисляет сумму всех чисел в диапазоне
-     * от {@code start} до {@code finish}.
+     * Calculates the sum of all numbers in the range.
      *
-     * @param start  Начальное число (включительно).
-     * @param finish Конечное число (включительно).
-     * @return Сумма всех чисел в указанном диапазоне.
+     * @param start starting value
+     * @param finish ending value
+     * @return the sum of all numbers
      */
     public static int sum(int start, int finish) {
         int sum = 0;
@@ -34,12 +24,11 @@ public class Counter {
     }
 
     /**
-     * Метод {@code sumByEven(int start, int finish)} вычисляет сумму всех четных чисел в диапазоне
-     * от {@code start} до {@code finish}.
+     * Calculates the sum of even numbers in the range.
      *
-     * @param start  Начальное число (включительно).
-     * @param finish Конечное число (включительно).
-     * @return Сумма всех четных чисел в указанном диапазоне.
+     * @param start starting value
+     * @param finish ending value
+     * @return the sum of even numbers
      */
     public static int sumByEven(int start, int finish) {
         int sum = 0;

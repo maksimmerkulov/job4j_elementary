@@ -1,27 +1,24 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Frame} используется для рисования рамки в консоли.
+ * Draws a rectangular frame of a specified size in the console.
  *
- * <p>Этот класс содержит метод {@link #draw(int)}, который рисует квадратную рамку заданного размера.
- * Рамка состоит из символов {@code "+"}, {@code "-"}, {@code "|"} и пробелов.</p>
- *
- * <p>Метод {@link #draw(int)} принимает целое число, определяющее размер рамки, и выводит ее в консоль.</p>
+ * <p>Example output for {@code size = 3}:
+ * <pre>{@code
+ * +-+
+ * | |
+ * +-+
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-21
+ * @version 1.2
  */
 public class Frame {
 
     /**
-     * Метод {@code draw(int size)} рисует квадратную рамку заданного размера.
+     * Draws a square frame using ASCII characters.
      *
-     * <p>Рамка рисуется с использованием символов {@code "+"} для углов,
-     * {@code "-"} для верхней и нижней границы, {@code "|"} для боковых границ,
-     * и пробела для внутренних областей.</p>
-     *
-     * @param size Размер рамки (количество строк и столбцов).
+     * @param size the side length of the square frame
      */
     public static void draw(int size) {
         for (int row = 0; row < size; row++) {
@@ -43,11 +40,9 @@ public class Frame {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #draw(int)}.
+     * Entry point of the program.
      *
-     * <p>Метод {@code main(String[] args)} выводит в консоль рамки двух различных размеров: 3 и 5.</p>
-     *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         System.out.println("Draw frame of size 3");

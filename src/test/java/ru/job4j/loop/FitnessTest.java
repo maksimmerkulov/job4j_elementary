@@ -1,33 +1,18 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code FitnessTest} проверяет работу метода {@link Fitness#calc(int, int)}
- * из класса {@link Fitness}.
- *
- * <p>Метод {@link Fitness#calc(int, int)} вычисляет количество месяцев, за которые Иван сможет превзойти
- * Николая по силе тяги, если каждый месяц его сила увеличивается в 3 раза, а сила Николая — в 2 раза.</p>
- *
- * <p>В тестах проверяются различные сценарии, включая случаи, когда:</p>
- * <ul>
- *     <li>Иван изначально сильнее Николая.</li>
- *     <li>Иван немного слабее Николая.</li>
- *     <li>Иван значительно слабее Николая.</li>
- *     <li>Иван и Николай начинают с одинаковой силой.</li>
- * </ul>
+ * Tests for the {@link Fitness} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 class FitnessTest {
 
-    /**
-     * Тест на случай, когда сила Ивана изначально больше силы Николая.
-     * Ожидаемый результат: 0 месяцев (Иван уже сильнее).
-     */
+    /** Verifies behavior when Ivan is already greater than Nikolay. */
     @Test
     void whenIvanGreatNik() {
         int ivan = 95;
@@ -37,10 +22,7 @@ class FitnessTest {
         assertThat(result).isEqualTo(expected);
     }
 
-    /**
-     * Тест на случай, когда сила Ивана меньше силы Николая всего на 5 кг.
-     * Ожидаемый результат: 1 месяц.
-     */
+    /** Verifies behavior when Ivan is less than Nikolay by one unit. */
     @Test
     void whenIvanLessByOneNik() {
         int ivan = 90;
@@ -50,10 +32,7 @@ class FitnessTest {
         assertThat(result).isEqualTo(expected);
     }
 
-    /**
-     * Тест на случай, когда сила Ивана значительно меньше силы Николая.
-     * Ожидаемый результат: 2 месяца.
-     */
+    /** Verifies behavior when Ivan is less by a larger margin. */
     @Test
     void whenIvanLessByFewNik() {
         int ivan = 50;
@@ -63,10 +42,7 @@ class FitnessTest {
         assertThat(result).isEqualTo(expected);
     }
 
-    /**
-     * Тест на случай, когда Иван и Николай начинают с одинаковой силой.
-     * Ожидаемый результат: 1 месяц.
-     */
+    /** Verifies behavior when Ivan and Nikolay have equal weights. */
     @Test
     void whenIvanEqualsNik() {
         int ivan = 90;

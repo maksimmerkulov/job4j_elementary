@@ -1,27 +1,19 @@
 package ru.job4j.condition;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.withPrecision;
 
 /**
- * Тест-класс {@code PointTest} предназначен для тестирования методов класса {@link Point}.
- * В частности, для проверки метода {@link Point#distance(Point)} для вычисления Евклидова расстояния
- * между двумя точками и метода {@link Point#distance3d(Point)} для вычисления расстояния между
- * точками в трехмерном пространстве.
- * <p>
- * Для тестирования используются точки с различными координатами, а результаты сравниваются с ожидаемыми значениями.
- * </p>
+ * Tests for the {@link Point} class.
  *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-04-05
+ * @version 1.4
  */
 class PointTest {
 
-    /**
-     * Тест проверяет расстояние между точками (0,0) и (2,0).
-     * Ожидаемое значение: 2.0.
-     */
+    /** Verifies 2D distance for points {@code (0,0)} and {@code (0,2)}. */
     @Test
     void whenPoints00And20Then2() {
         Point a = new Point(0, 0);
@@ -31,10 +23,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (-1,-1) и (1,1).
-     * Ожидаемое значение: 2.83.
-     */
+    /** Verifies 2D distance between {@code (-1,-1)} and {@code (1,1)}. */
     @Test
     void whenPointsMinus1Minus1And1And1Then2Dot83() {
         Point a = new Point(-1, -1);
@@ -44,10 +33,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (-2,-2) и (2,2).
-     * Ожидаемое значение: 5.66.
-     */
+    /** Verifies 2D distance between {@code (-2,-2)} and {@code (2,2)}. */
     @Test
     void whenPointsMinus2Minus2And2And2Then5Dot66() {
         Point a = new Point(-2, -2);
@@ -57,10 +43,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (0, 0) и (0, 0).
-     * Ожидаемое значение: 0.0.
-     */
+    /** Verifies 2D distance for identical points {@code (0,0)}. */
     @Test
     void whenPoints00And00Then0() {
         Point a = new Point(0, 0);
@@ -70,10 +53,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками с отрицательными координатами (-3, -3) и (-6, -7).
-     * Ожидаемое значение: 5.0.
-     */
+    /** Verifies 2D distance between {@code (-3,-3)} and {@code (-6,-7)}. */
     @Test
     void whenPointsMinus3Minus3AndMinus6Minus7Then5() {
         Point a = new Point(-3, -3);
@@ -83,10 +63,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (1, 2, 3) и (4, 5, 6).
-     * Ожидаемое значение: 5.2.
-     */
+    /** Verifies 3D distance between {@code (1,2,3)} and {@code (4,5,6)}. */
     @Test
     void whenPoints123And456Then5Dot2() {
         Point a = new Point(1, 2, 3);
@@ -96,10 +73,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (1, 1, 1) и (1, 1, 1).
-     * Ожидаемое значение: 0.0.
-     */
+    /** Verifies 3D distance when both points are at {@code (1,1,1)}. */
     @Test
     void whenPoints111And111Then0() {
         Point a = new Point(1, 1, 1);
@@ -109,10 +83,7 @@ class PointTest {
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
-    /**
-     * Тест проверяет расстояние между точками (0, 0, 0) и (3, 4, 12).
-     * Ожидаемое значение: 13.0.
-     */
+    /** Verifies 3D distance between {@code (0,0,0)} and {@code (3,4,12)}. */
     @Test
     void whenPoints000And3412Then13() {
         Point a = new Point(0, 0, 0);

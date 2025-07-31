@@ -1,52 +1,47 @@
 package ru.job4j.condition;
 
 /**
- * Класс {@code Max} предоставляет методы для нахождения максимального значения среди двух, трех или четырех чисел.
- * <p>
- * Используется перегрузка методов для минимизации дублирования кода.
- * </p>
+ * Provides methods to find the maximum value among numbers.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-04-05
+ * @version 1.2
  */
 public class Max {
 
     /**
-     * Метод {@code max(double first, double second)} возвращает максимальное из двух чисел.
+     * Finds the maximum of two numbers.
      *
-     * @param first  Первое число.
-     * @param second Второе число.
-     * @return Наибольшее из двух чисел.
+     * @param first the first number
+     * @param second the second number
+     * @return the maximum value
      */
     public double max(double first, double second) {
         return (first > second) ? first : second;
     }
 
     /**
-     * Метод {@code max(double first, double second, double third)} возвращает максимальное из трех чисел,
-     * используя перегруженный метод {@link #max(double, double)}.
+     * Finds the maximum of three numbers.
      *
-     * @param first  Первое число.
-     * @param second Второе число.
-     * @param third  Третье число.
-     * @return Наибольшее из трех чисел.
+     * @param first the first number
+     * @param second the second number
+     * @param third the third number
+     * @return the maximum value
      */
     public double max(double first, double second, double third) {
         return max(first, max(second, third));
     }
 
     /**
-     * Метод {@code max(double first, double second, double third, double fourth)} возвращает максимальное
-     * из четырех чисел, используя перегруженный метод {@link #max(double, double, double)}.
+     * Finds the maximum of four numbers.
      *
-     * @param first  Первое число.
-     * @param second Второе число.
-     * @param third  Третье число.
-     * @param fourth Четвертое число.
-     * @return Наибольшее из четырех чисел.
+     * @param first the first number
+     * @param second the second number
+     * @param third the third number
+     * @param fourth the fourth number
+     * @return the maximum value
      */
-    public double max(double first, double second, double third, double fourth) {
+    public double max(double first, double second, double third,
+                      double fourth) {
         return max(first, max(second, third, fourth));
     }
 }

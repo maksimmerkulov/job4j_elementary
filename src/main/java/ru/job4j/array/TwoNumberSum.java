@@ -1,33 +1,22 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code TwoNumberSum} предназначен для нахождения индексов двух чисел в отсортированном массиве,
- * сумма которых равна заданному числу, с использованием метода двух указателей (Two Pointers).
- * <p>
- * Алгоритм использует два указателя, один начинающийся с начала массива, а другой — с конца.
- * Показания указателей сравниваются с целевым числом, и в зависимости от результата указатели сдвигаются.
- * </p>
- *
- * <p>Пример использования:</p>
- * <pre>
- *     int[] array  = {1, 2, 3, 4, 5};
- *     int target   = 6;
- *     int[] result = TwoNumberSum.getIndexes(array, target); {1, 4}
- * </pre>
+ * Finds two numbers in a sorted array that add up to a target sum.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-03-02
+ * @version 1.2
  */
 public class TwoNumberSum {
 
     /**
-     * Метод {@code getIndexes(int[] array, int target)} ищет два элемента в отсортированном массиве,
-     * сумма которых равна target. Используется алгоритм "Метод двух указателей" (Two Pointers).
+     * Finds indices of two numbers that satisfy the target sum.
      *
-     * @param array  Отсортированный массив целых чисел.
-     * @param target Целевое значение суммы.
-     * @return Массив из двух индексов, если сумма найдена, иначе пустой массив.
+     * <p>Uses the two-pointer approach with {@code O(n)} time complexity.
+     * The input array must be sorted.
+     *
+     * @param array sorted integer array to search in
+     * @param target required sum of two elements
+     * @return array of two indices if found, empty array otherwise
      */
     public static int[] getIndexes(int[] array, int target) {
         int i = 0;

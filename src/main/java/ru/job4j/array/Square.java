@@ -1,51 +1,44 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code Square} предназначен для заполнения массива числами, возведенными в квадрат.
+ * Calculates squares of numbers and stores them in an array.
  *
- * <p>Программа выполняет следующие шаги:</p>
- * <ul>
- *     <li>Создает массив размером {@code bound}.</li>
- *     <li>Заполняет массив квадратами чисел от {@code 0} до {@code bound - 1}.</li>
- *     <li>Возвращает заполненный массив.</li>
- * </ul>
- *
- * <p>Пример использования:</p>
- * <pre>
- * int[] array = Square.calculate(4);
- * array: [0, 1, 4, 9]
- * </pre>
+ * <p>Example output for {@code bound = 4}:
+ * <pre>{@code
+ * 0
+ * 1
+ * 4
+ * 9
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-24
+ * @version 1.3
  */
 public class Square {
 
     /**
-     * Метод {@code calculate(int bound)} заполняет массив квадратами чисел от {@code 0} до {@code bound - 1}.
+     * Calculates squares of numbers from {@code 0} to {@code bound - 1}.
      *
-     * @param bound Верхняя граница чисел (не включительно).
-     * @return Массив, содержащий квадраты чисел от {@code 0} до {@code bound - 1}.
+     * @param bound the number of elements in the resulting array
+     * @return array containing squared values
      */
     public static int[] calculate(int bound) {
         int[] result = new int[bound];
-        for (int index = 0; index < result.length; index++) {
-            result[index] = index * index;
+        for (int i = 0; i < result.length; i++) {
+            result[i] = i * i;
         }
         return result;
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #calculate(int)},
-     * выводя результат в консоль.
+     * Entry point of the program.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
         int[] array = calculate(4);
-        for (int index = 0; index < array.length; index++) {
-            System.out.println(array[index]);
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]);
         }
     }
 }

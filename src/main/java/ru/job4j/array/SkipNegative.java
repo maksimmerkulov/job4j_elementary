@@ -1,27 +1,18 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code SkipNegative} предназначен для замены отрицательных значений в двумерном массиве на ноль.
- * <p>
- * Этот класс содержит метод {@link #skip(int[][])}, который проходит по каждому элементу массива и заменяет
- * отрицательные значения на нули.
- * </p>
+ * Provides a method to filter negative numbers in a multidimensional array.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-28
+ * @version 1.2
  */
 public class SkipNegative {
 
     /**
-     * Метод {@code skip(int[][] array)} заменяет все отрицательные значения в переданном двумерном массиве на ноль.
-     * <p>
-     * ВНИМАНИЕ: Метод изменяет переданный массив. Если нужно сохранить исходный массив, создайте его копию
-     * перед вызовом.
-     * </p>
+     * Replaces all negative elements in the array with {@code 0}.
      *
-     * @param array Двумерный массив целых чисел.
-     * @return Тот же массив, но с замененными отрицательными значениями на ноль.
+     * @param array multidimensional array to process
+     * @return the modified array
      */
     public static int[][] skip(int[][] array) {
         for (int row = 0; row < array.length; row++) {

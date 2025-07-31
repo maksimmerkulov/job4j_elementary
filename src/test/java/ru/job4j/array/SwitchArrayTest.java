@@ -1,24 +1,20 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SwitchArrayTest} проверяет корректность работы методов {@link SwitchArray#swap(int[], int, int)}
- * и {@link SwitchArray#swapBorder(int[])} класса {@link SwitchArray}.
- *
- * <p>Методы тестируют перестановку элементов в массиве, включая граничные случаи.</p>
- * <p>Проверяется, что после выполнения методов массив содержит ожидаемые значения.</p>
+ * Tests for the {@link SwitchArray} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-25
+ * @version 1.2
  */
 class SwitchArrayTest {
 
     /**
-     * Тест метода {@link SwitchArray#swapBorder(int[])} на массиве из 4 элементов.
-     * Ожидаемый результат: первый и последний элементы поменяются местами.
+     * Verifies swapping the first and last elements
+     * for an array of length {@code 4}.
      */
     @Test
     void whenSwapBorderArrayLengthIs4() {
@@ -29,8 +25,8 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swapBorder(int[])} на массиве из 6 элементов.
-     * Проверяется, что первый и последний элементы поменяются местами.
+     * Verifies swapping the first and last elements
+     * for an array of length {@code 6}.
      */
     @Test
     void whenSwapBorderArrayLengthIs6() {
@@ -41,8 +37,8 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест {@link SwitchArray#swapBorder(int[])} для массива из 3 элементов.
-     * Ожидаемый результат: {3, 2, 1}.
+     * Verifies swapping the first and last elements
+     * for an array of length {@code 3}.
      */
     @Test
     void whenSwapBorderArrayLengthIs3() {
@@ -53,8 +49,8 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест {@link SwitchArray#swapBorder(int[])} для массива из одного элемента.
-     * Ожидаемый результат: массив остается без изменений.
+     * Verifies swapping the first and last elements
+     * for a single-element array.
      */
     @Test
     void whenSwapBorderArrayLengthIs1() {
@@ -65,8 +61,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swap(int[], int, int)} при перестановке
-     * первого и последнего элемента в массиве из 4 элементов.
+     * Verifies swapping elements at indices {@code 0} and {@code 3}.
      */
     @Test
     void whenSwap0to3() {
@@ -79,8 +74,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swap(int[], int, int)}
-     * при перестановке элементов по индексам 1 и 2.
+     * Verifies swapping elements at indices {@code 1} and {@code 2}.
      */
     @Test
     void whenSwap1to2() {
@@ -93,8 +87,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест {@link SwitchArray#swap(int[], int, int)}
-     * при перестановке элементов 2 и 4 в массиве из 5 элементов.
+     * Verifies swapping elements at indices {@code 2} and {@code 4}.
      */
     @Test
     void whenSwap2to4() {
@@ -107,8 +100,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swap(int[], int, int)}
-     * при перестановке элементов 4 и 6 в массиве из 7 элементов.
+     * Verifies swapping elements at indices {@code 4} and {@code 6}.
      */
     @Test
     void whenSwap4to6() {
@@ -121,8 +113,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swap(int[], int, int)}
-     * при перестановке элементов 3 и 4.
+     * Verifies swapping elements at indices {@code 3} and {@code 4}.
      */
     @Test
     void whenSwap3to4() {
@@ -135,8 +126,7 @@ class SwitchArrayTest {
     }
 
     /**
-     * Тест метода {@link SwitchArray#swap(int[], int, int)}
-     * при перестановке первого и последнего элементов.
+     * Verifies swapping elements at indices {@code 0} and {@code 6}.
      */
     @Test
     void whenSwap0to6() {

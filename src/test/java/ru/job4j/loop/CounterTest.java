@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Unit tests for the {@link Counter} class.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 class CounterTest {
 
@@ -68,6 +68,78 @@ class CounterTest {
         int start = 10;
         int finish = 1;
         int result = Counter.sum(start, finish);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum from 1 to 10.
+     */
+    @Test
+    void whenSumEvenNumbersFrom1To10Then30() {
+        int start = 1;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum from 0 to 10.
+     */
+    @Test
+    void whenSumEvenNumbersFrom0To10Then30() {
+        int start = 0;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 30;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum from 3 to 8.
+     */
+    @Test
+    void whenSumEvenNumbersFrom3To8Then18() {
+        int start = 3;
+        int finish = 8;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 18;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum from 1 to 1.
+     */
+    @Test
+    void whenSumEvenNumbersFrom1To1Then0() {
+        int start = 1;
+        int finish = 1;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum with a negative start.
+     */
+    @Test
+    void whenSumEvenNumbersFromMinus5To10Then24() {
+        int start = -5;
+        int finish = 10;
+        int result = Counter.sumByEven(start, finish);
+        int expected = 24;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    /**
+     * Verifies the even sum when the start exceeds the finish.
+     */
+    @Test
+    void whenSumEvenNumbersStartGreaterThanFinishThen0() {
+        int start = 10;
+        int finish = 1;
+        int result = Counter.sumByEven(start, finish);
         int expected = 0;
         assertThat(result).isEqualTo(expected);
     }

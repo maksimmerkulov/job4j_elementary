@@ -1,21 +1,21 @@
 package ru.job4j.array;
 
 /**
- * Fills an array using a linear function and prints its elements using for-each.
+ * Demonstrates the usage of the enhanced for loop with an array of strings.
  *
  * <p>Example output:
  * <pre>{@code
- * 3
- * 5
- * 7
- * 9
- * 11
+ * one
+ * two
+ * three
+ * four
+ * five
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.0
  */
-public class ArrayLoop {
+public class ForEachUsage {
 
     /**
      * Entry point of the program.
@@ -23,11 +23,8 @@ public class ArrayLoop {
      * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
-        int[] numbers = new int[5];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i * 2 + 3;
-        }
-        for (int number : numbers) {
+        String[] numbers = {"one", "two", "three", "four", "five"};
+        for (String number : numbers) {
             System.out.println(number);
         }
     }

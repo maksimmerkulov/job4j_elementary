@@ -1,8 +1,8 @@
 package ru.job4j.array;
 
 /**
- * An entry point program that demonstrates filling and printing an array with
- * a calculated sequence of numbers using loops.
+ * An entry point program that demonstrates filling an array and printing it
+ * using an enhanced for-each loop.
  *
  * <p>Example output:
  * <pre>{@code
@@ -14,7 +14,7 @@ package ru.job4j.array;
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class ArrayLoop {
 
@@ -28,8 +28,8 @@ public class ArrayLoop {
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = i * 2 + 3;
         }
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
+        for (int number : numbers) {
+            System.out.println(number);
         }
     }
 }

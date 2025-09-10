@@ -16,7 +16,7 @@ package ru.job4j.array;
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
+ * @version 1.3
  */
 public class ArrayDefinition {
 
@@ -41,9 +41,8 @@ public class ArrayDefinition {
         names[1] = "Ivan";
         names[2] = "Fedor";
         names[3] = "Nikolay";
-        System.out.println(names[0]);
-        System.out.println(names[1]);
-        System.out.println(names[2]);
-        System.out.println(names[3]);
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]);
+        }
     }
 }

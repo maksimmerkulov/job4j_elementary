@@ -1,17 +1,23 @@
 package ru.job4j.array;
 
 /**
- * Demonstrates definitions and sizes of various array types.
+ * Demonstrates initialization, sizes, and element modification of various
+ * arrays.
  *
  * <p>Example output:
  * <pre>{@code
  * The length of the ages array is: 10
  * The length of the surnames array is: 100500
  * The length of the prices array is: 40
+ *
+ * Petr
+ * Ivan
+ * Fedor
+ * Nikolay
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
  */
 public class ArrayDefinition {
 
@@ -30,5 +36,15 @@ public class ArrayDefinition {
                 + surnames.length);
         System.out.println("The length of the prices array is: "
                 + prices.length);
+        System.out.println();
+        String[] names = new String[4];
+        names[0] = "Petr";
+        names[1] = "Ivan";
+        names[2] = "Fedor";
+        names[3] = "Nikolay";
+        System.out.println(names[0]);
+        System.out.println(names[1]);
+        System.out.println(names[2]);
+        System.out.println(names[3]);
     }
 }

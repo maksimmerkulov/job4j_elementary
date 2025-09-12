@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 /**
- * A utility class that swaps element positions within an array.
+ * A utility class that swaps elements within an array by indices or borders.
  *
  * <p>Example output:
  * <pre>{@code
@@ -14,9 +14,24 @@ package ru.job4j.array;
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class SwitchArray {
+
+    /**
+     * Swaps two elements in an array by their indices.
+     *
+     * @param array       the array to process
+     * @param source      the index of the first element
+     * @param destination the index of the second element
+     * @return the array with swapped elements
+     */
+    public static int[] swap(int[] array, int source, int destination) {
+        int temp = array[source];
+        array[source] = array[destination];
+        array[destination] = temp;
+        return array;
+    }
 
     /**
      * Swaps the first and the last elements of an array.

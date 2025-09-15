@@ -1,10 +1,10 @@
 package ru.job4j.array;
 
 /**
- * Searches for an element index in an array.
+ * Provides utility methods for searching elements in arrays.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class FindLoop {
 
@@ -18,6 +18,31 @@ public class FindLoop {
     public static int indexOf(int[] data, int element) {
         int result = -1;
         for (int i = 0; i < data.length; i++) {
+            if (data[i] == element) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Searches for the element within the specified range.
+     *
+     * @param data    the array to search
+     * @param element the value to find
+     * @param start   the start index (inclusive)
+     * @param finish  the end index (inclusive)
+     * @return index of the element, or {@code -1} if not found
+     */
+    public static int indexInRange(
+            int[] data,
+            int element,
+            int start,
+            int finish
+    ) {
+        int result = -1;
+        for (int i = start; i <= finish; i++) {
             if (data[i] == element) {
                 result = i;
                 break;

@@ -1,11 +1,11 @@
 package ru.job4j.array;
 
 /**
- * A utility class that provides methods to check matrices for specific
- * patterns.
+ * A utility class that provides methods to check and extract data from
+ * matrices.
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
  */
 public class MatrixCheck {
 
@@ -41,6 +41,20 @@ public class MatrixCheck {
                 result = false;
                 break;
             }
+        }
+        return result;
+    }
+
+    /**
+     * Extracts the main diagonal from a square matrix.
+     *
+     * @param board the matrix to process
+     * @return an array containing the diagonal elements
+     */
+    public static char[] extractDiagonal(char[][] board) {
+        char[] result = new char[board.length];
+        for (int i = 0; i < board.length; i++) {
+            result[i] = board[i][i];
         }
         return result;
     }

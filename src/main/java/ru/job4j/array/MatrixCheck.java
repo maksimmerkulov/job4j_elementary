@@ -1,11 +1,11 @@
 package ru.job4j.array;
 
 /**
- * A utility class that provides a method to check matrices for specific
+ * A utility class that provides methods to check matrices for specific
  * patterns.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class MatrixCheck {
 
@@ -20,6 +20,24 @@ public class MatrixCheck {
         boolean result = true;
         for (int i = 0; i < board[row].length; i++) {
             if (board[row][i] != 'X') {
+                result = false;
+                break;
+            }
+        }
+        return result;
+    }
+
+    /**
+     * Checks if the specified column is fully filled with {@code 'X'}.
+     *
+     * @param board  the matrix to check
+     * @param column the index of the column to verify
+     * @return {@code true} if the column is mono, otherwise {@code false}
+     */
+    public static boolean monoVertical(char[][] board, int column) {
+        boolean result = true;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][column] != 'X') {
                 result = false;
                 break;
             }

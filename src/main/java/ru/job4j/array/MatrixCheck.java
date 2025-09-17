@@ -1,11 +1,11 @@
 package ru.job4j.array;
 
 /**
- * A utility class that provides methods to check and extract data from
- * matrices.
+ * A utility class that provides methods to check, extract, and verify winning
+ * conditions in matrices.
  *
  * @author Maksim Merkulov
- * @version 1.2
+ * @version 1.3
  */
 public class MatrixCheck {
 
@@ -55,6 +55,25 @@ public class MatrixCheck {
         char[] result = new char[board.length];
         for (int i = 0; i < board.length; i++) {
             result[i] = board[i][i];
+        }
+        return result;
+    }
+
+    /**
+     * Checks if the board has a winning combination (5 X in a row or column).
+     *
+     * @param board the matrix to check
+     * @return {@code true} if there is a win, otherwise {@code false}
+     */
+    public static boolean isWin(char[][] board) {
+        boolean result = false;
+        for (int i = 0; i < board.length; i++) {
+            if (board[i][i] == 'X'
+                    && (monoHorizontal(board, i)
+                    || monoVertical(board, i))) {
+                result = true;
+                break;
+            }
         }
         return result;
     }

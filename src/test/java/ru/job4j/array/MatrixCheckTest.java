@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Tests for the {@link MatrixCheck} class.
  *
  * @author Maksim Merkulov
- * @version 1.2
+ * @version 1.3
  */
 class MatrixCheckTest {
 
@@ -122,5 +122,73 @@ class MatrixCheckTest {
         char[] result = MatrixCheck.extractDiagonal(input);
         char[] expected = {'X', 'Y', 'Z'};
         assertThat(result).containsExactly(expected);
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code true}
+     * for a vertical win.
+     */
+    @Test
+    void whenDataMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code false}
+     * when there is no win.
+     */
+    @Test
+    void whenDataNotMonoByTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isFalse();
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code true}
+     * for a horizontal win.
+     */
+    @Test
+    void whenDataHMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isTrue();
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#isWin(char[][])} returns {@code false}
+     * for a diagonal sequence of {@code 'X'}.
+     */
+    @Test
+    void whenDataDiagMonoIsTrueThenFalse() {
+        char[][] input = {
+                {'X', ' ', ' ', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', ' ', 'X', ' '},
+                {' ', ' ', ' ', ' ', 'X'},
+        };
+        boolean result = MatrixCheck.isWin(input);
+        assertThat(result).isFalse();
     }
 }

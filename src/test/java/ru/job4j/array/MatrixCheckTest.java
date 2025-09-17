@@ -8,12 +8,13 @@ import static org.assertj.core.api.Assertions.assertThat;
  * Tests for the {@link MatrixCheck} class.
  *
  * @author Maksim Merkulov
- * @version 1.1
+ * @version 1.2
  */
 class MatrixCheckTest {
 
     /**
-     * Verifies that the method returns {@code true} when the row is mono.
+     * Verifies that {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * returns {@code true}.
      */
     @Test
     void whenHasMonoHorizontal() {
@@ -28,7 +29,8 @@ class MatrixCheckTest {
     }
 
     /**
-     * Verifies that the method returns {@code false} when the row is not mono.
+     * Verifies that {@link MatrixCheck#monoHorizontal(char[][], int)}
+     * returns {@code false}.
      */
     @Test
     void whenNoMonoHorizontal() {
@@ -43,7 +45,8 @@ class MatrixCheckTest {
     }
 
     /**
-     * Verifies that the method returns {@code true} when the column is mono.
+     * Verifies that {@link MatrixCheck#monoVertical(char[][], int)}
+     * returns {@code true}.
      */
     @Test
     void whenHasMonoVertical() {
@@ -58,7 +61,8 @@ class MatrixCheckTest {
     }
 
     /**
-     * Verifies that the method returns {@code false} when the column is not mono.
+     * Verifies that {@link MatrixCheck#monoVertical(char[][], int)}
+     * returns {@code false}.
      */
     @Test
     void whenNoMonoVertical() {
@@ -70,5 +74,53 @@ class MatrixCheckTest {
         int column = 2;
         boolean result = MatrixCheck.monoVertical(input, column);
         assertThat(result).isFalse();
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * returns {@code 'X'} elements.
+     */
+    @Test
+    void whenDiagonalFullX() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'X', ' '},
+                {' ', ' ', 'X'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'X', 'X'};
+        assertThat(result).containsExactly(expected);
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * returns {@code '1'} elements.
+     */
+    @Test
+    void whenDiagonalFullOne() {
+        char[][] input = {
+                {'1', ' ', ' '},
+                {' ', '1', ' '},
+                {' ', ' ', '1'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'1', '1', '1'};
+        assertThat(result).containsExactly(expected);
+    }
+
+    /**
+     * Verifies that {@link MatrixCheck#extractDiagonal(char[][])}
+     * returns mixed elements.
+     */
+    @Test
+    void whenDiagonalMix() {
+        char[][] input = {
+                {'X', ' ', ' '},
+                {' ', 'Y', ' '},
+                {' ', ' ', 'Z'},
+        };
+        char[] result = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'Y', 'Z'};
+        assertThat(result).containsExactly(expected);
     }
 }

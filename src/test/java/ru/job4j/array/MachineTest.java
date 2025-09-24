@@ -1,31 +1,42 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Класс {@code MachineTest} содержит модульные тесты для метода {@link Machine#change(int, int)}
- * из класса {@link Machine}.
- * <p>
- * Метод {@link Machine#change(int, int)} рассчитывает сдачу с использованием жадного алгоритма.
- * Доступные номиналы монет: 10, 5, 2, 1.
- * </p>
+ * Класс {@code MachineTest} содержит модульные тесты для метода
+ * {@link Machine#change(int, int)} из класса {@link Machine}.
  *
- * <p>Примеры работы метода:</p>
+ * <p>Метод {@link Machine#change(int, int)} рассчитывает сдачу
+ * с использованием {@code жадного алгоритма}.</p>
+ *
+ * <p>Доступные номиналы монет: {@code 10, 5, 2, 1}.</p>
+ *
+ * <p><b>Примеры работы метода:</b></p>
  * <pre>
  *     Machine.change(50, 21) -> {10, 10, 5, 2, 2}
  *     Machine.change(30, 30) -> {}
  * </pre>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int money = 100;
+ * int price = 100;
+ * int[] result = Machine.change(money, price);
+ * int[] expected = {};
+ * assertThat(result).containsExactly(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-03-04
+ * @version 1.4
  */
 public class MachineTest {
 
     /**
      * Проверяет случай, когда сумма внесенных денег равна стоимости товара.
-     * Ожидается пустой массив (сдачи нет).
+     *
+     * <p>Ожидается пустой массив (сдачи нет).</p>
      */
     @Test
     public void whenMoneyEqualsPrice() {

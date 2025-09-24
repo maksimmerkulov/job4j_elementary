@@ -1,26 +1,33 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code TurnTest} проверяет корректность работы метода {@link Turn#back(int[])}
- * в классе {@link Turn}.
+ * Класс {@code TurnTest} проверяет метод {@link Turn#back(int[])} класса
+ * {@link Turn}.
  *
  * <p>Проверяется реверс массива для четного и нечетного количества элементов.</p>
  *
- * <p>Ожидаемый результат — массив должен быть перевернут относительно исходного порядка.</p>
+ * <p>Ожидаемый результат — массив должен быть перевернут относительно исходного
+ * порядка.</p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] input = {4, 1, 6, 2};
+ * int[] result = Turn.back(input);
+ * int[] expected = {2, 6, 1, 4};
+ * assertThat(result).containsExactly(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-26
+ * @version 1.2
  */
 class TurnTest {
 
     /**
-     * Тест для {@link Turn#back(int[])} с массивом четной длины.
-     *
-     * <p>Ожидаемый результат: элементы меняются зеркально относительно центра.</p>
+     * Проверяет {@link Turn#back(int[])} на массиве четной длины.
      */
     @Test
     void whenTurnArrayWithEvenAmountOfElementsThenTurnedArray() {
@@ -31,9 +38,7 @@ class TurnTest {
     }
 
     /**
-     * Тест для {@link Turn#back(int[])} с массивом нечетной длины.
-     *
-     * <p>Ожидаемый результат: порядок элементов изменяется на обратный.</p>
+     * Проверяет {@link Turn#back(int[])} на массиве нечетной длины.
      */
     @Test
     void whenTurnArrayWithOddAmountOfElementsThenTurnedArray() {

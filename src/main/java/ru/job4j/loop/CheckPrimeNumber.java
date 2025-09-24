@@ -1,30 +1,35 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code CheckPrimeNumber} предназначен для проверки, является ли заданное число простым.
+ * Класс {@code CheckPrimeNumber} предназначен для проверки, является ли
+ * заданное число простым.
  *
- * <p>Простое число — это натуральное число, которое больше 1 и делится только на 1 и само себя.</p>
+ * <p>Простое число — это натуральное число, которое больше 1 и делится
+ * только на 1 и само себя.</p>
  *
- * <p>Пример использования:</p>
- * <pre>
- *     boolean isPrime = CheckPrimeNumber.check(7); true
- *     boolean isPrime = CheckPrimeNumber.check(10); false
- * </pre>
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * boolean isPrime = CheckPrimeNumber.check(7);
+ * }</pre>
+ *
+ * <p><b>Результат проверки:</b></p>
+ * <pre>{@code
+ * true
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 public class CheckPrimeNumber {
 
     /**
-     *  Метод {@code check(int number)} проверяет, является ли переданное число простым.
+     *  Проверяет, является ли переданное число простым.
      *
-     * <p>Число считается простым, если оно больше 1 и не делится нацело ни на одно число,
-     * кроме 1 и самого себя.</p>
+     * <p>Число считается простым, если оно больше 1 и не делится нацело
+     * ни на одно число, кроме 1 и самого себя.</p>
      *
-     * @param number Число для проверки.
-     * @return {@code true}, если число простое, иначе {@code false}.
+     * @param number число для проверки
+     * @return {@code true}, если число простое, иначе {@code false}
      */
     public static boolean check(int number) {
         if (number < 2) {

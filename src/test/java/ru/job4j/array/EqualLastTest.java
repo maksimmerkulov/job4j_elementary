@@ -1,23 +1,33 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code EqualLastTest} для проверки метода {@link EqualLast#check(int[], int[])}
- * в классе {@link EqualLast}.
+ * Класс {@code EqualLastTest} для проверки метода
+ * {@link EqualLast#check(int[], int[])} в классе {@link EqualLast}.
  *
- * <p>Тестируется корректность определения совпадения последних элементов двух массивов.</p>
+ * <p>Тестируется корректность определения совпадения последних элементов двух
+ * массивов.</p>
+ *
  * <p>Проверяются различные случаи, включая пустые массивы.</p>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[] left = {1, 2, 3};
+ * int[] right = {5, 4, 3};
+ * boolean result = EqualLast.check(left, right);
+ * assertThat(result).isTrue();
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class EqualLastTest {
 
     /**
-     * Тест, когда последние элементы массивов равны.
+     * Проверяет, когда последние элементы массивов равны.
      *
      * <p>Ожидаемый результат: {@code true}.</p>
      */
@@ -30,7 +40,7 @@ public class EqualLastTest {
     }
 
     /**
-     * Тест, когда последние элементы массивов не равны.
+     * Проверяет, когда последние элементы массивов не равны.
      *
      * <p>Ожидаемый результат: {@code false}.</p>
      */
@@ -43,7 +53,7 @@ public class EqualLastTest {
     }
 
     /**
-     * Тест, когда первый массив пустой.
+     * Проверяет, когда первый массив пустой.
      *
      * <p>Ожидаемый результат: {@code false}.</p>
      */
@@ -56,7 +66,7 @@ public class EqualLastTest {
     }
 
     /**
-     * Тест, когда второй массив пустой.
+     * Проверяет, когда второй массив пустой.
      *
      * <p>Ожидаемый результат: {@code false}.</p>
      */
@@ -69,7 +79,7 @@ public class EqualLastTest {
     }
 
     /**
-     * Тест, когда оба массива пустые.
+     * Проверяет, когда оба массива пустые.
      *
      * <p>Ожидаемый результат: {@code false}.</p>
      */

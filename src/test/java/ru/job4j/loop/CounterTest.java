@@ -1,22 +1,41 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тестовый класс {@code CounterTest} для проверки методов суммирования чисел в классе {@link Counter}.
+ * Класс {@code CounterTest} для проверки методов суммирования чисел в классе
+ * {@link Counter}.
  *
- * <p>Проверяются методы:</p>
+ * <p>Тесты покрывают различные граничные случаи, включая отрицательные значения
+ * и неупорядоченные границы.</p>
+ *
+ * <p><b>Проверяются методы:</b></p>
  * <ul>
- *     <li>{@link Counter#sum(int, int)} — вычисляет сумму всех чисел в заданном диапазоне.</li>
- *     <li>{@link Counter#sumByEven(int, int)} — вычисляет сумму всех четных чисел в диапазоне.</li>
+ *     <li>{@link Counter#sum(int, int)} — вычисляет сумму всех чисел в заданном
+ *         диапазоне.</li>
+ *     <li>{@link Counter#sumByEven(int, int)} — вычисляет сумму всех четных
+ *         чисел в диапазоне.</li>
  * </ul>
  *
- * <p>Тесты покрывают различные граничные случаи, включая отрицательные значения и неупорядоченные границы.</p>
+ * <p><b>Примеры тестирования:</b></p>
+ * <pre>{@code
+ * int start = 0;
+ * int finish = 10;
+ * int expected = 55;
+ * int output = Counter.sum(start, finish);
+ * assertThat(output).isEqualTo(expected);
+
+ * int start = 0;
+ * int finish = 10;
+ * int result = Counter.sumByEven(start, finish);
+ * int expected = 30;
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-20
+ * @version 1.3
  */
 class CounterTest {
 
@@ -47,7 +66,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы чисел в случае, если начальное и конечное число равны 1.
+     * Проверяет вычисление суммы чисел в случае, если начальное и конечное
+     * число равны 1.
      * Ожидаемый результат: 1.
      */
     @Test
@@ -112,7 +132,8 @@ class CounterTest {
     }
 
     /**
-     * Проверяет вычисление суммы четных чисел в случае, если диапазон состоит из одного нечетного числа (1).
+     * Проверяет вычисление суммы четных чисел в случае, если диапазон состоит
+     * из одного нечетного числа (1).
      * Ожидаемый результат: 0.
      */
     @Test

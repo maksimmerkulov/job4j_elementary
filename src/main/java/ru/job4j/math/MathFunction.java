@@ -1,68 +1,80 @@
 package ru.job4j.math;
 
 /**
- * Класс {@code MathFunction} предназначен для выполнения основных математических операций:
- * сложения, вычитания, умножения и деления.
- * Все операции выполняются с использованием чисел типа {@code double}.
+ * Класс {@code MathFunction} предназначен для выполнения основных математических
+ * операций: сложения, вычитания, умножения и деления. Все операции выполняются
+ * с использованием чисел типа {@code double}.
  *
- * <p>Пример использования:</p>
- * <pre>
- *     double result1 = MathFunction.sum(10, 20); 30.0
- *     double result2 = MathFunction.subtract(20, 10); 10.0
- *     double result3 = MathFunction.multiply(10, 20); 200.0
- *     double result4 = MathFunction.divide(20, 10); 2.0
- * </pre>
+ * <p>Класс состоит исключительно из статических методов и не предназначен для
+ * создания экземпляров.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * double result1 = MathFunction.sum(3.5, 2.5);
+ * double result2 = MathFunction.subtract(5, 3);
+ * double result3 = MathFunction.multiply(4, 2.5);
+ * double result4 = MathFunction.divide(10, 2);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * 6.0
+ * 2.0
+ * 10.0
+ * 5.0
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-13
+ * @version 1.2
  */
 public class MathFunction {
 
     /**
-     * Метод {@code sum(double first, double second)} выполняет сложение двух чисел.
+     * Выполняет сложение двух чисел.
      *
-     * @param first  Первое число для сложения.
-     * @param second Второе число для сложения.
-     * @return Сумма двух чисел.
+     * @param first первое число для сложения
+     * @param second второе число для сложения
+     * @return сумма двух чисел
      */
     public static double sum(double first, double second) {
         return first + second;
     }
 
     /**
-     * Метод {@code subtract(double first, double second)} выполняет вычитание двух чисел.
+     * Выполняет вычитание двух чисел.
      *
-     * @param first  Уменьшаемое число.
-     * @param second Вычитаемое число.
-     * @return Разность чисел.
+     * @param first уменьшаемое число
+     * @param second вычитаемое число
+     * @return разность чисел
      */
     public static double subtract(double first, double second) {
         return first - second;
     }
 
     /**
-     * Метод {@code multiply(double first, double second)} выполняет умножение двух чисел.
+     * Выполняет умножение двух чисел.
      *
-     * @param first  Первый множитель.
-     * @param second Второй множитель.
-     * @return Произведение двух чисел.
+     * @param first первый множитель
+     * @param second второй множитель
+     * @return произведение двух чисел
      */
     public static double multiply(double first, double second) {
         return first * second;
     }
 
     /**
-     * Метод {@code divide(double first, double second)} выполняет деление двух чисел.
+     * Выполняет деление двух чисел.
      *
-     * @param first  Делимое число.
-     * @param second Делитель.
-     * @return Результат деления.
-     * @throws IllegalArgumentException если второе число (делитель) равно нулю.
+     * @param first делимое число
+     * @param second делитель
+     * @return результат деления
+     * @throws IllegalArgumentException если второе число (делитель) равно нулю
      */
     public static double divide(double first, double second) {
         if (second == 0) {
-            throw new IllegalArgumentException("Ошибка: деление на ноль невозможно!");
+            throw new IllegalArgumentException(
+                    "Ошибка: деление на ноль невозможно!"
+            );
         }
         return first / second;
     }

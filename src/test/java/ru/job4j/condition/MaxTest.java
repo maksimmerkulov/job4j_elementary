@@ -1,50 +1,55 @@
 package ru.job4j.condition;
 
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * Тест-класс {@code MaxTest} для класса {@link Max}.
- * <p>
- * Проверяются методы нахождения максимального числа среди 2, 3 и 4 значений.
- * </p>
+ * Класс {@code MaxTest} предназначен для проверки работы методов определения
+ * максимального значения в классе {@link Max}.
+ *
+ * <p>Проверяются перегруженные версии метода {@code max()}, возвращающего
+ * наибольшее значение среди двух, трех или четырех чисел.</p>
+ *
  * <ul>
- *     <li>{@link #whenMaxOfTwoThenCorrect()} – тестирование метода
- *     {@link Max#max(double, double)} для двух чисел.</li>
- *     <li>{@link #whenMaxOfThreeThenCorrect()} – тестирование метода
- *     {@link Max#max(double, double, double)} для трех чисел.</li>
- *     <li>{@link #whenMaxOfFourThenCorrect()} – тестирование метода
- *     {@link Max#max(double, double, double, double)} для четырех чисел.</li>
+ *     <li>{@link #whenMaxOfTwoThenCorrect()} — проверка выбора максимума из
+ *         двух значений.</li>
+ *     <li>{@link #whenMaxOfThreeThenCorrect()} — проверка выбора максимума из
+ *         трех значений.</li>
+ *     <li>{@link #whenMaxOfFourThenCorrect()} — проверка выбора максимума из
+ *         четырех значений.</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * Max max = new Max();
+ * double result = max.max(2.0, 4.0, 1.0);
+ * assertEquals(4.0, result, 0.0001);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-04-05
+ * @version 1.2
  */
 class MaxTest {
 
     /**
-     * Допустимая погрешность для сравнения чисел с плавающей точкой.
-     * <p>
-     * Помогает обеспечить стабильность утверждений при сравнении значений типа double.
-     * </p>
+     * Допустимая погрешность при сравнении чисел типа {@code double}.
+     *
+     * <p>Обеспечивает стабильность проверок в тестах.</p>
      */
     private static final double DELTA = 0.0001;
 
     /**
-     * Экземпляр класса для тестирования.
-     * <p>
-     * Используется для вызова перегруженных методов {@code max()}.
-     * </p>
+     * Экземпляр класса {@link Max} для вызова перегруженных методов
+     * {@code max()}.
      */
     private final Max max = new Max();
 
     /**
      * Тест метода {@link Max#max(double, double)}.
-     * <p>
-     * Проверяется, что правильно определяется максимальное значение среди двух чисел.
-     * </p>
+     *
+     * <p>Проверяется, что правильно определяется максимальное значение среди
+     * двух чисел.</p>
      */
     @Test
     void whenMaxOfTwoThenCorrect() {
@@ -56,9 +61,9 @@ class MaxTest {
 
     /**
      * Тест метода {@link Max#max(double, double, double)}.
-     * <p>
-     * Проверяется, что правильно определяется максимальное значение среди трех чисел.
-     * </p>
+     *
+     * <p>Проверяется, что правильно определяется максимальное значение среди
+     * трех чисел.</p>
      */
     @Test
     void whenMaxOfThreeThenCorrect() {
@@ -70,9 +75,9 @@ class MaxTest {
 
     /**
      * Тест метода {@link Max#max(double, double, double, double)}.
-     * <p>
-     * Проверяется, что правильно определяется максимальное значение среди четырех чисел.
-     * </p>
+     *
+     * <p>Проверяется, что правильно определяется максимальное значение среди
+     * четырех чисел.</p>
      */
     @Test
     void whenMaxOfFourThenCorrect() {

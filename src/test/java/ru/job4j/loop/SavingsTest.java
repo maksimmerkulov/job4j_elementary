@@ -1,33 +1,42 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code SavingsTest} предназначен для проверки метода {@link Savings#years(double, double, double)}
- * в классе {@link Savings}.
+ * Класс {@code SavingsTest} проверяет метод
+ * {@link Savings#years(double, double, double)} класса {@link Savings}.
  *
- * <p>Этот класс тестирует метод, который рассчитывает количество лет, необходимых для накопления целевой суммы,
- * с учетом ежегодных депозитов и процентной ставки. В тестах учитываются различные значения для целевой суммы,
- * ежегодного депозита и процентной ставки, чтобы проверить корректность работы метода.</p>
+ * <p>Метод {@link Savings#years(double, double, double)} вычисляет количество
+ * лет, необходимых для накопления целевой суммы с учетом ежегодных депозитов
+ * и процентов.</p>
  *
- * <p>В тестах проверяются следующие случаи:</p>
+ * <p>Тесты проверяют разные сценарии:</p>
  * <ul>
- *     <li>Когда целевая сумма 500, ежегодный депозит 100, процент 5%. Результат: 5 лет.</li>
- *     <li>Когда целевая сумма 1000, ежегодный депозит 200, процент 10%. Результат: 5 лет.</li>
- *     <li>Когда целевая сумма 1000, ежегодный депозит 100, процент 20%. Результат: 7 лет.</li>
+ *     <li>Цель 500, депозит 100, процент 5%. Результат: 5 лет.</li>
+ *     <li>Цель 1000, депозит 200, процент 10%. Результат: 5 лет.</li>
+ *     <li>Цель 1000, депозит 100, процент 20%. Результат: 7 лет.</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * double goal = 500;
+ * double deposit = 100;
+ * double percent = 5;
+ * int expected = 5;
+ * int result = Savings.years(goal, deposit, percent);
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-21
+ * @version 1.2
  */
 class SavingsTest {
 
     /**
-     * Проверка метода {@link Savings#years(double, double, double)} с целевой суммой 500,
-     * ежегодным депозитом 100 и процентной ставкой 5%.
-     * Ожидаемый результат: 5 лет.
+     * Проверяет метод {@link Savings#years(double, double, double)}
+     * для цели 500, депозита 100 и процента 5%. Ожидаемый результат: 5 лет.
      */
     @Test
     void whenGoal500Deposit100Percent5ThenYears5() {
@@ -40,9 +49,8 @@ class SavingsTest {
     }
 
     /**
-     * Проверка метода {@link Savings#years(double, double, double)} с целевой суммой 1000,
-     * ежегодным депозитом 200 и процентной ставкой 10%.
-     * Ожидаемый результат: 5 лет.
+     * Проверяет метод {@link Savings#years(double, double, double)}
+     * для цели 1000, депозита 200 и процента 10%. Ожидаемый результат: 5 лет.
      */
     @Test
     void whenGoal1000Deposit200Percent10ThenYears5() {
@@ -55,9 +63,8 @@ class SavingsTest {
     }
 
     /**
-     * Проверка метода {@link Savings#years(double, double, double)} с целевой суммой 1000,
-     * ежегодным депозитом 100 и процентной ставкой 20%.
-     * Ожидаемый результат: 7 лет.
+     * Проверяет метод {@link Savings#years(double, double, double)}
+     * для цели 1000, депозита 100 и процента 20%. Ожидаемый результат: 7 лет.
      */
     @Test
     void whenGoal1000Deposit100Percent20ThenYears7() {

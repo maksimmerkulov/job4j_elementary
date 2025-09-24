@@ -1,25 +1,32 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code ArrayCharTest} проверяет работу метода {@link ArrayChar#startsWith(char[], char[])}
- * класса {@link ArrayChar}.
+ * Класс {@code ArrayCharTest} проверяет работу метода
+ * {@link ArrayChar#startsWith(char[], char[])} класса {@link ArrayChar}.
  *
- * <p>Метод {@link ArrayChar#startsWith(char[], char[])} определяет, начинается ли массив символов {@code word}
- * с указанного префикса {@code prefix}.
- * В тестах проверяется корректность работы метода на различных входных данных.</p>
+ * <p>Метод {@link ArrayChar#startsWith(char[], char[])} определяет, начинается
+ * ли массив символов {@code word} с указанного префикса {@code prefix}.</p>
  *
- * <p>Примеры тестируемых случаев:</p>
+ * <p><b>Примеры тестируемых случаев:</b></p>
  * <ul>
  *     <li>Слово "Hello" начинается с префикса "He" → {@code true}.</li>
  *     <li>Слово "Hello" не начинается с префикса "Hi" → {@code false}.</li>
  * </ul>
  *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * char[] word = {'H', 'e', 'l', 'l', 'o'};
+ * char[] prefix = {'H', 'e'};
+ * boolean result = ArrayChar.startsWith(word, prefix);
+ * assertThat(result).isTrue();
+ * }</pre>
+ *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-28
+ * @version 1.3
  */
 public class ArrayCharTest {
 

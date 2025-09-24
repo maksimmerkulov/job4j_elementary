@@ -1,29 +1,36 @@
 package ru.job4j.loop;
 
 /**
- * Класс {@code Counter} предназначен для суммирования чисел в заданном диапазоне.
+ * Класс {@code Counter} предназначен для суммирования чисел
+ * в заданном диапазоне.
  *
- * <p>Содержит методы для подсчета суммы всех чисел и суммы только четных чисел.</p>
+ * <p>Содержит методы для подсчета суммы всех чисел и суммы
+ * только четных чисел.</p>
  *
- * <p>Пример использования:</p>
- * <pre>
- *     int totalSum = Counter.sum(1, 10); 55
- *     int evenSum = Counter.sumByEven(1, 10); 30
- * </pre>
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * int totalSum = Counter.sum(1, 10);
+ * int evenSum = Counter.sumByEven(1, 10);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * totalSum = 55
+ * evenSum = 30
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.2
- * @since 2025-02-20
+ * @version 1.3
  */
 public class Counter {
 
     /**
-     * Метод {@code sum(int start, int finish)} вычисляет сумму всех чисел в диапазоне
+     * Вычисляет сумму всех чисел в диапазоне
      * от {@code start} до {@code finish}.
      *
-     * @param start  Начальное число (включительно).
-     * @param finish Конечное число (включительно).
-     * @return Сумма всех чисел в указанном диапазоне.
+     * @param start начальное число (включительно)
+     * @param finish конечное число (включительно)
+     * @return сумма всех чисел в указанном диапазоне
      */
     public static int sum(int start, int finish) {
         int sum = 0;
@@ -34,12 +41,12 @@ public class Counter {
     }
 
     /**
-     * Метод {@code sumByEven(int start, int finish)} вычисляет сумму всех четных чисел в диапазоне
+     * Вычисляет сумму всех четных чисел в диапазоне
      * от {@code start} до {@code finish}.
      *
-     * @param start  Начальное число (включительно).
-     * @param finish Конечное число (включительно).
-     * @return Сумма всех четных чисел в указанном диапазоне.
+     * @param start начальное число (включительно)
+     * @param finish конечное число (включительно)
+     * @return сумма всех четных чисел в указанном диапазоне
      */
     public static int sumByEven(int start, int finish) {
         int sum = 0;

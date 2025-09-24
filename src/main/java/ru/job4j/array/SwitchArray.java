@@ -1,33 +1,44 @@
 package ru.job4j.array;
 
 /**
- * Класс {@code SwitchArray} содержит методы для обмена элементов в массиве.
+ * Класс {@code SwitchArray} содержит методы для обмена элементов массива.
  *
  * <p>Основные методы:</p>
  * <ul>
- *     <li>{@link #swap(int[], int, int)} — меняет местами два элемента массива по индексам.</li>
- *     <li>{@link #swapBorder(int[])} — меняет местами первый и последний элементы массива.</li>
+ *     <li>{@link #swap(int[], int, int)} — меняет местами два элемента.</li>
+ *     <li>{@link #swapBorder(int[])} — меняет местами первый и последний.</li>
  * </ul>
  *
- * <p>Класс предназначен для демонстрации базовых операций перестановки элементов в массиве.</p>
+ * <p>Класс предназначен для демонстрации базовых операций перестановки
+ * элементов в массиве.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * int[] data = {1, 2, 3};
+ * SwitchArray.swap(data, 0, 2);
+ * SwitchArray.swapBorder(data);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * 3
+ * 2
+ * 1
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-25
+ * @version 1.2
  */
 public class SwitchArray {
 
     /**
-     * Метод {@code swap(int[] array, int source, int destination)} меняет местами два элемента в переданном массиве.
+     * Меняет местами два элемента в массиве.
      *
-     * <p>Метод выполняет перестановку значений по индексам {@code source} и {@code destination}.</p>
-     * <p>Если индексы выходят за границы массива, будет выброшено {@link ArrayIndexOutOfBoundsException}.</p>
-     *
-     * @param array       Исходный массив, в котором происходит замена.
-     * @param source      Индекс первого элемента.
-     * @param destination Индекс второго элемента.
-     * @return Тот же массив с измененными элементами.
-     * @throws ArrayIndexOutOfBoundsException если переданы некорректные индексы.
+     * @param array исходный массив
+     * @param source индекс первого элемента
+     * @param destination индекс второго элемента
+     * @return массив с измененными элементами
+     * @throws ArrayIndexOutOfBoundsException если индексы некорректны
      */
     public static int[] swap(int[] array, int source, int destination) {
         int temp = array[source];
@@ -37,11 +48,13 @@ public class SwitchArray {
     }
 
     /**
-     * Метод {@code swapBorder(int[] array)} меняет местами первый и последний элементы массива.
-     * Если массив пустой или состоит из одного элемента, изменений не происходит.
+     * Меняет местами первый и последний элементы массива.
      *
-     * @param array Исходный массив.
-     * @return Массив с переставленными границами (или без изменений).
+     * <p>Если массив пустой или состоит из одного элемента,
+     * изменений не происходит.</p>
+     *
+     * @param array исходный массив
+     * @return массив с переставленными границами (или без изменений)
      */
     public static int[] swapBorder(int[] array) {
         int temp = array[0];
@@ -51,11 +64,11 @@ public class SwitchArray {
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует работу метода {@link #swapBorder(int[])}.
+     * Точка входа в программу.
      *
-     * <p>Выводит результат работы метода в консоль.</p>
+     * <p>Демонстрирует работу метода {@link #swapBorder(int[])}.</p>
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
         int[] numbers = new int[] {1, 2, 3, 4, 5, 6};

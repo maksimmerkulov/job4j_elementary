@@ -1,29 +1,50 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 /**
- * Calculation of distance between two points in 2D space.
+ * Represents a point in 2D space.
  *
- * <p>Example output for {@code x1 = 0, y1 = 0, x2 = 2, y2 = 0}:
+ * <p>Example output:
  * <pre>{@code
- * result (0, 0) to (2, 0) 2.0
+ * 2.0
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Point {
 
     /**
-     * Calculates the distance between two points.
-     *
-     * @param x1 x-coordinate of the first point
-     * @param y1 y-coordinate of the first point
-     * @param x2 x-coordinate of the second point
-     * @param y2 y-coordinate of the second point
-     * @return the distance result
+     * The x-coordinate of the point.
      */
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    private int x;
+
+    /**
+     * The y-coordinate of the point.
+     */
+    private int y;
+
+    /**
+     * Creates a new {@code Point} with the specified coordinates.
+     *
+     * @param first  the x-coordinate
+     * @param second the y-coordinate
+     */
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    /**
+     * Calculates the distance between this point and the specified point.
+     *
+     * @param that the other point
+     * @return the distance between points
+     */
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     /**
@@ -32,7 +53,9 @@ public class Point {
      * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
-        double result = distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double distance = a.distance(b);
+        System.out.println(distance);
     }
 }

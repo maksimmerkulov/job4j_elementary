@@ -9,40 +9,45 @@ import static org.assertj.core.api.Assertions.withPrecision;
  * Unit tests for the {@link Point} class.
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 class PointTest {
 
     /**
-     * Verifies the distance between simple points.
+     * Verifies that the distance between two points is calculated correctly.
      */
     @Test
     void whenPoints00And20Then2() {
-        int x1 = 0, y1 = 0, x2 = 2, y2 = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 0);
         double expected = 2.0;
-        double output = Point.distance(x1, y1, x2, y2);
+        double output = a.distance(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     /**
-     * Verifies the distance with positive and negative coordinates.
+     * Verifies that the distance between negative and positive points is
+     * calculated correctly.
      */
     @Test
     void whenPointsMinus1Minus1And1And1Then2Dot83() {
-        int x1 = -1, y1 = -1, x2 = 1, y2 = 1;
+        Point a = new Point(-1, -1);
+        Point b = new Point(1, 1);
         double expected = 2.83;
-        double output = Point.distance(x1, y1, x2, y2);
+        double output = a.distance(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
     /**
-     * Verifies the distance with increased coordinates.
+     * Verifies that the distance between distant points is calculated
+     * correctly.
      */
     @Test
     void whenPointsMinus2Minus2And2And2Then5Dot66() {
-        int x1 = -2, y1 = -2, x2 = 2, y2 = 2;
+        Point a = new Point(-2, -2);
+        Point b = new Point(2, 2);
         double expected = 5.66;
-        double output = Point.distance(x1, y1, x2, y2);
+        double output = a.distance(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 }

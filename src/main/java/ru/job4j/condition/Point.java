@@ -1,29 +1,50 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 /**
- * A geometric utility that computes distances between points.
+ * A geometric representation of a point in a two-dimensional coordinate system.
  *
  * <p>Example output:
  * <pre>{@code
- * result (0, 0) to (2, 0) 2.0
+ * 2.0
  * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.0
+ * @version 1.1
  */
 public class Point {
 
     /**
-     * Calculates the distance between two points.
-     *
-     * @param x1 the x-coordinate of the first point
-     * @param y1 the y-coordinate of the first point
-     * @param x2 the x-coordinate of the second point
-     * @param y2 the y-coordinate of the second point
-     * @return the distance result
+     * The x-coordinate.
      */
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    private int x;
+
+    /**
+     * The y-coordinate.
+     */
+    private int y;
+
+    /**
+     * Creates a new {@code Point} with the specified coordinates.
+     *
+     * @param first  the x-coordinate
+     * @param second the y-coordinate
+     */
+    public Point(int first, int second) {
+        this.x = first;
+        this.y = second;
+    }
+
+    /**
+     * Returns the distance between this point and the specified point.
+     *
+     * @param that the other {@link Point}
+     * @return the distance between the two points
+     */
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     /**
@@ -32,7 +53,9 @@ public class Point {
      * @param args command-line arguments; not used
      */
     public static void main(String[] args) {
-        double result = distance(0, 0, 2, 0);
-        System.out.println("result (0, 0) to (2, 0) " + result);
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
+        double distance = a.distance(b);
+        System.out.println(distance);
     }
 }

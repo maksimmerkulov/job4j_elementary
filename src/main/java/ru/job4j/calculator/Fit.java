@@ -1,45 +1,54 @@
 package ru.job4j.calculator;
 
 /**
- * Класс {@code Fit} предназначен для вычисления идеального веса для мужчин и женщин.
- * Идеальный вес рассчитывается с использованием роста человека.
+ * Класс {@code Fit} вычисляет идеальный вес для мужчин и женщин.
+ *
+ * <p>Идеальный вес рассчитывается на основе роста человека.</p>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * short height = 187;
+ * double man = Fit.manWeight(height);
+ * double woman = Fit.womanWeight(height);
+ * System.out.println("Man 187 cm is " + man + " kg");
+ * System.out.println("Woman 187 cm is " + woman + " kg");
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * Man 187 cm is 85.0 kg
+ * Woman 187 cm is 87.05 kg
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-14
+ * @version 1.2
  */
 public class Fit {
 
     /**
-     * Метод {@code manWeight(short height)} вычисляет идеальный вес для мужчины.
+     * Вычисляет идеальный вес для мужчины.
      *
-     * @param height Рост в сантиметрах.
-     * @return Идеальный вес в килограммах.
+     * @param height рост в сантиметрах
+     * @return идеальный вес в килограммах
      */
     public static double manWeight(short height) {
         return (height - 100) * 1.15;
     }
 
     /**
-     * Метод {@code womanWeight(short height)} вычисляет идеальный вес для женщины.
+     * Вычисляет идеальный вес для женщины.
      *
-     * @param height Рост в сантиметрах.
-     * @return Идеальный вес в килограммах.
+     * @param height рост в сантиметрах
+     * @return идеальный вес в килограммах
      */
     public static double womanWeight(short height) {
         return (height - 110) * 1.15;
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует расчет идеального веса для мужчины.
-     * <p>Пример использования:</p>
-     * <pre>
-     *     short height = 187;
-     *     double man = Fit.manWeight(height);
-     *     System.out.println("Man 187 cm is " + man + " kg");
-     * </pre>
+     * Демонстрирует расчет идеального веса для мужчины.
      *
-     * @param args Аргументы командной строки (не используются).
+     * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
         short height = 187;

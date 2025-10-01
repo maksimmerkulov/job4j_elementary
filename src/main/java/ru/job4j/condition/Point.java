@@ -4,53 +4,66 @@ import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 
 /**
- * Класс {@code Point} предназначен для представления точки на двумерной или трехмерной плоскости
- * и вычисления расстояния до другой точки по формуле Евклидова расстояния.
- * <p>
- * Для 2D используется формула:
- * {@code sqrt((x2 - x1)^2 + (y2 - y1)^2)}
- * <p>
- * Для 3D:
- * {@code sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)}
- * </p>
+ * Класс {@code Point} предназначен для представления точки на 2D или 3D
+ * плоскости и вычисления расстояния до другой точки по формуле Евклидова
+ * расстояния.
  *
- * <p>Пример использования:</p>
- * <pre>
- *     Point a = new Point(0, 0);
- *     Point b = new Point(0, 2);
- *     double distance = a.distance(b);
- * </pre>
+ * <p><b>Формула для 2D:</b></p>
+ * <pre>{@code
+ * sqrt((x2 - x1)^2 + (y2 - y1)^2)
+ * }</pre>
+ *
+ * <p><b>Формула для 3D:</b></p>
+ * <pre>{@code
+ * sqrt((x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2)
+ * }</pre>
+ *
+ * <p><b>Пример использования:</b></p>
+ * <pre>{@code
+ * Point a = new Point(0, 0);
+ * Point b = new Point(0, 2);
+ * double distance = a.distance(b);
+ *
+ * Point c = new Point(1, 2, 3);
+ * Point d = new Point(4, 5, 6);
+ * double distance3d = c.distance3d(d);
+ * }</pre>
+ *
+ * <p><b>Пример вывода:</b></p>
+ * <pre>{@code
+ * Point[0, 0]
+ * Point[0, 2]
+ * Point[1, 2, 3]
+ * Point[4, 5, 6]
+ * 2.0
+ * 5.196152422706632
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.3
- * @since 2025-04-05
+ * @version 1.4
  */
 public class Point {
 
     /**
-     * Поле {@code x} представляет координату X точки.
-     * Доступно только внутри экземпляра класса.
+     * Координата X точки.
      */
     private int x;
 
     /**
-     * Поле {@code y} представляет координату Y точки.
-     * Доступно только внутри экземпляра класса.
+     * Координата Y точки.
      */
     private int y;
 
     /**
-     * Поле {@code z} представляет координату Z точки.
-     * Доступно только внутри экземпляра класса.
+     * Координата Z точки.
      */
     private int z;
 
     /**
-     * Конструктор {@code Point(int x, int y)}
-     * создает объект {@link Point} с заданными координатами.
+     * Создает объект {@link Point} с координатами X и Y.
      *
-     * @param x Координата X.
-     * @param y Координата Y.
+     * @param x координата X
+     * @param y координата Y
      */
     public Point(int x, int y) {
         this.x = x;
@@ -58,12 +71,11 @@ public class Point {
     }
 
     /**
-     * Конструктор {@code Point(int x, int y, int z)}
-     * создает объект {@link Point} с заданными координатами.
+     * Создает объект {@link Point} с координатами X, Y и Z.
      *
-     * @param x Координата X.
-     * @param y Координата Y.
-     * @param z Координата Z.
+     * @param x координата X
+     * @param y координата Y
+     * @param z координата Z
      */
     public Point(int x, int y, int z) {
         this.x = x;
@@ -72,22 +84,20 @@ public class Point {
     }
 
     /**
-     * Метод {@code distance(Point that)} вычисляет Евклидово расстояние
-     * между текущей точкой и переданной в аргументе в двухмерном пространстве.
+     * Вычисляет расстояние между текущей точкой и переданной в 2D.
      *
-     * @param that Другая точка, до которой вычисляется расстояние.
-     * @return Расстояние между двумя точками в 2D.
+     * @param that другая точка
+     * @return расстояние между точками в 2D
      */
     public double distance(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
     /**
-     * Метод {@code distance3d(Point that)} вычисляет Евклидово расстояние
-     * между текущей точкой и переданной в аргументе в трехмерном пространстве.
+     * Вычисляет расстояние между текущей точкой и переданной в 3D.
      *
-     * @param that Другая точка, до которой вычисляется расстояние.
-     * @return Расстояние между двумя точками в 3D.
+     * @param that другая точка
+     * @return расстояние между точками в 3D
      */
     public double distance3d(Point that) {
         return sqrt(
@@ -98,28 +108,27 @@ public class Point {
     }
 
     /**
-     * Метод {@code infoPoint2d()} выводит координаты точки в 2D в консоль в формате: Point[x, y].
+     * Выводит координаты точки в 2D в формате {@code Point[x, y]}.
      */
     public void infoPoint2d() {
             System.out.println("Point[" + this.x + ", " + this.y + "]");
     }
 
     /**
-     * Метод {@code infoPoint3d()} выводит координаты точки в 3D в консоль в формате: Point[x, y, z].
+     * Выводит координаты точки в 3D в формате {@code Point[x, y, z]}.
      */
     public void infoPoint3d() {
-            System.out.println("Point[" + this.x + ", " + this.y + ", " + this.z + "]");
+            System.out.println("Point["
+                    + this.x + ", " + this.y + ", " + this.z + "]");
     }
 
     /**
-     * Метод {@code main(String[] args)} демонстрирует использование
-     * методов {@link #distance(Point)} и {@link #distance3d(Point)}.
-     * <p>
-     * Создаются две точки в двумерном пространстве и две точки в трехмерном пространстве.
-     * Вычисляется расстояние между точками в 2D и 3D, а затем выводятся результаты в консоль.
-     * </p>
+     * Точка входа в программу.
      *
-     * @param args Аргументы командной строки (не используются).
+     * <p>Демонстрирует использование методов {@link #distance(Point)} и
+     * {@link #distance3d(Point)}.</p>
+     *
+     * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
         Point a = new Point(0, 0);

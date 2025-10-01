@@ -1,28 +1,36 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code MatrixSumTest} предназначен для проверки метода
+ * Класс {@code MatrixSumTest} предназначен для проверки метода
  * {@link MatrixSum#sum(int[][])} из класса {@link MatrixSum}.
- * <p>
- * Включает тесты для следующих случаев:
+ *
+ * <p><b>Включает тесты для следующих случаев:</b></p>
  * <ul>
  *     <li>Массив с одним элементом.</li>
- *     <li>Квадратный массив 2×2.</li>
+ *     <li>Квадратный массив {@code 2×2}.</li>
  *     <li>Прямоугольный массив с различными значениями.</li>
  * </ul>
- * </p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int[][] array = {{10}};
+ * int result = MatrixSum.sum(array);
+ * int expected = 10;
+ * assertThat(result).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-28
+ * @version 1.2
  */
 public class MatrixSumTest {
 
     /**
-     * Тестирует метод {@link MatrixSum#sum(int[][])} на массиве, содержащем один элемент.
+     * Проверяет метод {@link MatrixSum#sum(int[][])}
+     * на массиве с одним элементом.
      */
     @Test
     public void whenSingle() {
@@ -35,7 +43,8 @@ public class MatrixSumTest {
     }
 
     /**
-     * Тестирует метод {@link MatrixSum#sum(int[][])} на квадратном массиве 2×2.
+     * Проверяет метод {@link MatrixSum#sum(int[][])}
+     * на квадратном массиве {@code 2×2}.
      */
     @Test
     public void whenTwo() {
@@ -49,7 +58,8 @@ public class MatrixSumTest {
     }
 
     /**
-     * Тестирует метод {@link MatrixSum#sum(int[][])} на прямоугольном массиве с разными значениями.
+     * Проверяет метод {@link MatrixSum#sum(int[][])}
+     * на прямоугольном массиве с различными значениями.
      */
     @Test
     public void whenThree() {

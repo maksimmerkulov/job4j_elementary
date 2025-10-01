@@ -1,34 +1,31 @@
 package ru.job4j.loop;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Тест-класс {@code FactorialTest} предназначен для проверки метода вычисления факториала
- * в классе {@link Factorial}.
- * <p>
- * Этот класс тестирует метод {@link Factorial#calculate(int)}, который вычисляет факториал числа.
- * Факториал числа - это произведение всех положительных целых чисел, меньших или равных данному числу.
- * Например, факториал числа 5 (обозначается 5!) равен 5 * 4 * 3 * 2 * 1 = 120.
- * </p>
+ * Класс {@code FactorialTest} проверяет метод вычисления факториала
+ * {@link Factorial#calculate(int)}.
  *
- * <p>Тесты включают следующие проверки:</p>
- * <ul>
- *     <li>Вычисление факториала для числа 5 (ожидаемый результат: 120)</li>
- *     <li>Вычисление факториала для числа 0 (ожидаемый результат: 1)</li>
- *     <li>Вычисление факториала для числа 1 (ожидаемый результат: 1)</li>
- *     <li>Вычисление факториала для числа 3 (ожидаемый результат: 6)</li>
- *     <li>Вычисление факториала для числа 7 (ожидаемый результат: 5040)</li>
- * </ul>
+ * <p>Метод вычисляет факториал числа — произведение всех положительных
+ * целых чисел, меньших или равных данному числу.</p>
+ *
+ * <p><b>Пример тестирования:</b></p>
+ * <pre>{@code
+ * int number = 5;
+ * int expected = 120;
+ * int output = Factorial.calculate(number);
+ * assertThat(output).isEqualTo(expected);
+ * }</pre>
  *
  * @author Maksim Merkulov
- * @version 1.1
- * @since 2025-02-20
+ * @version 1.2
  */
 class FactorialTest {
 
     /**
-     * Проверка метода {@link Factorial#calculate(int)} для числа 5.
+     * Проверяет {@link Factorial#calculate(int)} для числа 5.
      * Ожидаемый результат: 120.
      */
     @Test
@@ -40,7 +37,7 @@ class FactorialTest {
     }
 
     /**
-     * Проверка метода {@link Factorial#calculate(int)} для числа 0.
+     * Проверяет {@link Factorial#calculate(int)} для числа 0.
      * Ожидаемый результат: 1.
      */
     @Test
@@ -52,7 +49,7 @@ class FactorialTest {
     }
 
     /**
-     * Проверка метода {@link Factorial#calculate(int)} для числа 1.
+     * Проверяет {@link Factorial#calculate(int)} для числа 1.
      * Ожидаемый результат: 1.
      */
     @Test
@@ -64,7 +61,7 @@ class FactorialTest {
     }
 
     /**
-     * Проверка метода {@link Factorial#calculate(int)} для числа 3.
+     * Проверяет {@link Factorial#calculate(int)} для числа 3.
      * Ожидаемый результат: 6.
      */
     @Test
@@ -76,7 +73,7 @@ class FactorialTest {
     }
 
     /**
-     * Проверка метода {@link Factorial#calculate(int)} для числа 7.
+     * Проверяет {@link Factorial#calculate(int)} для числа 7.
      * Ожидаемый результат: 5040.
      */
     @Test
